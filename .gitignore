@@ -1,6 +1,7 @@
 .venv/
 .vscode/
 hf_cache/
+models/
 
 .env
 pyrightconfig.json
