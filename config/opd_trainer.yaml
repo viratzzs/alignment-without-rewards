@@ -1,0 +1,45 @@
+defaults:
+  - on_policy_distill_trainer
+  - _self_
+
+actor_rollout_ref:
+  model:
+    path: Qwen/Qwen3-4B
+
+  actor:
+    strategy: fsdp2
+    optimizer:
+      lr: 2e-5
+    ppo_mini_batch_size: 32
+    ppo_micro_batch_size: 8
+
+  rollout:
+    name: vllm
+    enable_sleep_mode: True          # critical for single GPU
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 20
+    max_tokens: 4096                  # short for MCQ non-think mode
+    cudagraph_capture_sizes: [1, 2, 4, 8, 16, 32, 64]  # ROCm stability
+    gpu_memory_utilization: 0.5 # Caps vLLM memory at ~96GB, leaving 28GB for Actor Weights
+
+  teacher:
+    server_ip: "127.0.0.1"
+    server_port: 15555
+    n_server_workers: 1
+
+data:
+  train_files: ./data/logiqa_train.parquet
+  val_files: ./data/logiqa_validation.parquet
+  max_prompt_length: 2048
+  max_response_length: 2048
+
+trainer:
+  total_epochs: 2
+  save_freq: 50   # every 50 steps — gives you ~14 snapshots per method over 690 steps
+  val_freq: 50
+  project_name: subnetwork-alignment
+  experiment_name: opd-qwen3-4b
+  nnodes: 1
+  n_gpus_per_node: 1
+  logger: ['wandb', 'console']

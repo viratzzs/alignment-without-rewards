@@ -2,6 +2,9 @@
 .vscode/
 hf_cache/
 models/
+verl-main/
+verl-0.7.0/
+outputs/
 
 .env
 pyrightconfig.json
