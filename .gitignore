@@ -1,5 +1,7 @@
 .venv/
 .vscode/
+hf_cache/
 
 .env
 pyrightconfig.json
+env_dump.txt
