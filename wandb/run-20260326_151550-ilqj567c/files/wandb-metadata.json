@@ -1,0 +1,45 @@
+{
+  "os": "Linux-6.8.0-85-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-03-26T15:15:50.175366Z",
+  "program": "/home/alignment-without-rewards/rl/grpo_run.py",
+  "codePath": "rl/grpo_run.py",
+  "codePathLocal": "rl/grpo_run.py",
+  "git": {
+    "remote": "https://github.com/viratzzs/alignment-without-rewards.git",
+    "commit": "d85f3e242d5b6363ce34d43b72aea865ff7b9748"
+  },
+  "email": "viratchauhan2004.work@gmail.com",
+  "root": "/home/alignment-without-rewards",
+  "host": "openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1",
+  "executable": "/home/alignment-without-rewards/.venv/bin/python3",
+  "cpu_count": 20,
+  "cpu_count_logical": 20,
+  "gpu": "AMD Instinct MI300X VF",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "747760488448",
+      "used": "418155302912"
+    }
+  },
+  "memory": {
+    "total": "253347164160"
+  },
+  "gpu_amd": [
+    {
+      "id": "0",
+      "uniqueId": "0x5b0198d9168ca83",
+      "vbiosVersion": "113-M3000100-103",
+      "performanceLevel": "auto",
+      "maxPower": "750.0",
+      "series": "AMD Instinct MI300X VF",
+      "model": "0x74b5",
+      "vendor": "Advanced Micro Devices, Inc. [AMD/ATI]",
+      "sku": "M3000100",
+      "sclkRange": "500Mhz - 2100Mhz",
+      "mclkRange": "900Mhz - 1300Mhz"
+    }
+  ],
+  "writerId": "07w05khkwd9wqu3ibjp82sequg7xaxat"
+}

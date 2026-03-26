@@ -1,0 +1,7 @@
+2026-03-26 15:14:25.719 | INFO     | __main__:main:160 - Logging to /home/alignment-without-rewards/evals/logs/ViratChauhan_Qwen3-4B-GRPO.log
+2026-03-26 15:14:25.719 | INFO     | __main__:main:168 - Loading 'validation' split...
+2026-03-26 15:14:26.017 | INFO     | __main__:main:173 -   651 samples loaded
+2026-03-26 15:14:26.017 | INFO     | __main__:main:168 - Loading 'test' split...
+2026-03-26 15:14:26.227 | INFO     | __main__:main:173 -   651 samples loaded
+2026-03-26 15:14:26.228 | INFO     | __main__:main:185 - Total samples: 1302
+2026-03-26 15:14:26.228 | INFO     | __main__:main:188 - Loading model: ViratChauhan/Qwen3-4B-GRPO

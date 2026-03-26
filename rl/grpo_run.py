@@ -80,7 +80,7 @@ if __name__ == "__main__":
         vllm_gpu_memory_utilization=0.5,
         vllm_max_model_length=4096,
         chat_template_kwargs={"enable_thinking": False},
-        learning_rate=5e-5,
+        learning_rate=1e-6,
         temperature=0.7,
         top_p=0.9, # do 0.8 if nonsense generations happen
         top_k=-1,
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         num_generations=4,
         # max_prompt_length removed in TRL 0.29.1 — enforce via tokenizer.model_max_length=2048 below
         max_completion_length=3072,
-        num_train_epochs=2,
+        num_train_epochs=1,
         save_steps=500,
         # to prevent RTE: expected to mark a variable ready only once, add this in startup: --ddp_find_unused_parameters False
         #gradient_checkpointing=True, # TODO: add this back if OOM, else don't cus it makes training slow.

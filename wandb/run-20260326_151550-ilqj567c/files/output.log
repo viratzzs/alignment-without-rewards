@@ -1,0 +1,1173 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+  0%|                                                                                                                                                              | 0/7376 [00:00<?, ?it/s][32m2026-03-26 15:16:01.017[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+[32mINFO[0m [90m03-26 15:15:52[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Regardless of accuracy, vividness, and vividness, in terms of language, the words are required to be used appropriately. In this way, the concept of expression will be accurate, and it will make people feel sharp and mysterious. Its tone and color.
+
+Question: The most accurate recap of this passage is:.
+
+Options:
+A. Language must be vivid and accurate.
+B. Language is very mysterious.
+C. Text is mysterious.
+D. Use the text appropriately.
+
+Answer: 4
+Response:
+id and accurate," which aligns with the passage's emphasis on accuracy and the appropriate use of language.
+
+Option B and C focus on mystery, which is mentioned in the passage but not the main point.
+
+Option D, "Use the text appropriately," is somewhat close but not as precise as Option A.
+
+#### 1
+Extracted: 1
+Reward: 0.0[0m
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  0%|                                                                                                                                                   | 1/7376 [00:21<43:13:23, 21.10s/it][32m2026-03-26 15:16:16.080[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.015, 'grad_norm': 0.9453125, 'learning_rate': 0.0, 'num_tokens': 3855.0, 'completions/mean_length': 244.375, 'completions/min_length': 112.0, 'completions/max_length': 405.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 244.375, 'completions/min_terminated_length': 112.0, 'completions/max_terminated_length': 405.0, 'rewards/correctness_reward_func/mean': 1.5, 'rewards/correctness_reward_func/std': 0.9258201122283936, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.0, 'reward_std': 0.9258201122283936, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.015541218221187592, 'sampling/sampling_logp_difference/max': 0.8279783725738525, 'sampling/importance_sampling_ratio/min': 0.09471353888511658, 'sampling/importance_sampling_ratio/mean': 0.2505340874195099, 'sampling/importance_sampling_ratio/max': 0.6040186285972595, 'entropy': 0.09816242009401321, 'clip_ratio/low_mean': 0.0005115089588798583, 'clip_ratio/low_min': 0.0005115089588798583, 'clip_ratio/high_mean': 0.0010230179177597165, 'clip_ratio/high_max': 0.0010230179177597165, 'clip_ratio/region_mean': 0.0015345268184319139, 'step_time': 20.853873744999873, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:13[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Money laundering: refers to the process of cleaning dirty money and legalizing illegal income, that is, the process of laundering and converting dirty money such as drug crimes, criminal underworld organizations, smuggling crimes and terrorist activities into "legal" property.
+
+Question: Which of the following are not money laundering?
+
+Options:
+A. A smuggling group repatriates the proceeds of smuggling to a fund account provided by a company.
+B. A terrorist organization transfers some funds to one of its sub-organizations.
+C. A drug criminal group invests the proceeds of smuggled drugs in legal trade.
+D. A company assists a triad organization to remit funds to its overseas head office.
+
+Answer: 2
+Response:
+hich is part of the integration stage of money laundering.
+
+**D. A company assists a triad organization to remit funds to its overseas head office.**
+This is an example of money laundering. The company is facilitating the movement of funds, which is part of the layering or placement stage.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  0%|                                                                                                                                                   | 2/7376 [00:25<22:37:39, 11.05s/it][32m2026-03-26 15:16:19.313[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 6.775067750677508e-08, 'num_tokens': 8757.0, 'completions/mean_length': 364.75, 'completions/min_length': 231.0, 'completions/max_length': 568.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 364.75, 'completions/min_terminated_length': 231.0, 'completions/max_terminated_length': 568.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.014620852656662464, 'sampling/sampling_logp_difference/max': 0.7559263110160828, 'sampling/importance_sampling_ratio/min': 0.019247839227318764, 'sampling/importance_sampling_ratio/mean': 0.08892661333084106, 'sampling/importance_sampling_ratio/max': 0.2506074011325836, 'entropy': 0.10440004616975784, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 3.8158150789968204, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:17[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: With the implementation of the "two-child policy", breastfeeding has increasingly become an unavoidable topic for the majority of young women during childbirth. Medical experts recommend that it is best to breastfeed exclusively in the first 6 months after birth. And parents also want to provide the best nutrition for their children. However, statistics show that in recent years, the exclusive breastfeeding rate of infants from 0 to 6 months in China has been significantly lower. The exclusive breastfeeding rate of infants within 6 months in rural areas is 30%, and only 16% in cities.
+
+Question: If the following items are true, which other items can explain the above statistical results?
+
+Options:
+A. Women in the workplace often suffer from breastfeeding embarrassment due to high work pressure and inadmissible working environment.
+B. Breastfeeding can reduce the prevalence of children, and the benefits to children's health can continue into adulthood.
+C. Many mothers do not understand the advantages of breastfeeding, but instead imagine that formula is too beautiful.
+D. Mothers affect sleep quality due to breastfeeding at night, their work and life rhythm is completely disrupted by breastfeeding.
+
+Answer: 2
+Response:
+ factor that would significantly impact the statistics.
+
+Between A and C, both offer plausible explanations. However, Option A directly addresses a workplace-related issue that could affect a significant portion of the population, making it a stronger explanation for the statistical results.
+
+#### 1
+Extracted: 1
+Reward: 0.0[0m
+  0%|                                                                                                                                                   | 3/7376 [00:28<15:17:03,  7.46s/it][32m2026-03-26 15:16:22.215[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0263, 'grad_norm': 0.4453125, 'learning_rate': 1.3550135501355015e-07, 'num_tokens': 13922.0, 'completions/mean_length': 305.125, 'completions/min_length': 228.0, 'completions/max_length': 382.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 305.125, 'completions/min_terminated_length': 228.0, 'completions/max_terminated_length': 382.0, 'rewards/correctness_reward_func/mean': 0.5, 'rewards/correctness_reward_func/std': 0.9258201122283936, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.0, 'reward_std': 0.9258201122283936, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.018313780426979065, 'sampling/sampling_logp_difference/max': 0.6779453754425049, 'sampling/importance_sampling_ratio/min': 0.010673034936189651, 'sampling/importance_sampling_ratio/mean': 0.07843028008937836, 'sampling/importance_sampling_ratio/max': 0.22799867391586304, 'entropy': 0.12028703838586807, 'clip_ratio/low_mean': 0.001229004468768835, 'clip_ratio/low_min': 0.001229004468768835, 'clip_ratio/high_mean': 0.0020483408588916063, 'clip_ratio/high_max': 0.0020483408588916063, 'clip_ratio/region_mean': 0.0032773453276604414, 'step_time': 3.010743337996246, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:20[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: A crocodile snatched a child, and it said to the child's mother, "Will I eat your child? The answer is correct, the child will give it back to you; if the answer is wrong, I will eat him. " The child's mother said: " You will eat him. "The mother's answer put the crocodile into a choice dilemma, which is called the" crocodile paradox ".
+
+Question: Based on the above scenario, which of the following describes a similar dilemma or paradox?
+
+Options:
+A. The tailor said, "There are no clothes in the world that I can't make. " The princess said, "There are no clothes in the world that satisfy me. " The king finally said, "You are all wrong. ".
+B. The thief went to the safe to steal jewelry, and found that there are two buttons on the box. You can only open the box by touching one of them. The green button says "Press me, it won't open", and the red button says "You can open it without pressing me. ".
+C. The fox caught a chicken and said to the chicken, "If I'm in a good mood, let me go; if you're in a bad mood, I'll eat you. Do you say I'm in a good mood or not? If you guess right, let me go "" The chicken quickly said, "You are in a good mood. ".
+D. The vase at home was broken, it must have been Dabao or Xiaobao. The mother asked who it was. Dabao said, "It was Xiaobao. " Xiaobao said, "Not Dabao. " It turned out they were all here. lie.
+
+Answer: 2
+Response:
+s, so it does not match the crocodile paradox.
+
+D. This scenario involves two people lying, but it is a simple lie-detection scenario, not a logical paradox.
+
+The scenario in option B is the most similar to the crocodile paradox, as it involves a logical contradiction that creates a dilemma.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  0%|                                                                                                                                                   | 4/7376 [00:31<11:36:18,  5.67s/it][32m2026-03-26 15:16:25.362[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.1144, 'grad_norm': 6.5625, 'learning_rate': 2.0325203252032523e-07, 'num_tokens': 17946.0, 'completions/mean_length': 178.5, 'completions/min_length': 94.0, 'completions/max_length': 340.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 178.5, 'completions/min_terminated_length': 94.0, 'completions/max_terminated_length': 340.0, 'rewards/correctness_reward_func/mean': 1.25, 'rewards/correctness_reward_func/std': 1.0350984334945679, 'rewards/format_reward_func/mean': 0.737500011920929, 'rewards/format_reward_func/std': 0.36228442192077637, 'rewards/int_answer_reward_func/mean': 0.3125, 'rewards/int_answer_reward_func/std': 0.25877460837364197, 'reward': 2.299999952316284, 'reward_std': 1.656157374382019, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.02748814783990383, 'sampling/sampling_logp_difference/max': 1.41029953956604, 'sampling/importance_sampling_ratio/min': 0.009662719443440437, 'sampling/importance_sampling_ratio/mean': 0.22842808067798615, 'sampling/importance_sampling_ratio/max': 1.3035075664520264, 'entropy': 0.14787925779819489, 'clip_ratio/low_mean': 0.004201680887490511, 'clip_ratio/low_min': 0.004201680887490511, 'clip_ratio/high_mean': 0.0021008404437452555, 'clip_ratio/high_max': 0.0021008404437452555, 'clip_ratio/region_mean': 0.006302521098405123, 'step_time': 2.7050744660009514, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:23[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Fan filter effect: refers to the psychological phenomenon that young people automatically filter their shortcomings and over-amplify their advantages when they see the objects they worship.
+
+Question: Which of the following are the fan filter effects:.
+
+Options:
+A. Xiao Li loves to watch war dramas. No matter what kind of film, as long as there are guns, guns, and troops in it, he will try to find them and watch them from beginning to end.
+B. Five-year-old Xiaogang likes his father very much. In his eyes, his father is an omnipotent and superman.
+C. After the news that a famous artist was arrested for taking drugs abroad, fans found a variety of reasons for him on Weibo.
+D. A teacher has held several lectures in the "100 lecterns", and his class is always full, full of students from various colleges.
+
+Answer: 3
+Response:
+- This describes a teacher's popularity and effectiveness, but it does not necessarily indicate a fan filter effect. It's more about the teacher's ability to attract students rather than a psychological phenomenon of filtering out shortcomings.
+
+Based on this analysis, the correct answer is:
+
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+  0%|                                                                                                                                                    | 5/7376 [00:34<9:40:37,  4.73s/it][32m2026-03-26 15:16:28.351[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0192, 'grad_norm': 0.53125, 'learning_rate': 2.710027100271003e-07, 'num_tokens': 22339.0, 'completions/mean_length': 311.625, 'completions/min_length': 210.0, 'completions/max_length': 370.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 311.625, 'completions/min_terminated_length': 210.0, 'completions/max_terminated_length': 370.0, 'rewards/correctness_reward_func/mean': 1.25, 'rewards/correctness_reward_func/std': 1.0350984334945679, 'rewards/format_reward_func/mean': 0.824999988079071, 'rewards/format_reward_func/std': 0.32403701543807983, 'rewards/int_answer_reward_func/mean': 0.375, 'rewards/int_answer_reward_func/std': 0.2314550280570984, 'reward': 2.450000047683716, 'reward_std': 1.4957081079483032, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.013212045654654503, 'sampling/sampling_logp_difference/max': 0.576553225517273, 'sampling/importance_sampling_ratio/min': 0.04537513107061386, 'sampling/importance_sampling_ratio/mean': 0.1315862238407135, 'sampling/importance_sampling_ratio/max': 0.2717548906803131, 'entropy': 0.08679990470409393, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0020056157372891903, 'clip_ratio/high_max': 0.0020056157372891903, 'clip_ratio/region_mean': 0.0020056157372891903, 'step_time': 2.8920258699945407, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:26[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: When a child has a cold, the mucus in the nose and throat is caused by a cold virus. Dairy products just stick to the eyes of the throat, which makes people feel a little uncomfortable. When the child has a cold, he can continue to provide milk or other dairy products.
+
+Question: From this?
+
+Options:
+A. Consuming dairy products can alleviate the discomfort caused by colds in children.
+B. Children cannot eat dairy products when they have a cold.
+C. Discomfort, when a child has a cold, has nothing to do with eating dairy products.
+D. Consuming dairy products will increase mucus production in the throat.
+
+Answer: 3
+Response:
+not directly supported by the context. Option B contradicts the context, which states that dairy can be continued. Option C is supported by the context, as it states that the discomfort is not caused by dairy. Option D is contradicted by the context, which says dairy does not increase mucus.
+
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+  0%|                                                                                                                                                    | 6/7376 [00:37<8:26:04,  4.12s/it][32m2026-03-26 15:16:32.416[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 3.387533875338754e-07, 'num_tokens': 26194.0, 'completions/mean_length': 250.375, 'completions/min_length': 137.0, 'completions/max_length': 357.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 250.375, 'completions/min_terminated_length': 137.0, 'completions/max_terminated_length': 357.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.018528936430811882, 'sampling/sampling_logp_difference/max': 0.5914582014083862, 'sampling/importance_sampling_ratio/min': 0.007992769591510296, 'sampling/importance_sampling_ratio/mean': 0.2876551151275635, 'sampling/importance_sampling_ratio/max': 1.2071452140808105, 'entropy': 0.11543929576873779, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.7843413680020603, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:29[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: The latest report from the capital transaction department of a bank pointed out that from the needs of domestic macro-control, only the continuous increase of the interest rate of the renminbi can fundamentally control the impulse of economic expansion and avoid the emergence and collapse of asset bubbles. RMB liquidity cannot be cured, low-interest rates cannot be corrected, and asset bubbles are likely to blow.
+
+Question: Based on this, you can launch.
+
+Options:
+A. If the RMB appreciates faster, then RMB liquidity can be cured.
+B. If RMB liquidity cannot be cured, the low-interest rate situation cannot be corrected.
+C. If the renminbi continues to raise interest rates, then the impulse to economic expansion can be fundamentally suppressed.
+D. If the renminbi cannot raise interest rates continuously, it will not be possible to fundamentally curb the impulse for economic expansion.
+
+Answer: 4
+Response:
+ent of the main point, while **D** is a contrapositive that is also valid.
+
+The question asks: "Based on this, you can launch." This implies which of the options is **logically valid** based on the context.
+
+Both **C** and **D** are valid, but **C** is more directly supported by the context.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|▏                                                                                                                                                   | 7/7376 [00:41<8:32:47,  4.18s/it][32m2026-03-26 15:16:36.364[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0015, 'grad_norm': 0.035888671875, 'learning_rate': 4.0650406504065046e-07, 'num_tokens': 31043.0, 'completions/mean_length': 335.125, 'completions/min_length': 126.0, 'completions/max_length': 592.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 335.125, 'completions/min_terminated_length': 126.0, 'completions/max_terminated_length': 592.0, 'rewards/correctness_reward_func/mean': 0.25, 'rewards/correctness_reward_func/std': 0.7071067690849304, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 1.75, 'reward_std': 0.7071067690849304, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.018169870600104332, 'sampling/sampling_logp_difference/max': 0.672976016998291, 'sampling/importance_sampling_ratio/min': 0.0005106961471028626, 'sampling/importance_sampling_ratio/mean': 0.08509939163923264, 'sampling/importance_sampling_ratio/max': 0.16600309312343597, 'entropy': 0.13019710779190063, 'clip_ratio/low_mean': 0.0018649757839739323, 'clip_ratio/low_min': 0.0018649757839739323, 'clip_ratio/high_mean': 0.002610966097563505, 'clip_ratio/high_max': 0.002610966097563505, 'clip_ratio/region_mean': 0.0044759418815374374, 'step_time': 4.082708617999742, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:33[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Studies show that as people age, the time spent on sports will gradually decrease, and the time spent on television will gradually increase. And in the next 20 years, the proportion of the elderly in the urban population will increase significantly. The company should sell the shares of "Tengda Sports Shoes" company in time and increase its investment in television companies.
+
+Question: Which of the following is not a prerequisite for making the above reasoning?
+
+Options:
+A. The increase in the number of people watching TV can increase the revenue of TV companies.
+B. The average person reduces exercise time, and their demand for sports shoes will also decrease.
+C. Most people participate in sports must wear sports shoes.
+D. The development trend of ordinary people's sports and leisure habits will not change significantly in 20 years.
+
+Answer: 3
+Response:
+nd leisure habits will not change significantly in 20 years.**
+This is a **prerequisite**. The argument assumes that the trend (more TV, less sports) will continue, which is necessary for the conclusion to be valid.
+
+### Conclusion:
+Option **C** is **not** a prerequisite for the reasoning.
+
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+  0%|▏                                                                                                                                                   | 8/7376 [00:45<8:22:16,  4.09s/it][32m2026-03-26 15:16:39.536[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0195, 'grad_norm': 0.8828125, 'learning_rate': 4.742547425474255e-07, 'num_tokens': 36103.0, 'completions/mean_length': 349.5, 'completions/min_length': 231.0, 'completions/max_length': 519.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 349.5, 'completions/min_terminated_length': 231.0, 'completions/max_terminated_length': 519.0, 'rewards/correctness_reward_func/mean': 1.75, 'rewards/correctness_reward_func/std': 0.7071067690849304, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.25, 'reward_std': 0.7071067690849304, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.015318804420530796, 'sampling/sampling_logp_difference/max': 0.6381657123565674, 'sampling/importance_sampling_ratio/min': 0.0014563982840627432, 'sampling/importance_sampling_ratio/mean': 0.1092979833483696, 'sampling/importance_sampling_ratio/max': 0.27999526262283325, 'entropy': 0.12079378217458725, 'clip_ratio/low_mean': 0.0007153076003305614, 'clip_ratio/low_min': 0.0007153076003305614, 'clip_ratio/high_mean': 0.0014306152006611228, 'clip_ratio/high_max': 0.0014306152006611228, 'clip_ratio/region_mean': 0.0021459227427840233, 'step_time': 3.691221618995769, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:37[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: WeChat provides a vibrant public life and makes it difficult for public discussion rules to form a consensus. The speed at which social tools are being renovated far exceeds the speed at which public discussion rules can take shape. The thrill of "rules of reality" makes people unwilling to be subject to any framework, so that in recent years, what rules to follow to debate has become a common issue in public debate. As an expert said, "shared media can promote independence from The development of the country's social power ", but this kind of power will obviously take a long time to undergo multiple multiple collisions and repeated wrestling. WeChat not only promotes the freedom of individual speech and the equality of the right to speak, but also makes this standing and tearing. It becomes more frequent and cheaper.
+
+Question: The text mainly says:.
+
+Options:
+A. The evolution of social tools has brought huge impact and challenges to public discussion rules.
+B. It is very difficult to form new public discussion rules in the common media.
+C. WeChat has a huge effect on getting rid of "rules of reality".
+D. There is still a long way to go for shared media to form an independent force.
+
+Answer: 1
+Response:
+tions the challenge of establishing new rules in the context of social media and the long-term process of social media becoming an independent force.
+
+Option A captures the main idea by emphasizing the impact and challenges brought by the evolution of social tools on public discussion rules.
+
+#### 1
+Extracted: 1
+Reward: 2.0[0m
+  0%|▏                                                                                                                                                   | 9/7376 [00:48<7:42:50,  3.77s/it][32m2026-03-26 15:16:42.444[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 5.420054200542006e-07, 'num_tokens': 40546.0, 'completions/mean_length': 215.375, 'completions/min_length': 99.0, 'completions/max_length': 367.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 215.375, 'completions/min_terminated_length': 99.0, 'completions/max_terminated_length': 367.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.023316262289881706, 'sampling/sampling_logp_difference/max': 0.6747879981994629, 'sampling/importance_sampling_ratio/min': 0.004916905891150236, 'sampling/importance_sampling_ratio/mean': 0.20788444578647614, 'sampling/importance_sampling_ratio/max': 0.6725956797599792, 'entropy': 0.1510401964187622, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.8940874059990165, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:40[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Caustic soda, sodium hydroxide, is a highly corrosive "high-risk chemical". However, caustic soda is also a "processing aid that can be used in various types of food processing and does not require a residual amount. " It is a highly efficient Acidity regulator. However, caustic soda used for food processing needs "food grade", and many reports mention "illegal merchants use industrial caustic soda". The difference between food grade caustic soda and industrial caustic soda is not the main component, but the former Heavy metal impurities require monitoring, the latter does not. In fact, the use of sodium hydroxide in food is the responsibility of the staff. In the final food, their "corrosiveness" has long ceased to exist. As for the use of industrial caustic soda , It belongs to the use of "unqualified raw materials" and should be cracked down.
+
+Question: Among the following options, what does not match the meaning of this text:.
+
+Options:
+A. Industrial caustic soda contains a large number of heavy metal impurities and cannot be used in food processing.
+B. The use of caustic soda in food processing poses a risk of corrosion by workers.
+C. The use of caustic soda in food processing is not illegal, and there is even no regulation on its residual amount.
+D. The main components of food-grade caustic soda and industrial caustic soda are basically the same, and both can be used as acidity regulators.
+
+Answer: 2
+Response:
+se of caustic soda in food processing is not illegal and there is no regulation on its residual amount.
+
+Option D is consistent with the text, as it states that the main components of food-grade caustic soda and industrial caustic soda are the same and both can be used as acidity regulators.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  0%|▏                                                                                                                                                  | 10/7376 [00:51<7:11:01,  3.51s/it][32m2026-03-26 15:16:45.326[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 6.097560975609757e-07, 'num_tokens': 45626.0, 'completions/mean_length': 281.0, 'completions/min_length': 234.0, 'completions/max_length': 327.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 281.0, 'completions/min_terminated_length': 234.0, 'completions/max_terminated_length': 327.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.02088848501443863, 'sampling/sampling_logp_difference/max': 2.2544212341308594, 'sampling/importance_sampling_ratio/min': 0.006346866954118013, 'sampling/importance_sampling_ratio/mean': 0.06472202390432358, 'sampling/importance_sampling_ratio/max': 0.21821476519107819, 'entropy': 0.10508452355861664, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.725378543997067, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:43[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: According to a report by the Macro Task Force of the Institute of Economics of the Chinese Academy of Sciences, from the historical practice of China's economic cycle floating, after the economic growth is less than double digits, the adjustment period is up to two years, and the economy will rebound rapidly, even like 1981, 1990 Such a serious situation is also picking up in two years. By comparison, the current decline in economic growth has been more than three years, and various indicators are still lower-it is pale and weak to explain with short-cycle fluctuations.
+
+Question: What does the text above mean?
+
+Options:
+A. The continuous fluctuation of the economic development process is an objective law of China's economic development.
+B. China's economy bids farewell to the double-digit growth period and enters a new adjustment cycle.
+C. Through adjustment, a great form of rapid economic growth in China will definitely emerge.
+D. The decline period of China's GDP is too long and no reasonable explanation can be found.
+
+Answer: 2
+Response:
+e period of China's GDP is too long and no reasonable explanation can be found. This is not accurate, as the text does suggest that the current situation is more serious than past adjustments, implying that there is a reason for the longer decline.
+
+Based on the analysis, the best answer is:
+
+#### 1
+Extracted: 1
+Reward: 0.0[0m
+  0%|▏                                                                                                                                                  | 11/7376 [00:54<6:44:15,  3.29s/it][32m2026-03-26 15:16:48.713[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 6.775067750677508e-07, 'num_tokens': 49985.0, 'completions/mean_length': 262.875, 'completions/min_length': 172.0, 'completions/max_length': 336.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 262.875, 'completions/min_terminated_length': 172.0, 'completions/max_terminated_length': 336.0, 'rewards/correctness_reward_func/mean': 0.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 1.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.02053143084049225, 'sampling/sampling_logp_difference/max': 0.6077280044555664, 'sampling/importance_sampling_ratio/min': 0.007960053160786629, 'sampling/importance_sampling_ratio/mean': 0.16289173066616058, 'sampling/importance_sampling_ratio/max': 0.6302486658096313, 'entropy': 0.12590351700782776, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.6267616960030864, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:46[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Many people now reject and fear sweetness and sugar, because they are very afraid of getting fat, and eating a small piece of candy will make them fat. In fact, what really makes people fat is not that small piece of candy, but the food you eat every day contains more energy than you consume. Steamed bread, noodles, rice, or cornmeal nests have starch, or unsweetened sugar. The calories released by the oxidation of starch in the human body are basically the same as sucrose. Controlling weight gain is mainly about controlling the total calorie intake, not whether the taste of the food is sweet.
+
+Question: The title that works best for this text is:.
+
+Options:
+A. Eat sugar and gain weight.
+B. Starch and gaining weight.
+C. Fatty "The Real Murderer".
+D. The "secret to gain weight".
+
+Answer: 4
+Response:
+e total calorie intake, not just starch.
+
+Option C ("Fatty "The Real Murderer"") is irrelevant, as the text does not focus on fat.
+
+Option D ("The "secret to gain weight"") is too vague and does not capture the text's main point about correcting the misconception about sugar and weight gain.
+
+#### 4
+Extracted: 4
+Reward: 2.0[0m
+  0%|▏                                                                                                                                                  | 12/7376 [00:57<6:52:29,  3.36s/it][32m2026-03-26 15:16:51.587[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 7.452574525745257e-07, 'num_tokens': 54691.0, 'completions/mean_length': 275.75, 'completions/min_length': 151.0, 'completions/max_length': 452.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 275.75, 'completions/min_terminated_length': 151.0, 'completions/max_terminated_length': 452.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.021054957062005997, 'sampling/sampling_logp_difference/max': 0.5865097045898438, 'sampling/importance_sampling_ratio/min': 0.0024093356914818287, 'sampling/importance_sampling_ratio/mean': 0.2336454540491104, 'sampling/importance_sampling_ratio/max': 0.8768119812011719, 'entropy': 0.1529337465763092, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 3.307280772998638, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:49[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: The young students who come to Barcelona for "pilgrimage" are endless all year round. They are not so much drawn from the sights of the Middle Ages as they were attracted by the work of Antonio Gaudi, a modernist master. Although Picasso was born in Magal, At the Aguila Palace in Barcelona, you can see a wide range of his works chronologically displayed from the age of 8. Dali was fascinated by the ocean in his early years and spent most of his life in a fishing village with white powder walls, but he was surreal. The genius of the doctrine of art is treasured in this artistic mecca--the place where he was born and rested.
+
+Question: This passage mainly supports such a view, that is ().
+
+Options:
+A. Modernist works attract young artists.
+B. Barcelona is a temple of painting.
+C. The painter's work may not be preserved in his place of birth.
+D. Young students "pilgrimage" Barcelona not to hang out on medieval sights.
+
+Answer: 1
+Response:
+ork is preserved there or not.
+
+D. Young students "pilgrimage" Barcelona not to hang out on medieval sights.
+- This is directly supported by the passage, which states that students are not so much drawn from the sights of the Middle Ages as they were attracted by the work of Antonio Gaudi.
+
+#### 4
+Extracted: 4
+Reward: 0.0[0m
+  0%|▎                                                                                                                                                  | 13/7376 [01:00<6:29:14,  3.17s/it][32m2026-03-26 15:16:56.133[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 8.130081300813009e-07, 'num_tokens': 59144.0, 'completions/mean_length': 286.125, 'completions/min_length': 271.0, 'completions/max_length': 317.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 286.125, 'completions/min_terminated_length': 271.0, 'completions/max_terminated_length': 317.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.015678713098168373, 'sampling/sampling_logp_difference/max': 0.7562772631645203, 'sampling/importance_sampling_ratio/min': 0.009083759039640427, 'sampling/importance_sampling_ratio/mean': 0.13090714812278748, 'sampling/importance_sampling_ratio/max': 0.4004959762096405, 'entropy': 0.10264306515455246, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.5652648719988065, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:52[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Wuyue returned without looking at the mountains and Jiuzhai returned without looking at the water. Mr. Li decided to stop visiting the mountains and water in the future. He must have visited Wuyue and Jiuzhai.
+
+Question: which is most similar to the logical inference structure of the sentence above?
+
+Options:
+A. Phytosterol is an important physiologically active substance. Ingestion of phytosterols can greatly help reduce cholesterol. People with high cholesterol must rarely use foods with high phytosterols.
+B. Green tea is unfermented tea, black tea is fully fermented tea, and Tieguanyin is semi-fermented tea, which is neither green tea nor black tea, so it is called oolong tea.
+C. The road that the city cleaning vehicle passes is always wet. Today the road surface on the elevated road is very dry. The cleaning vehicle must not have been there.
+D. Pulmonary diseases are largely related to smoking. Patients who detect tumors in the lungs usually choose to quit smoking. Li Gang recently planned to quit smoking. He must have detected lung tumors.
+
+Answer: 4
+Response:
+e original statement, which is about a past action leading to a current decision.
+
+**Conclusion:**
+Option C is most similar in logical structure to the original statement because both involve making an inference based on the absence of a condition leading to a conclusion about a past action.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|▎                                                                                                                                                  | 14/7376 [01:05<7:33:45,  3.70s/it][32m2026-03-26 15:17:07.088[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0089, 'grad_norm': 0.1767578125, 'learning_rate': 8.807588075880759e-07, 'num_tokens': 65247.0, 'completions/mean_length': 451.375, 'completions/min_length': 321.0, 'completions/max_length': 676.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 451.375, 'completions/min_terminated_length': 321.0, 'completions/max_terminated_length': 676.0, 'rewards/correctness_reward_func/mean': 0.5, 'rewards/correctness_reward_func/std': 0.9258201122283936, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.0, 'reward_std': 0.9258201122283936, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.015537712723016739, 'sampling/sampling_logp_difference/max': 1.0942137241363525, 'sampling/importance_sampling_ratio/min': 0.0010996757773682475, 'sampling/importance_sampling_ratio/mean': 0.03442426398396492, 'sampling/importance_sampling_ratio/max': 0.15635766088962555, 'entropy': 0.11117337644100189, 'clip_ratio/low_mean': 0.0022154527250677347, 'clip_ratio/low_min': 0.0022154527250677347, 'clip_ratio/high_mean': 0.0011077263625338674, 'clip_ratio/high_max': 0.0011077263625338674, 'clip_ratio/region_mean': 0.003323179204016924, 'step_time': 4.65089783899748, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:16:57[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: There are four kinds of fruits: apple, strawberry, banana, and orange. A. B, C, and D each receive one. A: "I got an apple", B: "I got an orange", C: "A lies He got the banana ", Ding:" I got the strawberry ".
+
+Question: If only two people are telling the truth, which of the following can definitely be launched?
+
+Options:
+A. B receives oranges.
+B. Ding received strawberries.
+C. C received not bananas.
+D. A is not Apple.
+
+Answer: 3
+Response:
+s not Apple. → True in **Case 3**, **Case 4**, **Case 5**, and **Case 6**.
+
+So **only B and C are true in all valid cases**. But the question asks which **can definitely be concluded** — and the answer must be one of the options.
+
+Among the options, **B** is **true in all valid cases**.
+
+#### #### 2
+Extracted: 2
+Reward: 0.0[0m
+  0%|▎                                                                                                                                                 | 15/7376 [01:17<12:58:34,  6.35s/it][32m2026-03-26 15:17:12.413[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0, 'grad_norm': 1.7523765563964844e-05, 'learning_rate': 9.48509485094851e-07, 'num_tokens': 73874.0, 'completions/mean_length': 790.875, 'completions/min_length': 92.0, 'completions/max_length': 1805.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 790.875, 'completions/min_terminated_length': 92.0, 'completions/max_terminated_length': 1805.0, 'rewards/correctness_reward_func/mean': 0.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 0.9125000238418579, 'rewards/format_reward_func/std': 0.2474873811006546, 'rewards/int_answer_reward_func/mean': 0.4375, 'rewards/int_answer_reward_func/std': 0.1767766922712326, 'reward': 1.350000023841858, 'reward_std': 0.4242640733718872, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.018075285479426384, 'sampling/sampling_logp_difference/max': 0.8894737958908081, 'sampling/importance_sampling_ratio/min': 7.990968997617642e-11, 'sampling/importance_sampling_ratio/mean': 0.1023673266172409, 'sampling/importance_sampling_ratio/max': 0.44881537556648254, 'entropy': 0.15749074518680573, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 11.805210063001141, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:17:09[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: No reform can be successful without the support and participation of the people. Only by fully respecting the will of the people and forming a broad consensus can the people actively support the reform and actively participate in the reform. We must adhere to the people's dominant position, give full play to the spirit of the people's initiative, and rely on the people Promote reform and opening up.
+
+Question: Based on the above statement, which of the following can be derived?
+
+Options:
+A. Reform can succeed only with people's support and participation.
+B. Only by upholding the status of the people as the main body can the spirit of mass initiative be brought into play.
+C. If people are enthusiastically engaged in reform, it shows that there is a broad consensus.
+D. Without full respect for the will of the people, the people will not actively support reform.
+
+Answer: 1
+Response:
+e people actively support the reform."
+
+All four options can be derived from the context in some way. However, the question asks which "can be derived," and all of them are valid inferences. Among these, **A** is the most directly and clearly stated in the context, making it the best choice.
+
+#### 1
+Extracted: 1
+Reward: 2.0[0m
+  0%|▎                                                                                                                                                 | 16/7376 [01:21<11:15:06,  5.50s/it][32m2026-03-26 15:17:15.876[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0271, 'grad_norm': 0.62109375, 'learning_rate': 1.0162601626016261e-06, 'num_tokens': 79117.0, 'completions/mean_length': 374.375, 'completions/min_length': 318.0, 'completions/max_length': 451.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 374.375, 'completions/min_terminated_length': 318.0, 'completions/max_terminated_length': 451.0, 'rewards/correctness_reward_func/mean': 0.75, 'rewards/correctness_reward_func/std': 1.0350984334945679, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.25, 'reward_std': 1.0350983142852783, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.016881611198186874, 'sampling/sampling_logp_difference/max': 0.6588317155838013, 'sampling/importance_sampling_ratio/min': 0.0071823811158537865, 'sampling/importance_sampling_ratio/mean': 0.07581014931201935, 'sampling/importance_sampling_ratio/max': 0.22769391536712646, 'entropy': 0.12578052282333374, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0030050084460526705, 'clip_ratio/high_max': 0.0030050084460526705, 'clip_ratio/region_mean': 0.0030050084460526705, 'step_time': 3.3566430189966923, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:17:13[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Time perception distortion refers to the perception of incorrect time. In life, due to various factors, people's perception of time is often unrealistic, sometimes it is too long, and sometimes it is too short. Many reasons It can cause the perception of time to be distorted. In reality, a bad performance will make people feel like they are sitting on a needle and feel that the end is far away. On the contrary, people always think that the time of beauty and joy is too short.
+
+Question: Based on the above definition, the following options do not fit the time-aware distortion:.
+
+Options:
+A. See you in a day, like March.
+B. Pleasure is short, loneliness and hate are longer.
+C. The lonely house is living like a year, and the wind is gradually changing.
+D. It's only seven days since the spring, and it's been two years since leaving home.
+
+Answer: 4
+Response:
+n, it would not fit. However, if we interpret it as time feeling long (like a year), it does fit.
+
+Given the phrasing, **Option C** is the **least likely** to fit the concept of time perception distortion, as it seems to describe a gradual change rather than a subjective distortion of time.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|▎                                                                                                                                                 | 17/7376 [01:24<10:00:50,  4.90s/it][32m2026-03-26 15:17:18.972[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0225, 'grad_norm': 0.63671875, 'learning_rate': 1.0840108401084012e-06, 'num_tokens': 83082.0, 'completions/mean_length': 236.625, 'completions/min_length': 87.0, 'completions/max_length': 466.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 236.625, 'completions/min_terminated_length': 87.0, 'completions/max_terminated_length': 466.0, 'rewards/correctness_reward_func/mean': 1.5, 'rewards/correctness_reward_func/std': 0.9258201122283936, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.0, 'reward_std': 0.9258201122283936, 'frac_reward_zero_std': 0.0, 'sampling/sampling_logp_difference/mean': 0.019073352217674255, 'sampling/sampling_logp_difference/max': 1.353133201599121, 'sampling/importance_sampling_ratio/min': 0.002528343815356493, 'sampling/importance_sampling_ratio/mean': 0.1812630295753479, 'sampling/importance_sampling_ratio/max': 0.673823893070221, 'entropy': 0.13503503799438477, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.00686740642413497, 'clip_ratio/high_max': 0.00686740642413497, 'clip_ratio/region_mean': 0.00686740642413497, 'step_time': 3.28516287200182, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:17:17[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Tax incentives refer to the government's use of multiple means in the tax system design and tax collection and management process, through the adjustment of tax burdens, to induce behavior choices of microeconomic entities, to encourage taxpayers to occur or not occur, to participate or not to participate in certain economic behaviors, To achieve the strategic goal of coordinated socio-economic development of the government.
+
+Question: According to the above definitions, Which of the following are not tax incentives: ().
+
+Options:
+A. During the product development stage, the equipment cost is high, at this time, the tax deduction for accelerated depreciation is provided.
+B. Tax concessions for taxpayers who have suffered severe natural disasters such as wind, fire, water, and earthquakes.
+C. In the middle stage of the product, the demand for funds is strong, and at this time, tax credits are provided for investment credits.
+D. The risk of the company is still large during the product trial stage, at this time, tax incentives for loss carry forward.
+
+Answer: 2
+Response:
+of investment.
+
+**D.** The risk of the company is still large during the product trial stage, at this time, tax incentives for loss carry forward.
+- This is a tax incentive because it allows companies to carry forward losses to offset future profits, encouraging risk-taking and innovation.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  0%|▎                                                                                                                                                  | 18/7376 [01:27<8:49:52,  4.32s/it][32m2026-03-26 15:17:21.794[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.1517615176151763e-06, 'num_tokens': 88011.0, 'completions/mean_length': 322.625, 'completions/min_length': 296.0, 'completions/max_length': 352.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 322.625, 'completions/min_terminated_length': 296.0, 'completions/max_terminated_length': 352.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.014982049353420734, 'sampling/sampling_logp_difference/max': 1.3664801120758057, 'sampling/importance_sampling_ratio/min': 0.014625538140535355, 'sampling/importance_sampling_ratio/mean': 0.12139914929866791, 'sampling/importance_sampling_ratio/max': 0.36636894941329956, 'entropy': 0.10906156897544861, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.8006004159979057, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 15:17:19[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Cultural anxiety: refers to the psychological state of confusion, anxiety, disappointment, and self-confidence caused by the squeeze of foreign cultures on traditional cultures in the process of globalization and modernization.
+
+Question: Which of the following are not cultural anxieties?
+
+Options:
+A. In response to the invasion of Western culture, some parents suggest that the education department formulate relevant policies as soon as possible to allow traditional classics including the Four Books and Five Classics to enter primary and secondary school classrooms.
+B. Squares, neighborhoods, and parks containing foreign place names such as "Roman Forum" and "California Town" can be found everywhere in cities, large and small.
+C. Christmas, Valentine's Day, and Easter are becoming more and more popular, but many traditional festivals have been ignored by young people. Some scholars have called for measures to be taken to restrict foreign festivals as soon as possible.
+D. Many historical and cultural heritage and human landscapes have disappeared with the transformation of the old city in full swing. More and more people of insight are deeply worried about this.
+
+Answer: 2
+Response:
+ concern about the loss of cultural heritage, which is a form of cultural anxiety.
+
+**Conclusion:** Option **B** is the only one that does not reflect a psychological state of anxiety or concern about the influence of foreign cultures on traditional ones. It is more of a factual observation.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  0%|▍                                                                                                                                                  | 19/7376 [01:30<7:54:05,  3.87s/it][32m2026-03-26 15:17:24.964[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.2195121951219514e-06, 'num_tokens': 92070.0, 'completions/mean_length': 230.875, 'completions/min_length': 143.0, 'completions/max_length': 325.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 230.875, 'completions/min_terminated_length': 143.0, 'completions/max_terminated_length': 325.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.016938522458076477, 'sampling/sampling_logp_difference/max': 0.5851409435272217, 'sampling/importance_sampling_ratio/min': 0.06063811480998993, 'sampling/importance_sampling_ratio/mean': 0.24152863025665283, 'sampling/importance_sampling_ratio/max': 0.529070258140564, 'entropy': 0.109475277364254, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.6444179660029477, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:22[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: The dictionary's interpretation of the library is that the library is the institution that collects, organizes, and collects books and materials for people to read and reference. The library has the functions of preserving human cultural heritage, developing information resources, and participating in social education. Among them, the collection of books should be the focus for people to read and reference, so as to spread the culture. This is commonly recognized by the world. However, from different perspectives, some people have questioned the function of the library. Ikeda, a famous collector of ancient books in Japan Izov wrote in his book "Hand-Drawn Travel of Japanese Bookstores": "Classic books acquired by the library are labeled and stored in the bottom of the box. It is rare that there is no chance to show up in front of ordinary people. It can be said to be the black hole of books. ".
+
+Question: What is the most accurate understanding of the "black hole" of books?
+
+Options:
+A. Focusing on the various disadvantages of the rare books in ancient books.
+B. Classical books are cherished, and the library's careful collection is understandable.
+C. Libraries must not only preserve human cultural heritage, but also spread the culture.
+D. The ancient books in the library are difficult to read by general readers.
+
+Answer: 4
+Response:
+t a direct interpretation of the "black hole" metaphor.
+
+Option D directly addresses the idea that ancient books in the library are difficult for general readers to access, which aligns with the metaphor of a "black hole" that absorbs books without letting them be seen or used by the public.
+
+#### 4
+Extracted: 4
+Reward: 2.0[0m
+  0%|▍                                                                                                                                                  | 20/7376 [01:34<7:33:25,  3.70s/it][32m2026-03-26 15:17:28.699[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.2872628726287264e-06, 'num_tokens': 97455.0, 'completions/mean_length': 277.625, 'completions/min_length': 194.0, 'completions/max_length': 398.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 277.625, 'completions/min_terminated_length': 194.0, 'completions/max_terminated_length': 398.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.02518412657082081, 'sampling/sampling_logp_difference/max': 0.8428452014923096, 'sampling/importance_sampling_ratio/min': 0.004609309136867523, 'sampling/importance_sampling_ratio/mean': 0.06052972003817558, 'sampling/importance_sampling_ratio/max': 0.1715465933084488, 'entropy': 0.15142372250556946, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 3.094235188997118, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:26[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Can taking medicine improve a person's ability to recognize pitch? A recent foreign study has given a positive answer to this. The researchers divided the trial participants into two groups: the first group took valproic acid and the second group After taking a placebo, none of the participants in the trial received systematic music training, and found that in the recognition pitch test, the correct recognition rate of the first group was higher. Based on this, the researchers believe that drug treatment can improve People's ability to recognize pitch.
+
+Question: Which of the following, if true, would most question the researchers' conclusions?
+
+Options:
+A. There are more participants in the first group than in the second group.
+B. The average age of the participants in the first group is different from that in the second group.
+C. Participants in the first group of tests were better than those in the second group.
+D. The proportion of parents in the first group of trials who are engaged in music work is higher.
+
+Answer: 3
+Response:
+ drug was the cause.
+
+**Analysis:**
+Option **C** is the strongest challenge because it directly suggests that the difference in results could be due to the participants' abilities rather than the drug. It provides a clear alternative explanation that undermines the researchers' conclusion.
+
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+  0%|▍                                                                                                                                                  | 21/7376 [01:37<7:34:44,  3.71s/it][32m2026-03-26 15:17:31.518[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0018, 'grad_norm': 0.07470703125, 'learning_rate': 1.3550135501355015e-06, 'num_tokens': 103232.0, 'completions/mean_length': 419.125, 'completions/min_length': 361.0, 'completions/max_length': 473.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 419.125, 'completions/min_terminated_length': 361.0, 'completions/max_terminated_length': 473.0, 'rewards/correctness_reward_func/mean': 1.75, 'rewards/correctness_reward_func/std': 0.7071067690849304, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.25, 'reward_std': 0.7071067690849304, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.019219301640987396, 'sampling/sampling_logp_difference/max': 0.6431291103363037, 'sampling/importance_sampling_ratio/min': 0.004695423413068056, 'sampling/importance_sampling_ratio/mean': 0.020210683345794678, 'sampling/importance_sampling_ratio/max': 0.05233825743198395, 'entropy': 0.14265300333499908, 'clip_ratio/low_mean': 0.0017894422635436058, 'clip_ratio/low_min': 0.0017894422635436058, 'clip_ratio/high_mean': 0.003877124981954694, 'clip_ratio/high_max': 0.003877124981954694, 'clip_ratio/region_mean': 0.005666567478328943, 'step_time': 3.5157163530020625, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:29[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Reverse urbanization: Refers to the phenomenon of urban residents actively flowing from urban areas to suburbs or rural areas due to work, life, environment and other reasons.
+
+Question: Which of the following is anti-urbanization.
+
+Options:
+A. Citizen Mr. Li has worked and lived in the city center for many years. Last year he moved to a suburban enterprise and bought a suite near the unit. I feel that work and life are very convenient.
+B. With the expansion of business volume, the warehouse of a logistics company cannot meet the business needs, and the cost of renting another site in the city is too high, and the company rents a large warehouse in the rural area with lower rents.
+C. In recent years, due to traffic congestion in the city and too much pressure, many urban white-collar workers have gone to the surrounding countryside for vacations and enjoy the joy of rural life.
+D. Due to the adjustment of the establishment system, Ms. Lin's husband changed from a big city to the Gobi Desert a thousand miles away. In order to support her husband's work, Ms. Lin planned to take her son to settle near the new station.
+
+Answer: 1
+Response:
+s. Lin is moving to a remote area to support her husband's work. This is a relocation due to job assignment, not necessarily a choice based on lifestyle or environment.
+
+The best example of anti-urbanization, which is the movement of people from urban to suburban or rural areas, is option A.
+
+#### 1
+Extracted: 1
+Reward: 2.0[0m
+  0%|▍                                                                                                                                                  | 22/7376 [01:40<6:57:33,  3.41s/it][32m2026-03-26 15:17:34.106[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0084, 'grad_norm': 0.2119140625, 'learning_rate': 1.4227642276422764e-06, 'num_tokens': 107498.0, 'completions/mean_length': 260.25, 'completions/min_length': 209.0, 'completions/max_length': 302.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 260.25, 'completions/min_terminated_length': 209.0, 'completions/max_terminated_length': 302.0, 'rewards/correctness_reward_func/mean': 1.25, 'rewards/correctness_reward_func/std': 1.0350984334945679, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.75, 'reward_std': 1.0350983142852783, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.02029429003596306, 'sampling/sampling_logp_difference/max': 0.7326028943061829, 'sampling/importance_sampling_ratio/min': 0.008914207108318806, 'sampling/importance_sampling_ratio/mean': 0.052119530737400055, 'sampling/importance_sampling_ratio/max': 0.11186888068914413, 'entropy': 0.14197741448879242, 'clip_ratio/low_mean': 0.003842459060251713, 'clip_ratio/low_min': 0.003842459060251713, 'clip_ratio/high_mean': 0.0009606147650629282, 'clip_ratio/high_max': 0.0009606147650629282, 'clip_ratio/region_mean': 0.004803074058145285, 'step_time': 2.5222228319980786, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:32[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Price competition: According to the market conditions, enterprises can compete with competitors for market share by adopting measures such as price increase, maintenance or reduction, or taking measures such as pricing and price adjustment according to the situation of competitors.
+
+Question: Which of the following does not belong to price competition?
+
+Options:
+A. During the New Year's Day of a certain brand of clothing, sales of old down jackets are discounted at counters in major shopping malls.
+B. A manufacturer hires a salesperson to distribute leaflets and souvenirs to attract customers in downtown.
+C. A brand of the car launched a new model, the same series of old cars sharply reduced prices.
+D. An insurance company launched a one-time purchase of a small discount insurance business in response to the increase in private car users.
+
+Answer: 2
+Response:
+aunched a one-time purchase of a small discount insurance business in response to the increase in private car users."
+- This is an example of price competition, as it involves a price discount to attract customers.
+
+Based on this analysis, **Option B** does not belong to price competition.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  0%|▍                                                                                                                                                  | 23/7376 [01:42<6:24:12,  3.14s/it][32m2026-03-26 15:17:36.778[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.4905149051490515e-06, 'num_tokens': 111385.0, 'completions/mean_length': 223.875, 'completions/min_length': 178.0, 'completions/max_length': 284.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 223.875, 'completions/min_terminated_length': 178.0, 'completions/max_terminated_length': 284.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.015022973529994488, 'sampling/sampling_logp_difference/max': 0.7122876048088074, 'sampling/importance_sampling_ratio/min': 0.013223598711192608, 'sampling/importance_sampling_ratio/mean': 0.08896523714065552, 'sampling/importance_sampling_ratio/max': 0.14045274257659912, 'entropy': 0.09593918919563293, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.3484311439970043, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:35[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Individuals always live in certain institutional arrangements. Most of the traditional Chinese Confucian institutional arrangements are informal, emphasizing the internalization process of behavior rules, not paying attention to external coercive constraints, and have higher flexibility.
+
+Question: therefore:.
+
+Options:
+A. Confucianism is modern.
+B. Under the arrangement of the Confucian system, individuals can do whatever they want, without restriction.
+C. Under the Confucian institutional arrangement, individuals can flexibly adjust their own rules of behavior with their own understanding of the rules of the system.
+D. Under the Confucian institutional arrangement, individuals can obtain the greatest freedom.
+
+Answer: 3
+Response:
+, which aligns with the context's description of Confucian institutional arrangements.
+
+Option D is incorrect because it suggests the greatest freedom, which is not explicitly stated in the context. The context emphasizes flexibility and internalization, not necessarily the greatest freedom.
+
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+  0%|▍                                                                                                                                                  | 24/7376 [01:45<6:11:10,  3.03s/it][32m2026-03-26 15:17:41.038[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.5582655826558265e-06, 'num_tokens': 115832.0, 'completions/mean_length': 242.375, 'completions/min_length': 173.0, 'completions/max_length': 305.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 242.375, 'completions/min_terminated_length': 173.0, 'completions/max_terminated_length': 305.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.02036614716053009, 'sampling/sampling_logp_difference/max': 0.948468804359436, 'sampling/importance_sampling_ratio/min': 0.024180741980671883, 'sampling/importance_sampling_ratio/mean': 0.1531364917755127, 'sampling/importance_sampling_ratio/max': 0.5386589765548706, 'entropy': 0.11868920177221298, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.604921322003065, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:37[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: If Xiao Zhang goes to Xinjiang this summer, he will have to visit Turfan and Kanas, otherwise, he will not go; only if he travels with Xiao Li, Xiao Zhang will tour Turfan or Tianchi; if he travels with Xiao Li, Xiao Zhang must make an agreement with Xiao Li ; If Xiao Zhang makes an appointment with Xiao Li, Xiao Li must have time this summer. Unfortunately, this summer, Xiao Li's unit came to an urgent task, and the relevant person must not take leave, and Xiao Li is no exception.
+
+Question: From this we can infer:.
+
+Options:
+A. Xiao Zhang hasn't been to Xinjiang this summer.
+B. Xiao Zhang goes to Kanas this summer.
+C. Xiao Zhang visits Tianchi this summer.
+D. Xiao Zhang is going to Turpan this summer.
+
+Answer: 1
+Response:
+mer.**
+   - This is not true, because he cannot tour Tianchi without traveling with Xiao Li, and Xiao Li cannot make time.
+
+D. **Xiao Zhang is going to Turpan this summer.**
+   - This is not true, because he cannot tour Turpan without traveling with Xiao Li, and Xiao Li cannot make time.
+
+#### A
+Extracted: None
+Reward: 0.0[0m
+  0%|▍                                                                                                                                                  | 25/7376 [01:50<7:03:30,  3.46s/it][32m2026-03-26 15:17:44.344[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0094, 'grad_norm': 0.29296875, 'learning_rate': 1.6260162601626018e-06, 'num_tokens': 121100.0, 'completions/mean_length': 394.5, 'completions/min_length': 267.0, 'completions/max_length': 623.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 394.5, 'completions/min_terminated_length': 267.0, 'completions/max_terminated_length': 623.0, 'rewards/correctness_reward_func/mean': 1.5, 'rewards/correctness_reward_func/std': 0.9258201122283936, 'rewards/format_reward_func/mean': 0.824999988079071, 'rewards/format_reward_func/std': 0.32403701543807983, 'rewards/int_answer_reward_func/mean': 0.375, 'rewards/int_answer_reward_func/std': 0.2314550280570984, 'reward': 2.700000047683716, 'reward_std': 1.4813121557235718, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.010758817195892334, 'sampling/sampling_logp_difference/max': 0.6398781538009644, 'sampling/importance_sampling_ratio/min': 0.016586361452937126, 'sampling/importance_sampling_ratio/mean': 0.22195737063884735, 'sampling/importance_sampling_ratio/max': 0.6362379193305969, 'entropy': 0.07653435319662094, 'clip_ratio/low_mean': 0.0006337135564535856, 'clip_ratio/low_min': 0.0006337135564535856, 'clip_ratio/high_mean': 0.001584283891133964, 'clip_ratio/high_max': 0.001584283891133964, 'clip_ratio/region_mean': 0.0022179975640028715, 'step_time': 4.212334363000991, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:42[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: In a science and technology invention competition, an ashtray with an ashtray that would emit a heavy cough like advanced lung cancer patients won the creative award. After the competition, a manufacturer bought out the idea and pushed the product further. Market, but sales are not ideal.
+
+Question: Based on the above information, the reasons for poor sales can be explained most reasonably and fully:.
+
+Options:
+A. The price of this new type ashtray is 50 yuan more expensive than ordinary ashtrays, and many consumers find it worthless.
+B. Many smokers feel that this ashtray can serve as a wake-up call.
+C. Many manufacturers have chosen this idea to develop and produce after the technological invention contest, and at the same time bring their products to the market.
+D. A manufacturer introduced a new type of lighter during the same period, attracting many consumers.
+
+Answer: 1
+Response:
+des the most reasonable and full explanation for the poor sales, as it suggests that the product's unique and potentially offensive design led to a lack of consumer appeal, and that the presence of multiple manufacturers producing similar products may have further reduced its market success.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|▌                                                                                                                                                  | 26/7376 [01:53<6:50:27,  3.35s/it][32m2026-03-26 15:17:48.025[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.6937669376693767e-06, 'num_tokens': 125367.0, 'completions/mean_length': 267.375, 'completions/min_length': 210.0, 'completions/max_length': 391.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 267.375, 'completions/min_terminated_length': 210.0, 'completions/max_terminated_length': 391.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.01899474672973156, 'sampling/sampling_logp_difference/max': 0.6103948354721069, 'sampling/importance_sampling_ratio/min': 0.001580083859153092, 'sampling/importance_sampling_ratio/mean': 0.2637506425380707, 'sampling/importance_sampling_ratio/max': 0.9641625881195068, 'entropy': 0.14651301503181458, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.9411591489988496, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:45[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: According to the survey, most TV viewers are quite disgusted with the same advertisement repeatedly played in TV programs. Therefore, some people think that the purpose of the manufacturer's advertising is not only not achieved, but even has a negative effect, which ultimately affects the product sales.
+
+Question: Which of the following, if true, would most weaken the conclusion?
+
+Options:
+A. as long as the ads are wonderful and creative, there are still many audiences who are willing to watch.
+B. The purpose of the manufacturer is to allow the audience to remember the products they are selling without taking into account the feelings of the audience at the time.
+C. some TV viewers do some housework or take a break during advertising time.
+D. TV advertisements of many powerful large companies often use the same advertisement repeatedly.
+
+Answer: 2
+Response:
+t doesn't directly address whether this has a negative effect on sales. It is neutral in terms of weakening the conclusion.
+
+**A and C** both weaken the conclusion, but **A** is more directly related to the effectiveness of the ads and the audience's response, making it the strongest option.
+
+#### 1
+Extracted: 1
+Reward: 0.0[0m
+  0%|▌                                                                                                                                                  | 27/7376 [01:57<7:06:00,  3.48s/it][32m2026-03-26 15:17:53.302[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.7615176151761518e-06, 'num_tokens': 130582.0, 'completions/mean_length': 372.875, 'completions/min_length': 318.0, 'completions/max_length': 507.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 372.875, 'completions/min_terminated_length': 318.0, 'completions/max_terminated_length': 507.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.019809482619166374, 'sampling/sampling_logp_difference/max': 0.7295236587524414, 'sampling/importance_sampling_ratio/min': 7.956750778248534e-05, 'sampling/importance_sampling_ratio/mean': 0.046911757439374924, 'sampling/importance_sampling_ratio/max': 0.13692234456539154, 'entropy': 0.15335789322853088, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 3.5710802100002184, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:49[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Occupational gene: refers to the personality characteristics and temperament that match the characteristics of the individual's work.
+
+Question: Which of the following does not involve occupational genes?
+
+Options:
+A. In his nearly ten years of truck driving experience, Xiao Li has his wit, concentration, and other characteristics that make him an excellent driver for the company.
+B. I have always been meticulous and serious, and I am very satisfied with my financial work.
+C. Colt is flexible and communicative. During his work in the company's sales department, his business volume has been among the best for many years.
+D. Dr. Marin, who graduated with honors from a well-known university, soon became a business backbone of the institution after entering a research institution.
+
+Answer: 4
+Response:
+e in a research institution. While this shows success in a professional setting, it does not specifically mention personality traits or temperaments that are suited to the work. It focuses more on academic achievement and career progression rather than traits that match the job requirements.
+
+#### 4
+Extracted: 4
+Reward: 2.0[0m
+  0%|▌                                                                                                                                                  | 28/7376 [02:02<8:22:27,  4.10s/it][32m2026-03-26 15:17:55.994[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0001, 'grad_norm': 0.000614166259765625, 'learning_rate': 1.8292682926829268e-06, 'num_tokens': 136157.0, 'completions/mean_length': 444.875, 'completions/min_length': 166.0, 'completions/max_length': 780.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 444.875, 'completions/min_terminated_length': 166.0, 'completions/max_terminated_length': 780.0, 'rewards/correctness_reward_func/mean': 1.75, 'rewards/correctness_reward_func/std': 0.7071067690849304, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.25, 'reward_std': 0.7071067690849304, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.02071622759103775, 'sampling/sampling_logp_difference/max': 0.8920248746871948, 'sampling/importance_sampling_ratio/min': 1.5813848222023807e-05, 'sampling/importance_sampling_ratio/mean': 0.059857141226530075, 'sampling/importance_sampling_ratio/max': 0.33664846420288086, 'entropy': 0.173305481672287, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0022478224709630013, 'clip_ratio/high_max': 0.0022478224709630013, 'clip_ratio/region_mean': 0.0022478224709630013, 'step_time': 5.269573596000555, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:54[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: In the face of nature, there is no good or bad for everything. Darwin's theory of evolution in The Origin of Species puts humans in a very ordinary position. However, many people have always been reluctant to accept this view, but Preconceivedly distorted Darwin's theory of evolution as a theory of progress and spread it. According to evolutionary theory, it is difficult to predict the evolutionary trend of a species, because the mechanism of evolution includes two factors-the environments and the species itself. We cannot predict changes in the environment. It is also difficult for us to fully grasp how the species itself inherits and mutates. Evolution theory can only explain to a large extent, rather than accurately predicting it, so it is unreasonable to give the evolutionary trend of species based on evolution theory. Although evolution theory is difficult to describe the evolution of species Details, but still helps people have a deep understanding of life.
+
+Question: The text is intended to explain:.
+
+Options:
+A. The fundamental difference between evolution and progress.
+B. Counter-evolutionary arguments lack a factual basis.
+C. Evolution is difficult to predict the evolutionary trend of species.
+D. The meaning and role of evolution should be scientifically understood.
+
+Answer: 4
+Response:
+fficult to predict outcomes. The text also highlights that while evolution theory cannot accurately predict trends, it still provides valuable insights into life.
+
+Option C directly reflects the main point of the text: that evolution is difficult to predict the evolutionary trend of species.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|▌                                                                                                                                                  | 29/7376 [02:04<7:14:12,  3.55s/it][32m2026-03-26 15:18:00.241[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.897018970189702e-06, 'num_tokens': 140227.0, 'completions/mean_length': 148.75, 'completions/min_length': 92.0, 'completions/max_length': 222.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 148.75, 'completions/min_terminated_length': 92.0, 'completions/max_terminated_length': 222.0, 'rewards/correctness_reward_func/mean': 0.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 1.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.017829308286309242, 'sampling/sampling_logp_difference/max': 0.6591978073120117, 'sampling/importance_sampling_ratio/min': 0.06393295526504517, 'sampling/importance_sampling_ratio/mean': 0.3825139105319977, 'sampling/importance_sampling_ratio/max': 0.8373653292655945, 'entropy': 0.10232434421777725, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.0861794379961793, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:17:56[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: In the context of the country's development of emerging industries, although a company has been in a leading position in a certain industry for a long time, the production data in the first half of the year shows that the leading edge is getting smaller and smaller. After inviting experts to conduct business diagnosis, experts believe that the company has a leading edge The reason for the reduction is that although the company has a sound management system, the lack of aggressiveness in the corporate culture has led to the company's development slowing down in a good policy environment.
+
+Question: Which of the following, if true, cannot refute the opinions of experts?
+
+Options:
+A. Compared with similar companies in coastal areas, which benefit from a sound industrial chain, the company is in the Mainland and its development is limited.
+B. The reason for the slowdown is that the company's production data in the second half of the year has generally been higher than in the first half.
+C. The company has always focused on strengthening the construction of corporate culture and has formed a harmonious corporate atmosphere.
+D. Corporate culture is not a company's core competitiveness. The key problem is that the research and development of new products are not enough.
+
+Answer: 3
+Response:
+ option states that corporate culture is not the core issue, and the real problem is insufficient R&D. This **shifts the blame** from corporate culture to R&D, which **does not directly refute** the experts' specific claim about corporate culture. This **cannot refute** the experts' opinion.
+
+#### 4
+Extracted: 4
+Reward: 0.0[0m
+  0%|▌                                                                                                                                                  | 30/7376 [02:09<7:51:59,  3.86s/it][32m2026-03-26 15:18:03.835[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 1.964769647696477e-06, 'num_tokens': 145030.0, 'completions/mean_length': 294.875, 'completions/min_length': 125.0, 'completions/max_length': 651.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 294.875, 'completions/min_terminated_length': 125.0, 'completions/max_terminated_length': 651.0, 'rewards/correctness_reward_func/mean': 0.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 1.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.02348187193274498, 'sampling/sampling_logp_difference/max': 0.7329621315002441, 'sampling/importance_sampling_ratio/min': 1.9395312847336754e-05, 'sampling/importance_sampling_ratio/mean': 0.09323442727327347, 'sampling/importance_sampling_ratio/max': 0.462119996547699, 'entropy': 0.16250933706760406, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 4.333893581002485, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:01[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: An appointed agency means an agency performed by an agent in accordance with the designation of a people's court or a designated agency.
+
+Question: Which of the following are designated agents?
+
+Options:
+A. Enterprise A grants Buyer B to sign a TV sales contract with Company C.
+B. Partners A. B, and C grant agency rights to each other, and each partner has the right to sign or perform contracts on behalf of other partners.
+C. A filed an infringement lawsuit against B for his 10-year-old son.
+D. The villagers' committee in the place where the minor A resides appoints B as the agent of the civil tort of A.
+
+Answer: 4
+Response:
+ the agent of the civil tort of A.
+This clearly describes a situation where a designated body (the villagers' committee) has appointed B as an agent for a minor (A). This fits the definition of a designated agent as it involves a designation by a designated body (the villagers' committee).
+
+#### 4
+Extracted: 4
+Reward: 2.0[0m
+  0%|▌                                                                                                                                                  | 31/7376 [02:12<7:32:03,  3.69s/it][32m2026-03-26 15:18:06.757[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 2.0325203252032523e-06, 'num_tokens': 149503.0, 'completions/mean_length': 340.625, 'completions/min_length': 268.0, 'completions/max_length': 427.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 340.625, 'completions/min_terminated_length': 268.0, 'completions/max_terminated_length': 427.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.016097256913781166, 'sampling/sampling_logp_difference/max': 0.8063840866088867, 'sampling/importance_sampling_ratio/min': 0.010411680676043034, 'sampling/importance_sampling_ratio/mean': 0.08313628286123276, 'sampling/importance_sampling_ratio/max': 0.1781185269355774, 'entropy': 0.1107817217707634, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 3.1438027010008227, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:04[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Surveys show that people who choose to invest in multiple ways tend to be richer than people who only work in their own jobs. Therefore, choosing to invest in multiple ways can help people gain wealth.
+
+Question: Which of the following, if true, would best refute the above view?
+
+Options:
+A. the education of people who can invest in multiple ways is generally higher.
+B. The risk of choosing multiple ways of investing is greater than engaging in only my own job.
+C. people will choose multiple ways to invest only after they have a certain wealth.
+D. some people who are only engaged in their own job are richer than those who choose to invest in multiple ways.
+
+Answer: 3
+Response:
+ample, but it is not strong enough to refute the general claim. The argument is about a trend, not an absolute rule, so a few exceptions do not necessarily invalidate the overall conclusion.
+
+The best choice is **C**, as it directly challenges the causal relationship assumed in the argument.
+
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+  0%|▋                                                                                                                                                  | 32/7376 [02:15<7:01:54,  3.45s/it][32m2026-03-26 15:18:09.828[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 2.100271002710027e-06, 'num_tokens': 153567.0, 'completions/mean_length': 266.5, 'completions/min_length': 159.0, 'completions/max_length': 342.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 266.5, 'completions/min_terminated_length': 159.0, 'completions/max_terminated_length': 342.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.017864713445305824, 'sampling/sampling_logp_difference/max': 1.3662108182907104, 'sampling/importance_sampling_ratio/min': 0.01522619929164648, 'sampling/importance_sampling_ratio/mean': 0.13103434443473816, 'sampling/importance_sampling_ratio/max': 0.31246089935302734, 'entropy': 0.12418581545352936, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.7121510120050516, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:07[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Some jewellery workshops have been excavated at the Mayan site, these workshops are located on the side of the road that radiates outward from the center of the site, and there is a certain distance from the center. Since the nobles live only in the central area, archeologists have concluded that these workshops are made by The jewelry is not for the aristocracy, but for a middle class, they must be rich enough to buy jewelry.
+
+Question: For artisans working in these workshops, archaeologists make the following assumptions:.
+
+Options:
+A. They live near the workshop.
+B. They do not provide home delivery service.
+C. They themselves are members of the rich middle class.
+D. The ingredients of their products are different from those of jewellery for nobles.
+
+Answer: 4
+Response:
+. This supports the conclusion that the jewelry is for the middle class.
+
+D. The ingredients of their products are different from those of jewellery for nobles.
+This is not mentioned or implied in the context. The argument is about the social class of the consumers, not the materials used.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|▋                                                                                                                                                  | 33/7376 [02:18<6:50:46,  3.36s/it][32m2026-03-26 15:18:12.754[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.029, 'grad_norm': 0.474609375, 'learning_rate': 2.1680216802168024e-06, 'num_tokens': 157200.0, 'completions/mean_length': 203.625, 'completions/min_length': 81.0, 'completions/max_length': 402.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 203.625, 'completions/min_terminated_length': 81.0, 'completions/max_terminated_length': 402.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 0.824999988079071, 'rewards/format_reward_func/std': 0.32403701543807983, 'rewards/int_answer_reward_func/mean': 0.375, 'rewards/int_answer_reward_func/std': 0.2314550280570984, 'reward': 2.200000047683716, 'reward_std': 1.4618968963623047, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.01940368115901947, 'sampling/sampling_logp_difference/max': 0.6279572248458862, 'sampling/importance_sampling_ratio/min': 0.007772217970341444, 'sampling/importance_sampling_ratio/mean': 0.3018835186958313, 'sampling/importance_sampling_ratio/max': 1.2612738609313965, 'entropy': 0.13190339505672455, 'clip_ratio/low_mean': 0.0030693677254021168, 'clip_ratio/low_min': 0.0030693677254021168, 'clip_ratio/high_mean': 0.0024554941337555647, 'clip_ratio/high_max': 0.0024554941337555647, 'clip_ratio/region_mean': 0.005524862091988325, 'step_time': 2.965511575996061, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:10[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: From parchment, bamboo tube to paper, the invention of movable type printing, from Morse code, binary code to the digitization of images, the carriers of cultural products are becoming lighter, and the spread of spiritual products is becoming faster and faster. Especially the Internet Inventions and applications just broke the time and space boundaries of cultural content transmission, allowing text, video, and music to be transmitted to any corner of the earth in an instant. At the same time, with the help of new tools of technological innovation, people can more quickly Speed, producing exciting anime games, digital film, and television, mobile newspapers, online publishing, audiobooks, etc. , and creating new cultural industries.
+
+Question: What does this text mainly explain?
+
+Options:
+A. Cultural progress includes technological development and innovation.
+B. Scientific and technological innovation makes the potential of cultural innovation infinite.
+C. Scientific and technological innovation has greatly promoted the process of cultural innovation.
+D. Scientific and technological innovation provides tools and carriers for cultural innovation.
+
+Answer: 4
+Response:
+ural innovation.
+
+Between C and D, the text emphasizes not just the provision of tools and carriers but also the acceleration and promotion of cultural innovation. Therefore, the best choice is:
+
+#### 3. Scientific and technological innovation has greatly promoted the process of cultural innovation.
+Extracted: 3
+Reward: 0.0[0m
+  0%|▋                                                                                                                                                  | 34/7376 [02:21<6:35:43,  3.23s/it][32m2026-03-26 15:18:16.727[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0081, 'grad_norm': 0.76953125, 'learning_rate': 2.2357723577235773e-06, 'num_tokens': 161469.0, 'completions/mean_length': 261.125, 'completions/min_length': 189.0, 'completions/max_length': 347.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 261.125, 'completions/min_terminated_length': 189.0, 'completions/max_terminated_length': 347.0, 'rewards/correctness_reward_func/mean': 0.75, 'rewards/correctness_reward_func/std': 1.0350984334945679, 'rewards/format_reward_func/mean': 0.9125000238418579, 'rewards/format_reward_func/std': 0.2474873811006546, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.1624999046325684, 'reward_std': 1.1325539350509644, 'frac_reward_zero_std': 0.0, 'sampling/sampling_logp_difference/mean': 0.01562866009771824, 'sampling/sampling_logp_difference/max': 0.5746715068817139, 'sampling/importance_sampling_ratio/min': 0.06496892869472504, 'sampling/importance_sampling_ratio/mean': 0.12466049194335938, 'sampling/importance_sampling_ratio/max': 0.27071887254714966, 'entropy': 0.11123842000961304, 'clip_ratio/low_mean': 0.0004786979407072067, 'clip_ratio/low_min': 0.0004786979407072067, 'clip_ratio/high_mean': 0.005265677347779274, 'clip_ratio/high_max': 0.005265677347779274, 'clip_ratio/region_mean': 0.005744375288486481, 'step_time': 2.7561754520065733, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:13[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: The crime of robbery is the act of forcibly robbing public and private property by using violence, coercion or other methods on the spot for the owner and custodian of the property for the purpose of illegal possession.
+
+Question: Of the following, one of the crimes of robbery is.
+
+Options:
+A. Lee embedded in Wang's home and stole it. After being found, he fled with the stolen goods and Wang pursued it. Lee saw that an unextinguished motorcycle was next to the grocery store. The owner was smoking next to the car and rode on the motorcycle.
+B. Zheng, riding a motorcycle, saw Tian Mo walking with a delicate leather bag, pulling the leather bag from the back, trying to snatch the bag. Tian may grab the leather bag. In this scenario, Zheng suddenly accelerated the motorcycle, and Tugging at the purse and robbing it, Tian was immediately severely injured.
+C. One night, when I saw Zhao walking on the street, he wilfully ransacked him and took away his purse and other things.
+D. Lin sneaked into Hu's house and stole valuables. After being found by the owner, he fled and hid in the haystack of the peasant for a night. The next day when the village chief Gao passed by, he found that Lin's whereabouts were strange. Lin thought Gao Discovered his theft last night, hit Gao and seriously injured him.
+
+Answer: 2
+Response:
+ of taking the property. It does not clearly fit the definition of robbery as it is not **forcible taking of property on the spot**.
+
+Based on the analysis, **Option B** best fits the definition of robbery as it involves **forcible taking of property using violence or coercion on the spot**.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  0%|▋                                                                                                                                                  | 35/7376 [02:25<7:09:35,  3.51s/it][32m2026-03-26 15:18:19.979[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0021, 'grad_norm': 0.078125, 'learning_rate': 2.3035230352303526e-06, 'num_tokens': 166398.0, 'completions/mean_length': 286.125, 'completions/min_length': 91.0, 'completions/max_length': 538.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 286.125, 'completions/min_terminated_length': 91.0, 'completions/max_terminated_length': 538.0, 'rewards/correctness_reward_func/mean': 0.75, 'rewards/correctness_reward_func/std': 1.0350984334945679, 'rewards/format_reward_func/mean': 0.6499999761581421, 'rewards/format_reward_func/std': 0.37416574358940125, 'rewards/int_answer_reward_func/mean': 0.25, 'rewards/int_answer_reward_func/std': 0.26726123690605164, 'reward': 1.649999976158142, 'reward_std': 1.5847488641738892, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.017673730850219727, 'sampling/sampling_logp_difference/max': 1.2475800514221191, 'sampling/importance_sampling_ratio/min': 0.001221987884491682, 'sampling/importance_sampling_ratio/mean': 0.24146835505962372, 'sampling/importance_sampling_ratio/max': 0.6343700885772705, 'entropy': 0.10999657213687897, 'clip_ratio/low_mean': 0.0013106160331517458, 'clip_ratio/low_min': 0.0013106160331517458, 'clip_ratio/high_mean': 0.01004805602133274, 'clip_ratio/high_max': 0.01004805602133274, 'clip_ratio/region_mean': 0.011358671821653843, 'step_time': 3.930649722999078, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:17[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: There are a lot of records about astronomical phenomena in Yin Shang's oracle bones inscriptions, including records of the sun and the moon, eclipses, astronomical observations, stars, planets, novas, and comets. These exegetical materials indicate that the astronomy of Yin Dynasty has reached a considerable level. The level of development. And all these astronomical observations are inseparable from the worship of cults in heaven. This shows that the astronomy of astronomy has emerged from cults of worship in heaven, and its religious purpose is consistent.
+
+Question: Which of the following, if true, best supports the above conclusion?
+
+Options:
+A. The way astronomical observations are influenced by the worship of shamanism.
+B. As voodoo prevails, astronomical observations continue to evolve.
+C. The astronomical phenomenon recorded by the Yin Shang Oracle Bone Inscriptions represents the highest level of astronomical observation at that time.
+D. As voodoo worships heaven, astronomical observation is a rule-based and reliable method of divination.
+
+Answer: 4
+Response:
+ule-based and reliable method of divination.**
+This option directly connects astronomical observation to religious worship of heaven and frames it as a method of divination, which aligns with the conclusion that astronomy emerged from cults of worship in heaven and had a religious purpose.
+
+#### 4
+Extracted: 4
+Reward: 2.0[0m
+  0%|▋                                                                                                                                                  | 36/7376 [02:28<6:52:03,  3.37s/it][32m2026-03-26 15:18:22.119[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 2.3712737127371275e-06, 'num_tokens': 171263.0, 'completions/mean_length': 340.625, 'completions/min_length': 286.0, 'completions/max_length': 385.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 340.625, 'completions/min_terminated_length': 286.0, 'completions/max_terminated_length': 385.0, 'rewards/correctness_reward_func/mean': 2.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 3.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.015149216167628765, 'sampling/sampling_logp_difference/max': 0.40926265716552734, 'sampling/importance_sampling_ratio/min': 0.008549953810870647, 'sampling/importance_sampling_ratio/mean': 0.07126550376415253, 'sampling/importance_sampling_ratio/max': 0.1923680603504181, 'entropy': 0.10759878903627396, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.8693982160039013, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:20[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Participate in the international division of labor, participate in the import and export of capital and technology, get rid of closed self-adjustment, and realize the adjustment of the industrial structure in the transformation of the international industrial structure. This is inseparable from the development trend of world economic integration. The exchange of labor services, through the use of foreign capital and the introduction of technology, can play a complementary role in China's industrial structure, realize the technological transformation of original enterprises, and improve labor productivity. At the same time, it can fill some blank industries in the country and promote the adjustment and upgrade of the industrial structure. Here, the key is how to aim at the trends of the international industrial structure, focus on the focus of changes in the international industrial structure, and smoothly realize the adjustment of the industrial structure.
+
+Question: This passage mainly supports the argument that:.
+
+Options:
+A. To realize the adjustment of China's industrial structure, we must keep up with the development and changes of the international industrial structure.
+B. Realizing the adjustment of China's industrial structure in the transformation of the international industrial structure by participating in the international division of labor.
+C. Promote the adjustment and upgrade of the industrial structure through the exchange of goods and services.
+D. The development trend of world economic integration prompts the adjustment of China's industrial structure.
+
+Answer: 1
+Response:
+tructure changes.
+
+Option C is too narrow, as it focuses only on the exchange of goods and services, whereas the passage discusses a broader range of factors, including technology and capital.
+
+Option D is partially correct but does not capture the main argument as directly as Option A does.
+
+#### 1
+Extracted: 1
+Reward: 2.0[0m
+  1%|▋                                                                                                                                                  | 37/7376 [02:30<6:03:45,  2.97s/it][32m2026-03-26 15:18:25.136[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 2.4390243902439027e-06, 'num_tokens': 174854.0, 'completions/mean_length': 142.375, 'completions/min_length': 68.0, 'completions/max_length': 211.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 142.375, 'completions/min_terminated_length': 68.0, 'completions/max_terminated_length': 211.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.016206594184041023, 'sampling/sampling_logp_difference/max': 0.5747536420822144, 'sampling/importance_sampling_ratio/min': 0.09623181074857712, 'sampling/importance_sampling_ratio/mean': 0.23705647885799408, 'sampling/importance_sampling_ratio/max': 0.45608916878700256, 'entropy': 0.1045413389801979, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 1.897660057999019, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:22[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Whether it is scientific and technological factors, psychological factors, or other factors, the generation of happiness is not inevitable, and it is also not measurable. The idea that with technology, meeting personal pursuits will inevitably be untenable. Similarly, their role in happiness is not always positive. It should be said that, in terms of the source of happiness, technology, psychology, or other such as the value system, are only influencing factors, and between happiness, There is no necessary causal link.
+
+Question: Which of the following options best matches the meaning of this text:.
+
+Options:
+A. Technology is not a necessary condition for happiness.
+B. Technology is only a factor in happiness.
+C. Technology is not measurable for happiness.
+D. Technology's role in happiness is not always positive.
+
+Answer: 2
+Response:
+ext's main point about the role of technology in happiness. However, since the text emphasizes that technology is just one of many influencing factors and not necessarily a cause, A is also a valid interpretation.
+
+Given the emphasis on the lack of a necessary causal link, the best match is:
+
+#### 1
+Extracted: 1
+Reward: 0.0[0m
+  1%|▊                                                                                                                                                  | 38/7376 [02:34<6:09:09,  3.02s/it][32m2026-03-26 15:18:27.707[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 2.5067750677506776e-06, 'num_tokens': 179592.0, 'completions/mean_length': 316.75, 'completions/min_length': 256.0, 'completions/max_length': 404.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 316.75, 'completions/min_terminated_length': 256.0, 'completions/max_terminated_length': 404.0, 'rewards/correctness_reward_func/mean': 0.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 1.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.016759144142270088, 'sampling/sampling_logp_difference/max': 0.8538827896118164, 'sampling/importance_sampling_ratio/min': 0.0066328332759439945, 'sampling/importance_sampling_ratio/mean': 0.1167217344045639, 'sampling/importance_sampling_ratio/max': 0.47353559732437134, 'entropy': 0.11356759071350098, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.93994823799585, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:26[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: While writers cloned the cross-section landscape of an era, they cloned the landscape of their own lives. Pincha's clones have dual meanings: first, the human landscape that Pincha highlights in the changing times, and second, they pinpoint the scenes of the times. Personality orientation.
+
+Question: What is the center of this passage?
+
+Options:
+A. Literati shoulder the dual task of reflecting the times and showing life.
+B. Expressing the age and showing life is the dual purpose of literary creation.
+C. Appreciation of literary works allows readers to understand the social personality of writers.
+D. Appreciation of literary works has the dual significance of knowing the age and personality of literary.
+
+Answer: 4
+Response:
+ssage's message.
+
+Option C and D focus more on the role of readers in understanding the social personality of writers, which is not the main focus of the passage.
+
+Between A and B, both are close, but B more directly reflects the dual purpose of literary creation as described in the passage.
+
+#### 2
+Extracted: 2
+Reward: 0.0[0m
+  1%|▊                                                                                                                                                  | 39/7376 [02:36<5:47:53,  2.85s/it][32m2026-03-26 15:18:34.739[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 2.574525745257453e-06, 'num_tokens': 182787.0, 'completions/mean_length': 200.375, 'completions/min_length': 117.0, 'completions/max_length': 285.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 200.375, 'completions/min_terminated_length': 117.0, 'completions/max_terminated_length': 285.0, 'rewards/correctness_reward_func/mean': 0.0, 'rewards/correctness_reward_func/std': 0.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 1.5, 'reward_std': 0.0, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.020030111074447632, 'sampling/sampling_logp_difference/max': 1.0155366659164429, 'sampling/importance_sampling_ratio/min': 0.01280879694968462, 'sampling/importance_sampling_ratio/mean': 0.3633362054824829, 'sampling/importance_sampling_ratio/max': 0.615687906742096, 'entropy': 0.12933547794818878, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 2.2938903930044034, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:28[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: There are a total of 16 doctors and nurses in the hospital, including me, and the situation of the personnel mentioned below will not change in any way whether or not I count. Among these medical staff, (1) more nurses than Doctors; (2) more male doctors than male nurses; (3) more male nurses than female nurses; (4) at least one female doctor. ".
+
+Question: which is the gender and position of this speaker?
+
+Options:
+A. Male doctor.
+B. Female nurse.
+C. Male nurse.
+D. Female doctor.
+
+Answer: 2
+Response:
+(5) than female nurses (4) → satisfies.
+  - At least one female doctor (1) → satisfies.
+
+This scenario works. The speaker is one of the 7 doctors. Since there are 6 male doctors and 1 female doctor, and the speaker is part of the group, the speaker could be the female doctor.
+
+#### D. Female doctor.
+Extracted: None
+Reward: 0.0[0m
+  1%|▊                                                                                                                                                  | 40/7376 [02:44<8:53:48,  4.37s/it][32m2026-03-26 15:18:38.759[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0001, 'grad_norm': 0.000579833984375, 'learning_rate': 2.6422764227642278e-06, 'num_tokens': 190721.0, 'completions/mean_length': 763.75, 'completions/min_length': 326.0, 'completions/max_length': 1189.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 763.75, 'completions/min_terminated_length': 326.0, 'completions/max_terminated_length': 1189.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 0.824999988079071, 'rewards/format_reward_func/std': 0.32403701543807983, 'rewards/int_answer_reward_func/mean': 0.375, 'rewards/int_answer_reward_func/std': 0.2314550280570984, 'reward': 2.200000047683716, 'reward_std': 1.4618968963623047, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.01527846697717905, 'sampling/sampling_logp_difference/max': 0.6213361620903015, 'sampling/importance_sampling_ratio/min': 1.4612069207942113e-06, 'sampling/importance_sampling_ratio/mean': 0.021416660398244858, 'sampling/importance_sampling_ratio/max': 0.142550528049469, 'entropy': 0.13365140557289124, 'clip_ratio/low_mean': 0.0004909983836114407, 'clip_ratio/low_min': 0.0004909983836114407, 'clip_ratio/high_mean': 0.0009819967672228813, 'clip_ratio/high_max': 0.0009819967672228813, 'clip_ratio/region_mean': 0.0014729950344190001, 'step_time': 7.524881318000553, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:36[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: There are two seemingly contradictory trends in this era: on the one hand, with the improvement of people's education level and the diversification of access to information channels, people can make more rational judgments on various rumors: but on the other hand, information The explosive growth and technological advancement of rumors have also greatly accelerated the spread of rumors, and people often have no time to distinguish the authenticity of various kinds of information. Although it is always assumed that as long as the level of human rationality is continuously improved and the information is made transparent, rumors can be eliminated The soil produced, but so far this has only been an ideal. No society's information is completely correct. In many cases, people often unknowingly spread the information in order to learn the truth of their concerns as soon as possible. With rumors.
+
+Question: According to this text, is the following statement correct?
+
+Options:
+A. A certain level of human reason can prevent rumors.
+B. The spread of rumors often reflects the need for people to desperately want to know the truth.
+C. People's rational judgment and the advancement of information technology are contradictory trends.
+D. The growth of information and technological progress are the main sources of rumors.
+
+Answer: 2
+Response:
+osive growth of information and technological advancement have accelerated the spread of rumors, but it does not claim they are the **main sources** of rumors. It suggests they are factors that contribute to the spread, not the primary cause. Therefore, this option is **not fully accurate**.
+
+#### 2
+Extracted: 2
+Reward: 2.0[0m
+  1%|▊                                                                                                                                                  | 41/7376 [02:47<8:14:27,  4.04s/it]Traceback (most recent call last):
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 2.710027100271003e-06, 'num_tokens': 195829.0, 'completions/mean_length': 329.0, 'completions/min_length': 228.0, 'completions/max_length': 403.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 329.0, 'completions/min_terminated_length': 228.0, 'completions/max_terminated_length': 403.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0690449476242065, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0690449476242065, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.02042914554476738, 'sampling/sampling_logp_difference/max': 0.9556946754455566, 'sampling/importance_sampling_ratio/min': 0.004274803679436445, 'sampling/importance_sampling_ratio/mean': 0.13361214101314545, 'sampling/importance_sampling_ratio/max': 0.8872226476669312, 'entropy': 0.1271090805530548, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 3.1143079370012856, 'epoch': 0.01}
+[32mINFO[0m [90m03-26 15:18:39[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+  File "/home/alignment-without-rewards/rl/grpo_run.py", line 139, in <module>
+    trainer.train()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+    output = super().training_step(model, inputs, num_items_in_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4014, in training_step
+    inputs = self._prepare_inputs(inputs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1114, in _prepare_inputs
+    generation_batch = self._generate_and_score_completions(generation_batch)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1709, in _generate_and_score_completions
+    ) = self._generate(prompts)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1573, in _generate
+    completion_ids, logprobs, extra_fields = self._generate_single_turn(prompt_ids, images, multimodal_fields)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1267, in _generate_single_turn
+    _, completion_ids, logprobs, _, extra_fields = self.vllm_generation.generate(
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 713, in generate
+    all_outputs = self.llm.generate(vllm_prompts, sampling_params=sampling_params, use_tqdm=False)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 439, in generate
+    outputs = self._run_engine(use_tqdm=use_tqdm)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1764, in _run_engine
+    step_outputs = self.llm_engine.step()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 294, in step
+    outputs = self.engine_core.get_output()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 272, in get_output
+    outputs, model_executed = self.engine_core.step_fn()
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 455, in step_with_batch_queue
+    future = self.model_executor.sample_tokens(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 110, in sample_tokens
+    return self.collective_rpc(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 79, in collective_rpc
+    result = run_method(self.driver_worker, method, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 461, in run_method
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 578, in sample_tokens
+    return self.model_runner.sample_tokens(grammar_output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3415, in sample_tokens
+    sampler_output = self._sample(logits, spec_decode_metadata)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 2736, in _sample
+    return self.sampler(
+           ^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/sample/sampler.py", line 114, in forward
+    logprobs_tensors = self.gather_logprobs(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/sample/sampler.py", line 249, in gather_logprobs
+    indices = indices.to(torch.int32)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/alignment-without-rewards/rl/grpo_run.py", line 139, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+[rank0]:     output = super().training_step(model, inputs, num_items_in_batch)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4014, in training_step
+[rank0]:     inputs = self._prepare_inputs(inputs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1114, in _prepare_inputs
+[rank0]:     generation_batch = self._generate_and_score_completions(generation_batch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1709, in _generate_and_score_completions
+[rank0]:     ) = self._generate(prompts)
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1573, in _generate
+[rank0]:     completion_ids, logprobs, extra_fields = self._generate_single_turn(prompt_ids, images, multimodal_fields)
+[rank0]:                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1267, in _generate_single_turn
+[rank0]:     _, completion_ids, logprobs, _, extra_fields = self.vllm_generation.generate(
+[rank0]:                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 713, in generate
+[rank0]:     all_outputs = self.llm.generate(vllm_prompts, sampling_params=sampling_params, use_tqdm=False)
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 439, in generate
+[rank0]:     outputs = self._run_engine(use_tqdm=use_tqdm)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1764, in _run_engine
+[rank0]:     step_outputs = self.llm_engine.step()
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 294, in step
+[rank0]:     outputs = self.engine_core.get_output()
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 272, in get_output
+[rank0]:     outputs, model_executed = self.engine_core.step_fn()
+[rank0]:                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 455, in step_with_batch_queue
+[rank0]:     future = self.model_executor.sample_tokens(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 110, in sample_tokens
+[rank0]:     return self.collective_rpc(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 79, in collective_rpc
+[rank0]:     result = run_method(self.driver_worker, method, args, kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 461, in run_method
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 578, in sample_tokens
+[rank0]:     return self.model_runner.sample_tokens(grammar_output)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3415, in sample_tokens
+[rank0]:     sampler_output = self._sample(logits, spec_decode_metadata)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 2736, in _sample
+[rank0]:     return self.sampler(
+[rank0]:            ^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/sample/sampler.py", line 114, in forward
+[rank0]:     logprobs_tensors = self.gather_logprobs(
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/sample/sampler.py", line 249, in gather_logprobs
+[rank0]:     indices = indices.to(torch.int32)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt
