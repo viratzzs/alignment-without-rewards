@@ -3,16 +3,17 @@ name = "alignment-without-rewards"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "dataset>=1.6.2",
-    "datasets>=4.8.3",
+    "datasets==4.4.1",
     "loguru>=0.7.3",
     "pandas>=3.0.1",
+    "numpy==2.2.6",
     "pyngrok>=7.5.1",
     "python-dotenv>=1.2.2",
     "requests>=2.32.5",
-    "setuptools>=82.0.1",
+    "setuptools>=77,<80",
     "tqdm>=4.67.3",
-    "transformers>=5.3.0",
+    "transformers>=4.57.1",
 ]

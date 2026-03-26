@@ -12,14 +12,18 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from vllm import SamplingParams
 from trl import GRPOConfig, GRPOTrainer
 from loguru import logger
+from dotenv import load_dotenv
 
 from rewards import *
 
+load_dotenv()
 
-SYSTEM_PROMPT = """
-You are a logical assistant that is good at critical thinking and problem solving. Given a question out of a provided context, you will be given multiple options out of which you have to pick the right answer.
-Rationalize your answer step-by-step, then provide the final choice letter at the very end after '#### (Correct option number from 1 to 4)' (eg., #### 1)
-"""
+SYSTEM_PROMPT = """\
+You are a logical assistant who is good at critical thinking and problem solving. \
+Given a question out of a provided context, you will be given multiple options out of which you have to pick the right answer.
+Rationalize your answer step by step, then provide only the final choice letter at the very end after \
+'#### (Correct option number out of all 4 options)' 
+For example, #### 1"""
 
 def get_data(split = "train") -> Dataset:
     data = load_dataset('lucasmccabe/logiqa', split=split)#.select(range(1000))
@@ -33,10 +37,10 @@ def get_data(split = "train") -> Dataset:
 
 dataset = get_data()
 
-model_name = "Qwen/Qwen3.5-4B"
+model_name = "Qwen/Qwen3-4B"
 
-output_dir="outputs/Qwen3.5-4B-RL"
-run_name="Qwen3.5-4B-RL"
+output_dir="outputs/Qwen3-4B-RL"
+run_name="Qwen3-4B-RL"
 
 if __name__ == "__main__":
     # 45k samples * 2 epochs * 2 generations = 180k samples
@@ -59,8 +63,8 @@ if __name__ == "__main__":
         #vllm_mode="server",
         vllm_gpu_memory_utilization=0.7,
         learning_rate=6e-5,
-        temperature=1.0,
-        top_p=0.95,
+        temperature=0.7,
+        top_p=0.9, # do 0.8 if nonsense generations happen
         top_k=-1,
         min_p=0.0,
         presence_penalty=1.5,
@@ -74,8 +78,8 @@ if __name__ == "__main__":
         per_device_train_batch_size=32,
         #gradient_accumulation_steps=4, # TODO: Add grad accumul. again if training too slow.
         num_generations=4,
-        max_prompt_length=1024,
-        max_completion_length=512,
+        max_prompt_length=2048,
+        max_completion_length=3072,
         num_train_epochs=2,
         save_steps=500,
         # to prevent RTE: expected to mark a variable ready only once, add this in startup: --ddp_find_unused_parameters False
@@ -115,7 +119,7 @@ if __name__ == "__main__":
     #trainer.train(resume_from_checkpoint="/workspace/training-mvp/src/code-rl/outputs/Qwen8B-RL/checkpoint-600")
     trainer.train()
 
-    repo_name = "Viratzzs/Qwen3.5-4B-RL"
+    repo_name = "Viratzzs/Qwen3-4B-RL"
 
     logger.info("Saving full model...")
     trainer.save_model(f"{output_dir}/final_model")
