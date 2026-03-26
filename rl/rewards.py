@@ -104,11 +104,11 @@ def reasoning_quality_reward_func(completions, **kwargs) -> list[float]:
                 # too much text after the answer delimiter
                 score -= 0.1
 
-        # penalise extremely short responses
-        if len(r.strip()) < 30:
-            score = 0.0
+        # penalise extremely short responses (e.g. just spitting out the answer)
+        if len(r.strip()) < 100:
+            score = -2.0  # Strict negative penalty offsets the easy +1.5 formatting points
 
-        rewards.append(max(score, 0.0))
+        rewards.append(score)
     return rewards
 
 
