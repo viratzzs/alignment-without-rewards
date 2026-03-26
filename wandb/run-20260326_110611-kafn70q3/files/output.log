@@ -1,0 +1,72 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+  0%|                                                                                                                                                              | 0/7376 [00:00<?, ?it/s]Traceback (most recent call last):
+[32mINFO[0m [90m03-26 11:06:13[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+  File "/home/alignment-without-rewards/rl/grpo_run.py", line 155, in <module>
+    trainer.train()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+    output = super().training_step(model, inputs, num_items_in_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4014, in training_step
+    inputs = self._prepare_inputs(inputs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1114, in _prepare_inputs
+    generation_batch = self._generate_and_score_completions(generation_batch)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1881, in _generate_and_score_completions
+    rewards_per_func = self._calculate_rewards(inputs, prompts, completions, completion_ids_list)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1166, in _calculate_rewards
+    output_reward_func = reward_func(
+                         ^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/rl/rewards.py", line 17, in correctness_reward_func
+    responses = [completion[0]["content"] for completion in completions]
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/alignment-without-rewards/rl/grpo_run.py", line 155, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+[rank0]:     output = super().training_step(model, inputs, num_items_in_batch)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4014, in training_step
+[rank0]:     inputs = self._prepare_inputs(inputs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1114, in _prepare_inputs
+[rank0]:     generation_batch = self._generate_and_score_completions(generation_batch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1881, in _generate_and_score_completions
+[rank0]:     rewards_per_func = self._calculate_rewards(inputs, prompts, completions, completion_ids_list)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1166, in _calculate_rewards
+[rank0]:     output_reward_func = reward_func(
+[rank0]:                          ^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/rl/rewards.py", line 17, in correctness_reward_func
+[rank0]:     responses = [completion[0]["content"] for completion in completions]
+[rank0]:                  ~~~~~~~~~~~~~^^^^^^^^^^^
+[rank0]: TypeError: string indices must be integers, not 'str'

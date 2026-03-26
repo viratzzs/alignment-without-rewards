@@ -15,5 +15,18 @@ dependencies = [
     "requests>=2.32.5",
     "setuptools>=77,<80",
     "tqdm>=4.67.3",
-    "transformers>=4.57.1",
+    # ── ROCm-pinned stack (from wheels.vllm.ai/rocm) ──────────────────────
+    # If you need to upgrade, run: uv pip install <pkg> --extra-index-url <rocm_index>
+    "torch==2.9.1+git8907517",
+    "torchvision==0.24.1+d801a34",
+    "triton==3.4.0",
+    "transformers==4.57.6",
+    "huggingface-hub==0.36.2",
+    # ─────────────────────────────────────────────────────────────────────
+    "trl>=0.29.1",
+    "wandb==0.25.1",
 ]
+
+[tool.uv]
+# The ROCm wheel index. uv will search here for packages not on PyPI.
+extra-index-url = ["https://wheels.vllm.ai/rocm/0.14.0/rocm700"]

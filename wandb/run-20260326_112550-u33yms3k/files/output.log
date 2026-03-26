@@ -1,0 +1,268 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+  0%|                                                                                                                                                              | 0/3688 [00:00<?, ?it/s][32m2026-03-26 11:26:01.725[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+[32mINFO[0m [90m03-26 11:25:52[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Regardless of accuracy, vividness, and vividness, in terms of language, the words are required to be used appropriately. In this way, the concept of expression will be accurate, and it will make people feel sharp and mysterious. Its tone and color.
+
+Question: The most accurate recap of this passage is:.
+
+Options:
+A. Language must be vivid and accurate.
+B. Language is very mysterious.
+C. Text is mysterious.
+D. Use the text appropriately.
+
+Answer: 4
+Response:
+id and accurate," which aligns with the passage's emphasis on accuracy and the appropriate use of language.
+
+Option B and C focus on mystery, which is mentioned in the passage but not the main point.
+
+Option D, "Use the text appropriately," is somewhat close but not as precise as Option A.
+
+#### 1
+Extracted: 1
+Reward: 0.0[0m
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  0%|                                                                                                                                                   | 1/3688 [00:21<22:27:27, 21.93s/it][32m2026-03-26 11:26:16.299[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0069, 'grad_norm': 0.61328125, 'learning_rate': 0.0, 'num_tokens': 8539.0, 'completions/mean_length': 290.9375, 'completions/min_length': 112.0, 'completions/max_length': 543.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 290.9375, 'completions/min_terminated_length': 112.0, 'completions/max_terminated_length': 543.0, 'rewards/correctness_reward_func/mean': 1.625, 'rewards/correctness_reward_func/std': 0.8062257766723633, 'rewards/format_reward_func/mean': 0.956250011920929, 'rewards/format_reward_func/std': 0.17499999701976776, 'rewards/int_answer_reward_func/mean': 0.46875, 'rewards/int_answer_reward_func/std': 0.125, 'reward': 3.049999952316284, 'reward_std': 1.0, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.016235115006566048, 'sampling/sampling_logp_difference/max': 0.7167478799819946, 'sampling/importance_sampling_ratio/min': 0.0015344112180173397, 'sampling/importance_sampling_ratio/mean': 0.20902197062969208, 'sampling/importance_sampling_ratio/max': 0.6990202069282532, 'entropy': 0.0984431579709053, 'clip_ratio/low_mean': 0.0006444682949222624, 'clip_ratio/low_min': 0.0006444682949222624, 'clip_ratio/high_mean': 0.003222341649234295, 'clip_ratio/high_max': 0.003222341649234295, 'clip_ratio/region_mean': 0.0038668098859488964, 'step_time': 21.486396898999374, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 11:26:13[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: With the implementation of the "two-child policy", breastfeeding has increasingly become an unavoidable topic for the majority of young women during childbirth. Medical experts recommend that it is best to breastfeed exclusively in the first 6 months after birth. And parents also want to provide the best nutrition for their children. However, statistics show that in recent years, the exclusive breastfeeding rate of infants from 0 to 6 months in China has been significantly lower. The exclusive breastfeeding rate of infants within 6 months in rural areas is 30%, and only 16% in cities.
+
+Question: If the following items are true, which other items can explain the above statistical results?
+
+Options:
+A. Women in the workplace often suffer from breastfeeding embarrassment due to high work pressure and inadmissible working environment.
+B. Breastfeeding can reduce the prevalence of children, and the benefits to children's health can continue into adulthood.
+C. Many mothers do not understand the advantages of breastfeeding, but instead imagine that formula is too beautiful.
+D. Mothers affect sleep quality due to breastfeeding at night, their work and life rhythm is completely disrupted by breastfeeding.
+
+Answer: 2
+Response:
+th A and C provide plausible explanations. However, option C directly addresses the lack of understanding or preference for formula, which is a more direct reason for lower exclusive breastfeeding rates. Option A is more about workplace challenges, which may not be as universally applicable.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|                                                                                                                                                   | 2/3688 [00:25<11:40:16, 11.40s/it][32m2026-03-26 11:26:20.465[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0018, 'grad_norm': 1.0546875, 'learning_rate': 1.6260162601626016e-07, 'num_tokens': 17809.0, 'completions/mean_length': 246.875, 'completions/min_length': 62.0, 'completions/max_length': 386.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 246.875, 'completions/min_terminated_length': 62.0, 'completions/max_terminated_length': 386.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0327955484390259, 'rewards/format_reward_func/mean': 0.956250011920929, 'rewards/format_reward_func/std': 0.17499999701976776, 'rewards/int_answer_reward_func/mean': 0.46875, 'rewards/int_answer_reward_func/std': 0.125, 'reward': 2.424999952316284, 'reward_std': 1.1474609375, 'frac_reward_zero_std': 0.25, 'sampling/sampling_logp_difference/mean': 0.01901952736079693, 'sampling/sampling_logp_difference/max': 0.8203096389770508, 'sampling/importance_sampling_ratio/min': 0.015058556571602821, 'sampling/importance_sampling_ratio/mean': 0.19491539895534515, 'sampling/importance_sampling_ratio/max': 0.7676218748092651, 'entropy': 0.12882329523563385, 'clip_ratio/low_mean': 0.0007594936760142446, 'clip_ratio/low_min': 0.0007594936760142446, 'clip_ratio/high_mean': 0.005569620057940483, 'clip_ratio/high_max': 0.005569620057940483, 'clip_ratio/region_mean': 0.006329114083200693, 'step_time': 3.6474585350006237, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 11:26:18[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Fan filter effect: refers to the psychological phenomenon that young people automatically filter their shortcomings and over-amplify their advantages when they see the objects they worship.
+
+Question: Which of the following are the fan filter effects:.
+
+Options:
+A. Xiao Li loves to watch war dramas. No matter what kind of film, as long as there are guns, guns, and troops in it, he will try to find them and watch them from beginning to end.
+B. Five-year-old Xiaogang likes his father very much. In his eyes, his father is an omnipotent and superman.
+C. After the news that a famous artist was arrested for taking drugs abroad, fans found a variety of reasons for him on Weibo.
+D. A teacher has held several lectures in the "100 lecterns", and his class is always full, full of students from various colleges.
+
+Answer: 3
+Response:
+larity and the demand for his lectures, but it does not necessarily involve filtering shortcomings or over-amplifying advantages in a worshiped object. It is more about the teacher's effectiveness and appeal.
+
+Based on this analysis, the option that best illustrates the fan filter effect is:
+
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+  0%|                                                                                                                                                    | 3/3688 [00:29<8:10:09,  7.98s/it][32m2026-03-26 11:26:25.111[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.02, 'grad_norm': 0.546875, 'learning_rate': 3.252032520325203e-07, 'num_tokens': 26149.0, 'completions/mean_length': 286.75, 'completions/min_length': 139.0, 'completions/max_length': 397.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 286.75, 'completions/min_terminated_length': 139.0, 'completions/max_terminated_length': 397.0, 'rewards/correctness_reward_func/mean': 1.125, 'rewards/correctness_reward_func/std': 1.0246951580047607, 'rewards/format_reward_func/mean': 0.8687499761581421, 'rewards/format_reward_func/std': 0.2821790277957916, 'rewards/int_answer_reward_func/mean': 0.40625, 'rewards/int_answer_reward_func/std': 0.20155644416809082, 'reward': 2.4000000953674316, 'reward_std': 1.350555419921875, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.01548110879957676, 'sampling/sampling_logp_difference/max': 1.0617353916168213, 'sampling/importance_sampling_ratio/min': 0.012814361602067947, 'sampling/importance_sampling_ratio/mean': 0.14940771460533142, 'sampling/importance_sampling_ratio/max': 0.7084964513778687, 'entropy': 0.099030502140522, 'clip_ratio/low_mean': 0.0006538796587847173, 'clip_ratio/low_min': 0.0006538796587847173, 'clip_ratio/high_mean': 0.0026155186351388693, 'clip_ratio/high_max': 0.0026155186351388693, 'clip_ratio/region_mean': 0.0032693983521312475, 'step_time': 3.5727998910006136, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 11:26:21[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: The latest report from the capital transaction department of a bank pointed out that from the needs of domestic macro-control, only the continuous increase of the interest rate of the renminbi can fundamentally control the impulse of economic expansion and avoid the emergence and collapse of asset bubbles. RMB liquidity cannot be cured, low-interest rates cannot be corrected, and asset bubbles are likely to blow.
+
+Question: Based on this, you can launch.
+
+Options:
+A. If the RMB appreciates faster, then RMB liquidity can be cured.
+B. If RMB liquidity cannot be cured, the low-interest rate situation cannot be corrected.
+C. If the renminbi continues to raise interest rates, then the impulse to economic expansion can be fundamentally suppressed.
+D. If the renminbi cannot raise interest rates continuously, it will not be possible to fundamentally curb the impulse for economic expansion.
+
+Answer: 4
+Response:
+quivalent**.
+- However, this is still a **valid logical inference** based on the context's implication.
+
+Between **C** and **D**, **C** is a direct restatement of the context, while **D** is a logical contrapositive that is also valid. However, **C** is more directly supported by the text.
+
+#### 3
+Extracted: 3
+Reward: 0.0[0m
+  0%|▏                                                                                                                                                   | 4/3688 [00:35<7:01:42,  6.87s/it][32m2026-03-26 11:26:29.301[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0093, 'grad_norm': 0.54296875, 'learning_rate': 4.878048780487805e-07, 'num_tokens': 36257.0, 'completions/mean_length': 354.75, 'completions/min_length': 147.0, 'completions/max_length': 528.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 354.75, 'completions/min_terminated_length': 147.0, 'completions/max_terminated_length': 528.0, 'rewards/correctness_reward_func/mean': 1.25, 'rewards/correctness_reward_func/std': 1.0, 'rewards/format_reward_func/mean': 0.8687499761581421, 'rewards/format_reward_func/std': 0.2821790277957916, 'rewards/int_answer_reward_func/mean': 0.40625, 'rewards/int_answer_reward_func/std': 0.20155644416809082, 'reward': 2.5250000953674316, 'reward_std': 1.3542524576187134, 'frac_reward_zero_std': 0.25, 'sampling/sampling_logp_difference/mean': 0.016542160883545876, 'sampling/sampling_logp_difference/max': 1.4760818481445312, 'sampling/importance_sampling_ratio/min': 0.000747780897654593, 'sampling/importance_sampling_ratio/mean': 0.11008252948522568, 'sampling/importance_sampling_ratio/max': 0.5522754192352295, 'entropy': 0.1186181828379631, 'clip_ratio/low_mean': 0.0008809020509943366, 'clip_ratio/low_min': 0.0008809020509943366, 'clip_ratio/high_mean': 0.0031712474301457405, 'clip_ratio/high_max': 0.0031712474301457405, 'clip_ratio/region_mean': 0.004052149597555399, 'step_time': 4.785836705003021, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 11:26:27[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: WeChat provides a vibrant public life and makes it difficult for public discussion rules to form a consensus. The speed at which social tools are being renovated far exceeds the speed at which public discussion rules can take shape. The thrill of "rules of reality" makes people unwilling to be subject to any framework, so that in recent years, what rules to follow to debate has become a common issue in public debate. As an expert said, "shared media can promote independence from The development of the country's social power ", but this kind of power will obviously take a long time to undergo multiple multiple collisions and repeated wrestling. WeChat not only promotes the freedom of individual speech and the equality of the right to speak, but also makes this standing and tearing. It becomes more frequent and cheaper.
+
+Question: The text mainly says:.
+
+Options:
+A. The evolution of social tools has brought huge impact and challenges to public discussion rules.
+B. It is very difficult to form new public discussion rules in the common media.
+C. WeChat has a huge effect on getting rid of "rules of reality".
+D. There is still a long way to go for shared media to form an independent force.
+
+Answer: 1
+Response:
+o frameworks. The text also mentions the impact of shared media on public debate and the long-term process of establishing independent social power.
+
+Option A captures the main idea by emphasizing the impact and challenges brought by the evolution of social tools on public discussion rules.
+
+#### 1
+Extracted: 1
+Reward: 2.0[0m
+  0%|▏                                                                                                                                                   | 5/3688 [00:38<5:52:09,  5.74s/it][32m2026-03-26 11:26:33.260[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0, 'grad_norm': 0.0, 'learning_rate': 6.504065040650406e-07, 'num_tokens': 45573.0, 'completions/mean_length': 235.25, 'completions/min_length': 94.0, 'completions/max_length': 344.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 235.25, 'completions/min_terminated_length': 94.0, 'completions/max_terminated_length': 344.0, 'rewards/correctness_reward_func/mean': 1.0, 'rewards/correctness_reward_func/std': 1.0327955484390259, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.5, 'reward_std': 1.0327955484390259, 'frac_reward_zero_std': 1.0, 'sampling/sampling_logp_difference/mean': 0.021462038159370422, 'sampling/sampling_logp_difference/max': 1.2695913314819336, 'sampling/importance_sampling_ratio/min': 0.007837330922484398, 'sampling/importance_sampling_ratio/mean': 0.1949247419834137, 'sampling/importance_sampling_ratio/max': 0.6966647505760193, 'entropy': 0.14127051830291748, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'step_time': 3.3856678750016727, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 11:26:30[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: According to a report by the Macro Task Force of the Institute of Economics of the Chinese Academy of Sciences, from the historical practice of China's economic cycle floating, after the economic growth is less than double digits, the adjustment period is up to two years, and the economy will rebound rapidly, even like 1981, 1990 Such a serious situation is also picking up in two years. By comparison, the current decline in economic growth has been more than three years, and various indicators are still lower-it is pale and weak to explain with short-cycle fluctuations.
+
+Question: What does the text above mean?
+
+Options:
+A. The continuous fluctuation of the economic development process is an objective law of China's economic development.
+B. China's economy bids farewell to the double-digit growth period and enters a new adjustment cycle.
+C. Through adjustment, a great form of rapid economic growth in China will definitely emerge.
+D. The decline period of China's GDP is too long and no reasonable explanation can be found.
+
+Answer: 2
+Response:
+hrough adjustment, which is not supported by the text.
+
+D. This option suggests that the decline period is too long and no reasonable explanation can be found, which aligns with the text's main point that the current decline is more severe and prolonged than typical short-cycle fluctuations.
+
+#### 4
+Extracted: 4
+Reward: 0.0[0m
+  0%|▏                                                                                                                                                   | 6/3688 [00:42<5:15:43,  5.15s/it][32m2026-03-26 11:26:38.205[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': 0.0087, 'grad_norm': 0.279296875, 'learning_rate': 8.130081300813009e-07, 'num_tokens': 54512.0, 'completions/mean_length': 261.4375, 'completions/min_length': 97.0, 'completions/max_length': 389.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 261.4375, 'completions/min_terminated_length': 97.0, 'completions/max_terminated_length': 389.0, 'rewards/correctness_reward_func/mean': 0.75, 'rewards/correctness_reward_func/std': 1.0, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.25, 'reward_std': 1.0, 'frac_reward_zero_std': 0.5, 'sampling/sampling_logp_difference/mean': 0.019114695489406586, 'sampling/sampling_logp_difference/max': 0.690568208694458, 'sampling/importance_sampling_ratio/min': 0.007865766063332558, 'sampling/importance_sampling_ratio/mean': 0.10282770544290543, 'sampling/importance_sampling_ratio/max': 0.4046802520751953, 'entropy': 0.12425774335861206, 'clip_ratio/low_mean': 0.0038250060752034187, 'clip_ratio/low_min': 0.0038250060752034187, 'clip_ratio/high_mean': 0.0011953143402934074, 'clip_ratio/high_max': 0.0011953143402934074, 'clip_ratio/region_mean': 0.005020320415496826, 'step_time': 3.6575521609993302, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 11:26:34[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: The young students who come to Barcelona for "pilgrimage" are endless all year round. They are not so much drawn from the sights of the Middle Ages as they were attracted by the work of Antonio Gaudi, a modernist master. Although Picasso was born in Magal, At the Aguila Palace in Barcelona, you can see a wide range of his works chronologically displayed from the age of 8. Dali was fascinated by the ocean in his early years and spent most of his life in a fishing village with white powder walls, but he was surreal. The genius of the doctrine of art is treasured in this artistic mecca--the place where he was born and rested.
+
+Question: This passage mainly supports such a view, that is ().
+
+Options:
+A. Modernist works attract young artists.
+B. Barcelona is a temple of painting.
+C. The painter's work may not be preserved in his place of birth.
+D. Young students "pilgrimage" Barcelona not to hang out on medieval sights.
+
+Answer: 1
+Response:
+ birth.
+This is not mentioned or implied in the passage.
+
+D. Young students "pilgrimage" Barcelona not to hang out on medieval sights.
+This is directly supported by the passage, which states that students are not drawn to the medieval sights but rather to the works of artists like Gaudi.
+
+#### 4
+Extracted: 4
+Reward: 0.0[0m
+  0%|▎                                                                                                                                                   | 7/3688 [00:48<5:17:45,  5.18s/it][32m2026-03-26 11:26:50.685[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+{'loss': -0.0004, 'grad_norm': 0.1298828125, 'learning_rate': 9.75609756097561e-07, 'num_tokens': 64582.0, 'completions/mean_length': 338.375, 'completions/min_length': 233.0, 'completions/max_length': 590.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 338.375, 'completions/min_terminated_length': 233.0, 'completions/max_terminated_length': 590.0, 'rewards/correctness_reward_func/mean': 0.875, 'rewards/correctness_reward_func/std': 1.0246951580047607, 'rewards/format_reward_func/mean': 1.0, 'rewards/format_reward_func/std': 0.0, 'rewards/int_answer_reward_func/mean': 0.5, 'rewards/int_answer_reward_func/std': 0.0, 'reward': 2.375, 'reward_std': 1.0246950387954712, 'frac_reward_zero_std': 0.75, 'sampling/sampling_logp_difference/mean': 0.015438320115208626, 'sampling/sampling_logp_difference/max': 0.5234709978103638, 'sampling/importance_sampling_ratio/min': 0.0034359381534159184, 'sampling/importance_sampling_ratio/mean': 0.13636499643325806, 'sampling/importance_sampling_ratio/max': 0.5545512437820435, 'entropy': 0.10819066315889359, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0009235315956175327, 'clip_ratio/high_max': 0.0009235315956175327, 'clip_ratio/region_mean': 0.0009235315956175327, 'step_time': 4.8079541949991835, 'epoch': 0.0}
+[32mINFO[0m [90m03-26 11:26:40[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: There are four kinds of fruits: apple, strawberry, banana, and orange. A. B, C, and D each receive one. A: "I got an apple", B: "I got an orange", C: "A lies He got the banana ", Ding:" I got the strawberry ".
+
+Question: If only two people are telling the truth, which of the following can definitely be launched?
+
+Options:
+A. B receives oranges.
+B. Ding received strawberries.
+C. C received not bananas.
+D. A is not Apple.
+
+Answer: 3
+Response:
+ are looking for an option that is **definitely** true in **all** valid scenarios.
+
+From the two valid cases we tested:
+
+- In Case 3: A, C, D are true
+- In Case 4: B, C, D are true
+
+So **C. C received not bananas** is **true in both cases**, and is **definitely true**.
+
+---
+
+### Final Answer:
+#### 3
+Extracted: 3
+Reward: 2.0[0m
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/rl/grpo_run.py", line 141, in <module>
+    trainer.train()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+    output = super().training_step(model, inputs, num_items_in_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2084, in compute_loss
+    return self._compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2118, in _compute_loss
+    per_token_logps, entropies = self._get_per_token_logps_and_entropies(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1069, in _get_per_token_logps_and_entropies
+    logits = logits / self.temperature
+             ~~~~~~~^~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: HIP out of memory. Tried to allocate 15.03 GiB. GPU 0 has a total capacity of 191.69 GiB of which 5.67 GiB is free. Of the allocated memory 167.90 GiB is allocated by PyTorch, with 24.00 MiB allocated in private pools (e.g., HIP Graphs), and 16.27 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/alignment-without-rewards/rl/grpo_run.py", line 141, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+[rank0]:     output = super().training_step(model, inputs, num_items_in_batch)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2084, in compute_loss
+[rank0]:     return self._compute_loss(model, inputs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2118, in _compute_loss
+[rank0]:     per_token_logps, entropies = self._get_per_token_logps_and_entropies(
+[rank0]:                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/extras/profiling.py", line 202, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1069, in _get_per_token_logps_and_entropies
+[rank0]:     logits = logits / self.temperature
+[rank0]:              ~~~~~~~^~~~~~~~~~~~~~~~~~
+[rank0]: torch.OutOfMemoryError: HIP out of memory. Tried to allocate 15.03 GiB. GPU 0 has a total capacity of 191.69 GiB of which 5.67 GiB is free. Of the allocated memory 167.90 GiB is allocated by PyTorch, with 24.00 MiB allocated in private pools (e.g., HIP Graphs), and 16.27 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

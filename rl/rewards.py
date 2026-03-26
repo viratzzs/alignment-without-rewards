@@ -30,7 +30,7 @@ def correctness_reward_func(prompts, completions, correct_option, **kwargs) -> l
         f"\n{'─'*40}\n"
         f"Question:\n{q}\n"
         f"Answer: {correct_option[0]}\n"
-        f"Response:\n{responses[0][:300]}\n"
+        f"Response:\n{responses[0][-300:]}\n"
         f"Extracted: {extracted[0]}\n"
         f"Reward: {rewards[0]}"
     )

@@ -18,14 +18,14 @@ import urllib.request
 from loguru import logger
 from tqdm import tqdm
 from vllm import LLM, SamplingParams
+from dotenv import load_dotenv
 
+load_dotenv()
 
-#You are a logical assistant who is good at critical thinking and problem solving. \
 SYSTEM_PROMPT = """\
 Given a question out of a provided context, you will be given multiple options out of which you have to pick the right answer.
-Rationalize your answer and provide only the final choice letter at the very end after \
-'#### (Correct option number out of all 4 options)'
-For example, #### 1"""
+Rationalize your answer and then provide only the final choice number (out of 1-4) at the very end after ####. For example, #### 1
+"""
 
 URLS = {
     "validation": "https://raw.githubusercontent.com/lgw863/LogiQA-dataset/master/Eval.txt",

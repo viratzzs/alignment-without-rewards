@@ -21,7 +21,11 @@ import ray
 
 from kdflow.ray.train.teacher_group import TeacherActorGroup
 from kdflow.ray.train.student_group import StudentActorGroup
-from kdflow.ray.rollout.rollout_group import RolloutActorGroup
+try:
+    import sgl_kernel  # noqa: F401
+    from kdflow.ray.rollout.rollout_group import RolloutActorGroup
+except (ModuleNotFoundError, ImportError):
+    from kdflow.ray.rollout.rollout_group_vllm import RolloutActorGroupVLLM as RolloutActorGroup
 from kdflow.ray.placement_group import create_placement_group
 from kdflow.trainer import OnPolicyKDTrainer
 from kdflow.datasets import PromptDataset
@@ -153,6 +157,13 @@ def train(args):
         pg=(pg, reordered_bundle_indices),
         num_gpus_per_actor=0.5,
     )
+
+    # Off-policy vLLM rollout: skip weight-sync to avoid OOM from FlattenedTensorBucket
+    try:
+        import sgl_kernel  # noqa
+    except (ModuleNotFoundError, ImportError):
+        student_model.update_rollout_weights = lambda *a, **kw: None
+
 
     # Initialize tokenizers
     student_tokenizer = get_tokenizer(

@@ -1,0 +1,73 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+  0%|                                                                                                                                                              | 0/7376 [00:00<?, ?it/s][32m2026-03-26 11:02:14.557[0m | [34m[1mDEBUG   [0m | [36mrewards[0m:[36mcorrectness_reward_func[0m:[36m29[0m - [34m[1m
+[32mINFO[0m [90m03-26 11:01:58[0m [90m[block_pool.py:451][0m Successfully reset prefix cache
+────────────────────────────────────────
+Question:
+Context: Regardless of accuracy, vividness, and vividness, in terms of language, the words are required to be used appropriately. In this way, the concept of expression will be accurate, and it will make people feel sharp and mysterious. Its tone and color.
+
+Question: The most accurate recap of this passage is:.
+
+Options:
+A. Language must be vivid and accurate.
+B. Language is very mysterious.
+C. Text is mysterious.
+D. Use the text appropriately.
+
+Answer: 4
+Response:
+<think>
+Okay, let's tackle this question. The user provided a passage and four options, and I need to figure out which one is the most accurate recap.
+
+First, I'll read the passage again carefully. The key points seem to be about using language appropriately, ensuring accuracy and vividness. The pas
+Extracted: 4
+Reward: 2.0[0m
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/rl/grpo_run.py", line 137, in <module>
+    trainer.train()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+    output = super().training_step(model, inputs, num_items_in_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4071, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/accelerate/accelerator.py", line 2838, in backward
+    loss.backward(**kwargs)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 625, in backward
+    torch.autograd.backward(
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/alignment-without-rewards/rl/grpo_run.py", line 137, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2316, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1085, in training_step
+[rank0]:     output = super().training_step(model, inputs, num_items_in_batch)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/transformers/trainer.py", line 4071, in training_step
+[rank0]:     self.accelerator.backward(loss, **kwargs)
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/accelerate/accelerator.py", line 2838, in backward
+[rank0]:     loss.backward(**kwargs)
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 625, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt

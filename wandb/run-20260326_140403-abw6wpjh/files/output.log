@@ -1,0 +1,140 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:118[0m] ******* Start Training *******
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m]   Num Epochs:            2
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Steps per Epoch:       230
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Total Training Steps:  460
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Per-device Batch Size: 4
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Gradient Accumulation: 4
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Learning Rate:         2e-06
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   KD Algorithm:          vanilla_kd
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Loss Function:      rkl
+[36m(StudentRayActor pid=349524)[0m
+[36m(StudentRayActor pid=349524)[0m [2026-03-26 14:03:52] openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1:349524:349524 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=349524)[0m
+[36m(StudentRayActor pid=349524)[0m [2026-03-26 14:03:52] openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1:349524:349524 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=349524)[0m RCCL version : 2.26.6-HEAD:f224e2c
+[36m(StudentRayActor pid=349524)[0m HIP version  : 7.0.51831-a3e329ad8
+[36m(StudentRayActor pid=349524)[0m ROCm version : 7.0.0.0-38-9428210
+[36m(StudentRayActor pid=349524)[0m Hostname     : openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1
+[36m(StudentRayActor pid=349524)[0m Librccl path : /opt/rocm-7.0.0/lib/librccl.so.1
+[36m(StudentRayActor pid=349524)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-03-26 14:04:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:04:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m /home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:1357: UserWarning: expandable_segments not supported on this platform (Triggered internally at /app/pytorch/c10/hip/HIPAllocatorConfig.h:36.)
+[36m(TeacherRayActorHF pid=348945)[0m   return t.to(
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:05:42] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:06:39] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[36m(StudentRayActor pid=349524)[0m /home/KDFlow/kdflow/ray/train/student_actor.py:263: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /app/pytorch/torch/csrc/utils/tensor_numpy.cpp:206.)
+[36m(StudentRayActor pid=349524)[0m   k: torch.from_numpy(v).to(device, non_blocking=True) if isinstance(v, np.ndarray)
+[2026-03-26 14:07:20] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:07:20] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:07:20] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [1/460], train_progress [0.22%], Elapsed: 0:03:14, ETA: 1 day, 0:44:06, rollout_time: 44.825026, teacher_fwd_time: 109.366475, loss: 0.411263, kd_loss: 0.411263, lr: 6.521739e-08, gen_len: 418.000000, tot_len: 698.625000, student_train_time: 28.575694, weight_update_time: 0.000008
+[2026-03-26 14:07:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:07:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:07:50] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:08:34] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 14:08:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:08:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:08:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [2/460], train_progress [0.43%], Elapsed: 0:04:50, ETA: 18:26:50, rollout_time: 22.564529, teacher_fwd_time: 51.429293, loss: 0.357599, kd_loss: 0.357599, lr: 1.521739e-07, gen_len: 263.500000, tot_len: 522.375000, student_train_time: 9.530130, weight_update_time: 0.000006
+[2026-03-26 14:08:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:09:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:09:33] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:10:18] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 14:10:41] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:10:41] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:10:41] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [3/460], train_progress [0.65%], Elapsed: 0:06:35, ETA: 16:42:51, rollout_time: 31.046106, teacher_fwd_time: 51.527331, loss: 0.371849, kd_loss: 0.371849, lr: 2.391304e-07, gen_len: 381.625000, tot_len: 623.625000, student_train_time: 11.031513, weight_update_time: 0.000004
+[2026-03-26 14:10:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:11:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:11:18] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:12:00] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 14:12:22] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:12:22] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:12:22] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [4/460], train_progress [0.87%], Elapsed: 0:08:17, ETA: 15:44:18, rollout_time: 30.018507, teacher_fwd_time: 49.019108, loss: 0.342664, kd_loss: 0.342664, lr: 3.260869e-07, gen_len: 284.250000, tot_len: 567.000000, student_train_time: 10.612270, weight_update_time: 0.000005
+[2026-03-26 14:12:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:12:41] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:12:48] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:13:32] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 14:13:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:13:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:13:54] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [5/460], train_progress [1.09%], Elapsed: 0:09:48, ETA: 14:51:48, rollout_time: 18.656776, teacher_fwd_time: 51.270919, loss: 0.434889, kd_loss: 0.434889, lr: 4.130435e-07, gen_len: 257.750000, tot_len: 493.250000, student_train_time: 9.894659, weight_update_time: 0.000005
+[2026-03-26 14:13:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:14:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:14:22] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:15:06] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 14:15:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:15:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:15:29] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [6/460], train_progress [1.30%], Elapsed: 0:11:23, ETA: 14:21:20, rollout_time: 20.592013, teacher_fwd_time: 51.803305, loss: 0.333867, kd_loss: 0.333867, lr: 5.000000e-07, gen_len: 317.125000, tot_len: 589.125000, student_train_time: 10.574419, weight_update_time: 0.000004
+[2026-03-26 14:15:30] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:16:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:16:12] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:16:56] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 14:17:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:17:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:17:18] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [7/460], train_progress [1.52%], Elapsed: 0:13:12, ETA: 14:14:13, rollout_time: 35.936786, teacher_fwd_time: 51.850570, loss: 0.287670, kd_loss: 0.287670, lr: 5.869565e-07, gen_len: 346.000000, tot_len: 610.625000, student_train_time: 9.998677, weight_update_time: 0.000004
+[2026-03-26 14:17:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:17:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:18:01] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:18:45] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:127[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 14:19:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:19:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 14:19:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/2], step [8/460], train_progress [1.74%], Elapsed: 0:15:01, ETA: 14:08:26, rollout_time: 36.464286, teacher_fwd_time: 50.265485, loss: 0.299189, kd_loss: 0.299189, lr: 6.739130e-07, gen_len: 286.375000, tot_len: 586.500000, student_train_time: 10.359868, weight_update_time: 0.000004
+[2026-03-26 14:19:08] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 14:20:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=348945)[0m [2026-03-26 14:20:24] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[31mERROR[0m [90m03-26 14:20:53[0m [90m[core_client.py:610][0m Engine core proc EngineCore_DP0 died unexpectedly, shutting down client.
+[2026-03-26 14:20:53] [[32mINFO[0m] [[2mteacher_group.py:shutdown:202[0m] [TeacherActorGroup] All teacher actors shutdown complete.
+[2026-03-26 14:20:53] [[32mINFO[0m] [[2mrollout_group_vllm.py:shutdown:178[0m] [RolloutActorGroupVLLM] Shutdown complete.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 192, in <module>
+    train(args)
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 182, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 168, in fit
+    self.teacher.sleep()
+  File "/home/KDFlow/kdflow/ray/train/teacher_group.py", line 193, in sleep
+    ray.get([actor.sleep.remote() for actor in self.teacher_engines])
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 982, in get_objects
+    ] = self.core_worker.get_objects(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 2976, in ray._raylet.CoreWorker.get_objects
+  File "python/ray/includes/common.pxi", line 104, in ray._raylet.check_status
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 192, in <module>
+    train(args)
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 182, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 168, in fit
+    self.teacher.sleep()
+  File "/home/KDFlow/kdflow/ray/train/teacher_group.py", line 193, in sleep
+    ray.get([actor.sleep.remote() for actor in self.teacher_engines])
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 982, in get_objects
+    ] = self.core_worker.get_objects(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 2976, in ray._raylet.CoreWorker.get_objects
+  File "python/ray/includes/common.pxi", line 104, in ray._raylet.check_status
+KeyboardInterrupt

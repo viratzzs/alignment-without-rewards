@@ -5,6 +5,7 @@ models/
 verl-main/
 verl-0.7.0/
 outputs/
+__pycache__/
 
 .env
 pyrightconfig.json

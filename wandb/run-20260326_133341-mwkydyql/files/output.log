@@ -1,0 +1,92 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:118[0m] ******* Start Training *******
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m]   Num Epochs:            2
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Steps per Epoch:       230
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Total Training Steps:  460
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Per-device Batch Size: 4
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Gradient Accumulation: 4
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Learning Rate:         2e-06
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   KD Algorithm:          vanilla_kd
+[2026-03-26 13:33:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Loss Function:      rkl
+[2026-03-26 13:33:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:164[0m] [RolloutActorGroupVLLM] Awake.
+[36m(StudentRayActor pid=316739)[0m
+[36m(StudentRayActor pid=316739)[0m [2026-03-26 13:33:31] openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1:316739:316739 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=316739)[0m
+[36m(StudentRayActor pid=316739)[0m [2026-03-26 13:33:31] openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1:316739:316739 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=316739)[0m RCCL version : 2.26.6-HEAD:f224e2c
+[36m(StudentRayActor pid=316739)[0m HIP version  : 7.0.51831-a3e329ad8
+[36m(StudentRayActor pid=316739)[0m ROCm version : 7.0.0.0-38-9428210
+[36m(StudentRayActor pid=316739)[0m Hostname     : openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1
+[36m(StudentRayActor pid=316739)[0m Librccl path : /opt/rocm-7.0.0/lib/librccl.so.1
+[36m(StudentRayActor pid=316739)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-03-26 13:34:28] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:157[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=316242)[0m /home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:1357: UserWarning: expandable_segments not supported on this platform (Triggered internally at /app/pytorch/c10/hip/HIPAllocatorConfig.h:36.)
+[36m(TeacherRayActorHF pid=316242)[0m   return t.to(
+[36m(TeacherRayActorHF pid=316242)[0m [2026-03-26 13:35:10] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:134[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[2026-03-26 13:35:24] [[32mINFO[0m] [[2mteacher_group.py:shutdown:202[0m] [TeacherActorGroup] All teacher actors shutdown complete.
+[2026-03-26 13:35:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:shutdown:175[0m] [RolloutActorGroupVLLM] Shutdown complete.
+[36m(TeacherRayActorHF pid=316242)[0m [2026-03-26 13:35:24] [[32mINFO[0m] [[2mteacher_actor_hf.py:shutdown:141[0m] [TeacherRayActorHF] Shutdown complete.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 184, in <module>
+    train(args)
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 174, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 165, in fit
+    rollout_samples_for_kd = self.teacher.forward(rollout_samples)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/teacher_group.py", line 179, in forward
+    raw_results[idx] = ray.get(ref)
+                       ^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(TypeError): [36mray::TeacherRayActorHF.forward()[39m (pid=316242, ip=165.245.142.104, actor_id=07642f0ead8b012aba42a7af01000000, repr=<kdflow.ray.train.teacher_actor_hf.TeacherRayActorHF object at 0x734e0ee801a0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/teacher_actor_hf.py", line 111, in forward
+    hidden_states_list.append(masked.cpu().numpy())
+                              ^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 184, in <module>
+    train(args)
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 174, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 165, in fit
+    rollout_samples_for_kd = self.teacher.forward(rollout_samples)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/teacher_group.py", line 179, in forward
+    raw_results[idx] = ray.get(ref)
+                       ^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(TypeError): [36mray::TeacherRayActorHF.forward()[39m (pid=316242, ip=165.245.142.104, actor_id=07642f0ead8b012aba42a7af01000000, repr=<kdflow.ray.train.teacher_actor_hf.TeacherRayActorHF object at 0x734e0ee801a0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/teacher_actor_hf.py", line 111, in forward
+    hidden_states_list.append(masked.cpu().numpy())
+                              ^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
