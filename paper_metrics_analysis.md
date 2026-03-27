@@ -30,8 +30,6 @@ We expect the script to output an exceedingly high `Overlap Ratio` (e.g. > 50-70
 
 ---
 
-### Final Implementation Checklist for the Report
-Once [analyze_checkpoints_sparsity.py](file:///home/alignment-without-rewards/analyze_checkpoints_sparsity.py) finishes executing on your local machine:
-- [ ] Save the **Sparsity %** to validate H1.
-- [ ] Note the **Matrix Rankings** to validate H2.
-- [ ] Record the **Overlap Ratios** between OPD, OPSD, and GRPO to validate H3.
+## TODO
+- OPSD analysis
+- Because the parameters they touched are disjoint (orthogonal), it heavily implies merging the two models (using Task Arithmetic or SLERP) without them overriding each other is possible. We could theoretically stack the strong generalized knowledge of Qwen3-4B-OPD natively onto the sharp logic-following of Qwen3-4B-GRPO by just adding their weights together!
