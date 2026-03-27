@@ -1,0 +1,833 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:118[0m] ******* Start Training *******
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m]   Num Epochs:            1
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Steps per Epoch:       115
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Total Training Steps:  115
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Per-device Batch Size: 4
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Gradient Accumulation: 8
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Learning Rate:         1e-06
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   KD Algorithm:          vanilla_kd
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Loss Function:      rkl
+[2026-03-26 22:15:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[36m(StudentRayActor pid=516831)[0m
+[36m(StudentRayActor pid=516831)[0m [2026-03-26 22:14:56] openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1:516831:516831 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=516831)[0m
+[36m(StudentRayActor pid=516831)[0m [2026-03-26 22:14:56] openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1:516831:516831 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=516831)[0m RCCL version : 2.26.6-HEAD:f224e2c
+[36m(StudentRayActor pid=516831)[0m HIP version  : 7.0.51831-a3e329ad8
+[36m(StudentRayActor pid=516831)[0m ROCm version : 7.0.0.0-38-9428210
+[36m(StudentRayActor pid=516831)[0m Hostname     : openai-gpt-oss-rocm-7-gpu-mi300x1-192gb-devcloud-atl1
+[36m(StudentRayActor pid=516831)[0m Librccl path : /opt/rocm-7.0.0/lib/librccl.so.1
+[36m(StudentRayActor pid=516831)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-03-26 22:15:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m /home/alignment-without-rewards/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:1357: UserWarning: expandable_segments not supported on this platform (Triggered internally at /app/pytorch/c10/hip/HIPAllocatorConfig.h:36.)
+[36m(TeacherRayActorHF pid=516682)[0m   return t.to(
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:16:30] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:17:50] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[36m(StudentRayActor pid=516831)[0m /home/KDFlow/kdflow/ray/train/student_actor.py:263: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /app/pytorch/torch/csrc/utils/tensor_numpy.cpp:206.)
+[36m(StudentRayActor pid=516831)[0m   k: torch.from_numpy(v).to(device, non_blocking=True) if isinstance(v, np.ndarray)
+[2026-03-26 22:18:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:18:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:18:39] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [1/115], train_progress [0.87%], Elapsed: 0:03:32, ETA: 6:42:48, rollout_time: 35.909207, teacher_fwd_time: 126.929424, loss: 0.454034, kd_loss: 0.454034, lr: 1.250000e-07, gen_len: 422.500000, tot_len: 679.625000, student_train_time: 36.514899, weight_update_time: 0.000007
+[2026-03-26 22:18:40] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:19:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:19:21] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:20:26] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:20:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:20:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:20:52] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [2/115], train_progress [1.74%], Elapsed: 0:05:44, ETA: 5:23:56, rollout_time: 33.317089, teacher_fwd_time: 73.120255, loss: 0.353840, kd_loss: 0.353840, lr: 2.916667e-07, gen_len: 307.250000, tot_len: 597.750000, student_train_time: 14.526175, weight_update_time: 0.000006
+[2026-03-26 22:20:53] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:21:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:21:20] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:22:25] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:22:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:22:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:22:52] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [3/115], train_progress [2.61%], Elapsed: 0:07:44, ETA: 4:48:42, rollout_time: 20.717863, teacher_fwd_time: 72.290596, loss: 0.372987, kd_loss: 0.372987, lr: 4.583333e-07, gen_len: 290.500000, tot_len: 556.000000, student_train_time: 15.366276, weight_update_time: 0.000005
+[2026-03-26 22:22:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:23:30] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:23:37] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:24:43] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:25:08] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:25:08] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:25:08] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [4/115], train_progress [3.48%], Elapsed: 0:10:00, ETA: 4:37:30, rollout_time: 37.312338, teacher_fwd_time: 73.590904, loss: 0.388461, kd_loss: 0.388461, lr: 6.250000e-07, gen_len: 350.375000, tot_len: 659.625000, student_train_time: 13.969557, weight_update_time: 0.000004
+[2026-03-26 22:25:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:25:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:25:54] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:27:02] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:27:27] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:27:27] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:27:27] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [5/115], train_progress [4.35%], Elapsed: 0:12:20, ETA: 4:31:20, rollout_time: 38.692132, teacher_fwd_time: 74.850428, loss: 0.350340, kd_loss: 0.350340, lr: 7.916667e-07, gen_len: 287.000000, tot_len: 591.375000, student_train_time: 13.876536, weight_update_time: 0.000004
+[2026-03-26 22:27:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:28:01] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:28:08] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:29:17] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:29:46] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:29:46] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:29:46] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [6/115], train_progress [5.22%], Elapsed: 0:14:38, ETA: 4:25:50, rollout_time: 33.484337, teacher_fwd_time: 75.897743, loss: 0.317434, kd_loss: 0.317434, lr: 9.583333e-07, gen_len: 362.500000, tot_len: 623.750000, student_train_time: 16.821939, weight_update_time: 0.000005
+[2026-03-26 22:29:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:30:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:31:03] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:32:10] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:32:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:32:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:32:36] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [7/115], train_progress [6.09%], Elapsed: 0:17:28, ETA: 4:29:29, rollout_time: 69.463979, teacher_fwd_time: 74.598937, loss: 0.307482, kd_loss: 0.307482, lr: 9.998715e-07, gen_len: 339.875000, tot_len: 612.875000, student_train_time: 14.520670, weight_update_time: 0.000005
+[2026-03-26 22:32:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:33:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:33:28] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:34:29] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:34:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:34:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:34:54] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [8/115], train_progress [6.96%], Elapsed: 0:19:47, ETA: 4:24:36, rollout_time: 44.949517, teacher_fwd_time: 68.059430, loss: 0.303539, kd_loss: 0.303539, lr: 9.993577e-07, gen_len: 296.500000, tot_len: 587.375000, student_train_time: 13.352362, weight_update_time: 0.000005
+[2026-03-26 22:34:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:35:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:35:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:36:48] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:37:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:37:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:37:14] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [9/115], train_progress [7.83%], Elapsed: 0:22:07, ETA: 4:20:29, rollout_time: 38.563807, teacher_fwd_time: 74.826820, loss: 0.286426, kd_loss: 0.286426, lr: 9.984332e-07, gen_len: 274.625000, tot_len: 550.125000, student_train_time: 14.454311, weight_update_time: 0.000005
+[2026-03-26 22:37:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:37:58] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:38:05] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:39:13] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:39:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:39:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:39:39] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [10/115], train_progress [8.70%], Elapsed: 0:24:31, ETA: 4:17:25, rollout_time: 43.330766, teacher_fwd_time: 75.530063, loss: 0.318831, kd_loss: 0.318831, lr: 9.970988e-07, gen_len: 359.000000, tot_len: 643.625000, student_train_time: 13.951886, weight_update_time: 0.000005
+[2026-03-26 22:39:40] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:40:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:40:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:41:52] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:42:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:42:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:42:18] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [11/115], train_progress [9.57%], Elapsed: 0:27:10, ETA: 4:16:50, rollout_time: 57.617333, teacher_fwd_time: 75.054912, loss: 0.347825, kd_loss: 0.347825, lr: 9.953557e-07, gen_len: 305.875000, tot_len: 580.125000, student_train_time: 14.496600, weight_update_time: 0.000005
+[2026-03-26 22:42:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:42:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:43:02] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:44:10] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:44:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:44:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:44:36] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [12/115], train_progress [10.43%], Elapsed: 0:29:28, ETA: 4:12:55, rollout_time: 36.941856, teacher_fwd_time: 74.785058, loss: 0.313183, kd_loss: 0.313183, lr: 9.932052e-07, gen_len: 238.250000, tot_len: 509.500000, student_train_time: 14.558980, weight_update_time: 0.000005
+[2026-03-26 22:44:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:45:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:45:41] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:46:36] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:47:02] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:47:02] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:47:02] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [13/115], train_progress [11.30%], Elapsed: 0:31:55, ETA: 4:10:25, rollout_time: 57.788448, teacher_fwd_time: 61.981378, loss: 0.310541, kd_loss: 0.310541, lr: 9.906493e-07, gen_len: 534.000000, tot_len: 799.875000, student_train_time: 14.602858, weight_update_time: 0.000004
+[2026-03-26 22:47:04] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:47:35] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:47:42] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:48:48] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:49:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:49:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:49:14] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [14/115], train_progress [12.17%], Elapsed: 0:34:06, ETA: 4:06:00, rollout_time: 32.622467, teacher_fwd_time: 73.270503, loss: 0.313245, kd_loss: 0.313245, lr: 9.876899e-07, gen_len: 295.750000, tot_len: 556.000000, student_train_time: 14.148085, weight_update_time: 0.000004
+[2026-03-26 22:49:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:49:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:49:58] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:51:06] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:51:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:51:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:51:32] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [15/115], train_progress [13.04%], Elapsed: 0:36:24, ETA: 4:02:40, rollout_time: 36.511306, teacher_fwd_time: 74.744315, loss: 0.267545, kd_loss: 0.267545, lr: 9.843296e-07, gen_len: 346.375000, tot_len: 599.750000, student_train_time: 14.443694, weight_update_time: 0.000005
+[2026-03-26 22:51:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:52:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:52:33] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:53:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:54:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:54:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:54:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [16/115], train_progress [13.91%], Elapsed: 0:39:00, ETA: 4:01:18, rollout_time: 53.267719, teacher_fwd_time: 74.554566, loss: 0.304078, kd_loss: 0.304078, lr: 9.805711e-07, gen_len: 239.500000, tot_len: 534.125000, student_train_time: 15.895948, weight_update_time: 0.000005
+[2026-03-26 22:54:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:54:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:55:03] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:56:09] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:56:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:56:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:56:36] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [17/115], train_progress [14.78%], Elapsed: 0:41:28, ETA: 3:59:02, rollout_time: 47.914350, teacher_fwd_time: 73.931848, loss: 0.188629, kd_loss: 0.188629, lr: 9.764177e-07, gen_len: 304.250000, tot_len: 591.250000, student_train_time: 14.558266, weight_update_time: 0.000004
+[2026-03-26 22:56:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:57:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:57:29] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 22:58:36] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 22:59:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 22:59:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 22:59:03] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [18/115], train_progress [15.65%], Elapsed: 0:43:55, ETA: 3:56:39, rollout_time: 45.506848, teacher_fwd_time: 75.323560, loss: 0.219014, kd_loss: 0.219014, lr: 9.718726e-07, gen_len: 303.500000, tot_len: 526.250000, student_train_time: 14.334248, weight_update_time: 0.000005
+[2026-03-26 22:59:04] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:00:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:00:12] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:01:13] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:01:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:01:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:01:38] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [19/115], train_progress [16.52%], Elapsed: 0:46:30, ETA: 3:54:56, rollout_time: 61.925928, teacher_fwd_time: 68.285167, loss: 0.191503, kd_loss: 0.191503, lr: 9.669397e-07, gen_len: 239.000000, tot_len: 499.750000, student_train_time: 13.425859, weight_update_time: 0.000005
+[2026-03-26 23:01:40] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:02:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:02:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:03:20] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:03:46] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:03:46] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:03:46] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [20/115], train_progress [17.39%], Elapsed: 0:48:38, ETA: 3:51:00, rollout_time: 25.235486, teacher_fwd_time: 76.218564, loss: 0.312922, kd_loss: 0.312922, lr: 9.616231e-07, gen_len: 265.625000, tot_len: 551.750000, student_train_time: 14.300597, weight_update_time: 0.000006
+[2026-03-26 23:03:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:04:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:04:22] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:05:29] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:05:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:05:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:05:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [21/115], train_progress [18.26%], Elapsed: 0:50:47, ETA: 3:47:18, rollout_time: 28.867363, teacher_fwd_time: 74.731382, loss: 0.285145, kd_loss: 0.285145, lr: 9.559272e-07, gen_len: 330.125000, tot_len: 613.750000, student_train_time: 13.931308, weight_update_time: 0.000004
+[2026-03-26 23:05:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:06:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:06:50] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:07:58] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:08:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:08:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:08:24] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [22/115], train_progress [19.13%], Elapsed: 0:53:17, ETA: 3:45:14, rollout_time: 48.493337, teacher_fwd_time: 74.403476, loss: 0.252037, kd_loss: 0.252037, lr: 9.498568e-07, gen_len: 294.250000, tot_len: 569.000000, student_train_time: 14.420483, weight_update_time: 0.000007
+[2026-03-26 23:08:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:09:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:09:37] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:10:45] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:11:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:11:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:11:11] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [23/115], train_progress [20.00%], Elapsed: 0:56:03, ETA: 3:44:12, rollout_time: 65.024777, teacher_fwd_time: 75.286371, loss: 0.239331, kd_loss: 0.239331, lr: 9.434168e-07, gen_len: 195.375000, tot_len: 489.375000, student_train_time: 14.383560, weight_update_time: 0.000006
+[2026-03-26 23:11:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:11:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:11:57] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:12:51] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:13:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:13:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:13:17] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [24/115], train_progress [20.87%], Elapsed: 0:58:09, ETA: 3:40:29, rollout_time: 39.284999, teacher_fwd_time: 61.115402, loss: 0.254651, kd_loss: 0.254651, lr: 9.366127e-07, gen_len: 439.125000, tot_len: 678.250000, student_train_time: 13.980103, weight_update_time: 0.000005
+[2026-03-26 23:13:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:14:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:14:26] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:15:34] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:16:01] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:16:01] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:16:01] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [25/115], train_progress [21.74%], Elapsed: 1:00:53, ETA: 3:39:10, rollout_time: 61.912607, teacher_fwd_time: 75.464598, loss: 0.249441, kd_loss: 0.249441, lr: 9.294500e-07, gen_len: 343.875000, tot_len: 614.250000, student_train_time: 14.757915, weight_update_time: 0.000004
+[2026-03-26 23:16:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:16:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:16:49] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:17:59] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:18:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:18:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:18:26] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [26/115], train_progress [22.61%], Elapsed: 1:03:18, ETA: 3:36:40, rollout_time: 40.393487, teacher_fwd_time: 77.766497, loss: 0.197049, kd_loss: 0.197049, lr: 9.219348e-07, gen_len: 196.500000, tot_len: 487.750000, student_train_time: 14.438166, weight_update_time: 0.000005
+[2026-03-26 23:18:27] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:18:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:18:58] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:20:06] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:20:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:20:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:20:32] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [27/115], train_progress [23.48%], Elapsed: 1:05:24, ETA: 3:33:09, rollout_time: 25.255432, teacher_fwd_time: 75.563312, loss: 0.252085, kd_loss: 0.252085, lr: 9.140732e-07, gen_len: 289.875000, tot_len: 537.875000, student_train_time: 13.991725, weight_update_time: 0.000006
+[2026-03-26 23:20:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:20:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:21:03] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:22:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:22:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:22:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:22:37] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [28/115], train_progress [24.35%], Elapsed: 1:07:29, ETA: 3:29:40, rollout_time: 23.821448, teacher_fwd_time: 75.241631, loss: 0.249191, kd_loss: 0.249191, lr: 9.058719e-07, gen_len: 285.875000, tot_len: 552.125000, student_train_time: 14.226475, weight_update_time: 0.000004
+[2026-03-26 23:22:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:23:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:23:36] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:24:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:25:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:25:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:25:10] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [29/115], train_progress [25.22%], Elapsed: 1:10:02, ETA: 3:27:41, rollout_time: 51.726228, teacher_fwd_time: 75.095816, loss: 0.202274, kd_loss: 0.202274, lr: 8.973375e-07, gen_len: 373.750000, tot_len: 652.875000, student_train_time: 14.305516, weight_update_time: 0.000005
+[2026-03-26 23:25:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:26:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:26:18] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:27:25] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:27:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:27:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:27:50] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [30/115], train_progress [26.09%], Elapsed: 1:12:43, ETA: 3:26:01, rollout_time: 60.635788, teacher_fwd_time: 74.035896, loss: 0.238699, kd_loss: 0.238699, lr: 8.884773e-07, gen_len: 333.375000, tot_len: 623.250000, student_train_time: 13.891442, weight_update_time: 0.000007
+[2026-03-26 23:27:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:28:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:28:32] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:29:41] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:30:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:30:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:30:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [31/115], train_progress [26.96%], Elapsed: 1:14:59, ETA: 3:23:10, rollout_time: 34.330889, teacher_fwd_time: 75.968736, loss: 0.268442, kd_loss: 0.268442, lr: 8.792986e-07, gen_len: 434.250000, tot_len: 693.500000, student_train_time: 14.408174, weight_update_time: 0.000006
+[2026-03-26 23:30:08] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:31:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:31:12] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:32:19] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:32:46] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:32:46] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:32:46] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [32/115], train_progress [27.83%], Elapsed: 1:17:38, ETA: 3:21:21, rollout_time: 58.140057, teacher_fwd_time: 74.119391, loss: 0.176111, kd_loss: 0.176111, lr: 8.698089e-07, gen_len: 260.125000, tot_len: 514.500000, student_train_time: 14.661474, weight_update_time: 0.000019
+[2026-03-26 23:32:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:33:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:33:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:34:39] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:35:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:35:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:35:05] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [33/115], train_progress [28.70%], Elapsed: 1:19:57, ETA: 3:18:39, rollout_time: 46.587769, teacher_fwd_time: 66.646519, loss: 0.220777, kd_loss: 0.220777, lr: 8.600162e-07, gen_len: 237.250000, tot_len: 551.250000, student_train_time: 14.039644, weight_update_time: 0.000006
+[2026-03-26 23:35:06] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:35:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:35:41] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:36:49] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:37:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:37:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:37:15] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [34/115], train_progress [29.57%], Elapsed: 1:22:07, ETA: 3:15:37, rollout_time: 28.502340, teacher_fwd_time: 75.921528, loss: 0.241350, kd_loss: 0.241350, lr: 8.499286e-07, gen_len: 315.875000, tot_len: 597.000000, student_train_time: 14.228103, weight_update_time: 0.000005
+[2026-03-26 23:37:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:37:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:37:52] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:38:59] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:39:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:39:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:39:25] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [35/115], train_progress [30.43%], Elapsed: 1:24:17, ETA: 3:12:38, rollout_time: 29.777757, teacher_fwd_time: 74.029020, loss: 0.264119, kd_loss: 0.264119, lr: 8.395545e-07, gen_len: 383.250000, tot_len: 652.000000, student_train_time: 14.367172, weight_update_time: 0.000004
+[2026-03-26 23:39:27] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:39:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:40:02] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:40:56] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:41:22] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:41:22] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:41:22] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [36/115], train_progress [31.30%], Elapsed: 1:26:15, ETA: 3:09:16, rollout_time: 29.931219, teacher_fwd_time: 61.295295, loss: 0.313342, kd_loss: 0.313342, lr: 8.289026e-07, gen_len: 235.375000, tot_len: 521.125000, student_train_time: 14.441170, weight_update_time: 0.000005
+[2026-03-26 23:41:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:42:20] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:42:27] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:43:29] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:43:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:43:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:43:56] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [37/115], train_progress [32.17%], Elapsed: 1:28:48, ETA: 3:07:12, rollout_time: 57.791234, teacher_fwd_time: 69.366982, loss: 0.245182, kd_loss: 0.245182, lr: 8.179815e-07, gen_len: 233.875000, tot_len: 509.000000, student_train_time: 14.463997, weight_update_time: 0.000005
+[2026-03-26 23:43:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:44:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:44:31] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:45:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:46:06] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:46:06] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:46:06] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [38/115], train_progress [33.04%], Elapsed: 1:30:58, ETA: 3:04:19, rollout_time: 28.294983, teacher_fwd_time: 75.584997, loss: 0.205835, kd_loss: 0.205835, lr: 8.068005e-07, gen_len: 241.250000, tot_len: 509.625000, student_train_time: 14.711088, weight_update_time: 0.000005
+[2026-03-26 23:46:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:47:04] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:47:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:48:18] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:48:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:48:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:48:44] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [39/115], train_progress [33.91%], Elapsed: 1:33:37, ETA: 3:02:25, rollout_time: 57.806724, teacher_fwd_time: 74.625968, loss: 0.227992, kd_loss: 0.227992, lr: 7.953688e-07, gen_len: 393.375000, tot_len: 654.125000, student_train_time: 14.302086, weight_update_time: 0.000005
+[2026-03-26 23:48:46] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:49:30] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:49:38] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:50:48] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:51:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:51:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:51:16] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [40/115], train_progress [34.78%], Elapsed: 1:36:08, ETA: 3:00:15, rollout_time: 46.000890, teacher_fwd_time: 77.680098, loss: 0.215085, kd_loss: 0.215085, lr: 7.836958e-07, gen_len: 306.875000, tot_len: 612.000000, student_train_time: 15.913877, weight_update_time: 0.000006
+[2026-03-26 23:51:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:52:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:52:15] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:53:19] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:53:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:53:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:53:45] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [41/115], train_progress [35.65%], Elapsed: 1:38:37, ETA: 2:57:59, rollout_time: 51.537015, teacher_fwd_time: 71.383965, loss: 0.253003, kd_loss: 0.253003, lr: 7.717914e-07, gen_len: 306.625000, tot_len: 576.125000, student_train_time: 14.309784, weight_update_time: 0.000004
+[2026-03-26 23:53:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:54:20] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:54:27] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:55:27] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:55:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:55:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:55:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [42/115], train_progress [36.52%], Elapsed: 1:40:49, ETA: 2:55:13, rollout_time: 34.782897, teacher_fwd_time: 67.634195, loss: 0.258374, kd_loss: 0.258374, lr: 7.596654e-07, gen_len: 292.000000, tot_len: 525.250000, student_train_time: 17.850410, weight_update_time: 0.000005
+[2026-03-26 23:55:58] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:56:58] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:57:03] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:58:09] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-26 23:58:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:58:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-26 23:58:34] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [43/115], train_progress [37.39%], Elapsed: 1:43:27, ETA: 2:53:13, rollout_time: 60.662644, teacher_fwd_time: 70.744212, loss: 0.238887, kd_loss: 0.238887, lr: 7.473279e-07, gen_len: 412.875000, tot_len: 689.750000, student_train_time: 14.209173, weight_update_time: 0.000005
+[2026-03-26 23:58:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-26 23:59:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-26 23:59:32] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:00:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:01:06] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:01:06] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:01:06] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [44/115], train_progress [38.26%], Elapsed: 1:45:59, ETA: 2:51:01, rollout_time: 50.108030, teacher_fwd_time: 75.316774, loss: 0.211070, kd_loss: 0.211070, lr: 7.347890e-07, gen_len: 301.625000, tot_len: 578.625000, student_train_time: 14.754827, weight_update_time: 0.000004
+[2026-03-27 00:01:08] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:01:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:02:03] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:03:10] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:03:35] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:03:35] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:03:35] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [45/115], train_progress [39.13%], Elapsed: 1:48:27, ETA: 2:48:42, rollout_time: 48.592509, teacher_fwd_time: 74.888635, loss: 0.205865, kd_loss: 0.205865, lr: 7.220593e-07, gen_len: 226.625000, tot_len: 520.250000, student_train_time: 15.067979, weight_update_time: 0.000006
+[2026-03-27 00:03:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:04:02] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:04:09] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:05:19] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:05:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:05:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:05:45] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [46/115], train_progress [40.00%], Elapsed: 1:50:37, ETA: 2:45:55, rollout_time: 26.571758, teacher_fwd_time: 77.111655, loss: 0.193176, kd_loss: 0.193176, lr: 7.091493e-07, gen_len: 246.750000, tot_len: 523.625000, student_train_time: 14.430874, weight_update_time: 0.000006
+[2026-03-27 00:05:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:06:30] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:06:38] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:07:45] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:08:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:08:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:08:11] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [47/115], train_progress [40.87%], Elapsed: 1:53:03, ETA: 2:43:33, rollout_time: 45.411535, teacher_fwd_time: 74.700933, loss: 0.239016, kd_loss: 0.239016, lr: 6.960697e-07, gen_len: 362.125000, tot_len: 596.250000, student_train_time: 14.285921, weight_update_time: 0.000005
+[2026-03-27 00:08:12] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:08:49] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:08:57] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:10:05] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:10:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:10:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:10:31] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [48/115], train_progress [41.74%], Elapsed: 1:55:23, ETA: 2:41:03, rollout_time: 38.230042, teacher_fwd_time: 76.039191, loss: 0.204884, kd_loss: 0.204884, lr: 6.828314e-07, gen_len: 303.000000, tot_len: 548.625000, student_train_time: 13.817818, weight_update_time: 0.000006
+[2026-03-27 00:10:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:10:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:11:04] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:12:08] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:12:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:12:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:12:34] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [49/115], train_progress [42.61%], Elapsed: 1:57:26, ETA: 2:38:10, rollout_time: 25.452568, teacher_fwd_time: 71.476932, loss: 0.241274, kd_loss: 0.241274, lr: 6.694454e-07, gen_len: 330.500000, tot_len: 558.875000, student_train_time: 14.221299, weight_update_time: 0.000005
+[2026-03-27 00:12:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:13:00] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:13:07] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:14:14] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:14:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:14:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:14:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [50/115], train_progress [43.48%], Elapsed: 1:59:34, ETA: 2:35:26, rollout_time: 26.130296, teacher_fwd_time: 73.505357, loss: 0.258095, kd_loss: 0.258095, lr: 6.559228e-07, gen_len: 330.125000, tot_len: 595.500000, student_train_time: 16.561792, weight_update_time: 0.000005
+[2026-03-27 00:14:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:15:28] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:15:35] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:16:43] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:17:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:17:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:17:11] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [51/115], train_progress [44.35%], Elapsed: 2:02:03, ETA: 2:33:09, rollout_time: 45.886488, teacher_fwd_time: 75.139151, loss: 0.185314, kd_loss: 0.185314, lr: 6.422748e-07, gen_len: 303.250000, tot_len: 575.375000, student_train_time: 16.075108, weight_update_time: 0.000006
+[2026-03-27 00:17:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:17:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:17:46] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:18:55] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:19:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:19:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:19:21] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [52/115], train_progress [45.22%], Elapsed: 2:04:13, ETA: 2:30:29, rollout_time: 27.346752, teacher_fwd_time: 76.342159, loss: 0.258293, kd_loss: 0.258293, lr: 6.285128e-07, gen_len: 337.500000, tot_len: 589.000000, student_train_time: 14.384575, weight_update_time: 0.000005
+[2026-03-27 00:19:22] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:19:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:20:03] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:21:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:21:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:21:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:21:37] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [53/115], train_progress [46.09%], Elapsed: 2:06:29, ETA: 2:27:57, rollout_time: 34.970304, teacher_fwd_time: 74.685499, loss: 0.231111, kd_loss: 0.231111, lr: 6.146482e-07, gen_len: 311.625000, tot_len: 577.500000, student_train_time: 14.386902, weight_update_time: 0.000006
+[2026-03-27 00:21:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:22:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:22:21] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:23:30] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:23:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:23:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:23:56] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [54/115], train_progress [46.96%], Elapsed: 2:08:48, ETA: 2:25:29, rollout_time: 36.365387, teacher_fwd_time: 76.511424, loss: 0.218663, kd_loss: 0.218663, lr: 6.006925e-07, gen_len: 311.375000, tot_len: 604.000000, student_train_time: 14.425272, weight_update_time: 0.000004
+[2026-03-27 00:23:58] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:24:23] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:24:31] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:25:37] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:26:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:26:04] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:26:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [55/115], train_progress [47.83%], Elapsed: 2:10:56, ETA: 2:22:50, rollout_time: 27.236959, teacher_fwd_time: 74.206331, loss: 0.218263, kd_loss: 0.218263, lr: 5.866573e-07, gen_len: 266.625000, tot_len: 536.375000, student_train_time: 14.359858, weight_update_time: 0.000005
+[2026-03-27 00:26:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:26:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:26:54] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:27:55] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:28:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:28:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:28:24] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [56/115], train_progress [48.70%], Elapsed: 2:13:16, ETA: 2:20:24, rollout_time: 43.003515, teacher_fwd_time: 68.501126, loss: 0.267539, kd_loss: 0.267539, lr: 5.725544e-07, gen_len: 327.000000, tot_len: 587.750000, student_train_time: 16.974746, weight_update_time: 0.000006
+[2026-03-27 00:28:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:29:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:29:24] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:30:31] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:30:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:30:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:30:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [57/115], train_progress [49.57%], Elapsed: 2:15:49, ETA: 2:18:11, rollout_time: 53.079923, teacher_fwd_time: 73.891135, loss: 0.325396, kd_loss: 0.325396, lr: 5.583953e-07, gen_len: 388.250000, tot_len: 662.750000, student_train_time: 14.647439, weight_update_time: 0.000005
+[2026-03-27 00:30:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:31:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:31:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:32:47] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:33:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:33:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:33:13] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [58/115], train_progress [50.43%], Elapsed: 2:18:05, ETA: 2:15:42, rollout_time: 34.949949, teacher_fwd_time: 75.161750, loss: 0.205262, kd_loss: 0.205262, lr: 5.441918e-07, gen_len: 266.625000, tot_len: 545.000000, student_train_time: 14.252899, weight_update_time: 0.000005
+[2026-03-27 00:33:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:34:02] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:34:10] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:35:16] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:35:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:35:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:35:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [59/115], train_progress [51.30%], Elapsed: 2:20:35, ETA: 2:13:26, rollout_time: 49.097218, teacher_fwd_time: 73.977329, loss: 0.260429, kd_loss: 0.260429, lr: 5.299558e-07, gen_len: 436.375000, tot_len: 723.500000, student_train_time: 14.258555, weight_update_time: 0.000005
+[2026-03-27 00:35:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:36:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:36:23] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:37:32] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:37:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:37:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:37:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [60/115], train_progress [52.17%], Elapsed: 2:22:50, ETA: 2:10:55, rollout_time: 33.437766, teacher_fwd_time: 75.785259, loss: 0.222703, kd_loss: 0.222703, lr: 5.156990e-07, gen_len: 288.250000, tot_len: 564.875000, student_train_time: 14.004855, weight_update_time: 0.000005
+[2026-03-27 00:37:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:39:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:39:10] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:40:12] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:40:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:40:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:40:44] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [61/115], train_progress [53.04%], Elapsed: 2:25:36, ETA: 2:08:53, rollout_time: 65.400514, teacher_fwd_time: 69.186730, loss: 0.179182, kd_loss: 0.179182, lr: 5.014334e-07, gen_len: 293.250000, tot_len: 544.750000, student_train_time: 19.722861, weight_update_time: 0.000005
+[2026-03-27 00:40:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:41:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:41:28] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:42:24] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:42:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:42:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:42:50] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [62/115], train_progress [53.91%], Elapsed: 2:27:43, ETA: 2:06:16, rollout_time: 36.891565, teacher_fwd_time: 63.380357, loss: 0.244005, kd_loss: 0.244005, lr: 4.871707e-07, gen_len: 259.000000, tot_len: 579.375000, student_train_time: 14.686060, weight_update_time: 0.000005
+[2026-03-27 00:42:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:44:02] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:44:09] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:45:13] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:45:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:45:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:45:38] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [63/115], train_progress [54.78%], Elapsed: 2:30:31, ETA: 2:04:14, rollout_time: 71.503425, teacher_fwd_time: 70.562064, loss: 0.243071, kd_loss: 0.243071, lr: 4.729229e-07, gen_len: 331.750000, tot_len: 604.125000, student_train_time: 14.011829, weight_update_time: 0.000005
+[2026-03-27 00:45:40] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:46:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:47:03] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:48:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:48:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:48:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:48:38] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [64/115], train_progress [55.65%], Elapsed: 2:33:30, ETA: 2:02:19, rollout_time: 77.376633, teacher_fwd_time: 75.437224, loss: 0.250026, kd_loss: 0.250026, lr: 4.587017e-07, gen_len: 352.625000, tot_len: 648.125000, student_train_time: 14.604096, weight_update_time: 0.000005
+[2026-03-27 00:48:40] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:49:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:49:50] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:50:59] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:51:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:51:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:51:25] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [65/115], train_progress [56.52%], Elapsed: 2:36:18, ETA: 2:00:13, rollout_time: 65.157136, teacher_fwd_time: 75.813438, loss: 0.190109, kd_loss: 0.190109, lr: 4.445189e-07, gen_len: 342.250000, tot_len: 670.250000, student_train_time: 14.732223, weight_update_time: 0.000006
+[2026-03-27 00:51:27] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:51:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:52:04] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:53:13] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:53:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:53:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:53:38] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [66/115], train_progress [57.39%], Elapsed: 2:38:30, ETA: 1:57:40, rollout_time: 31.416418, teacher_fwd_time: 76.631276, loss: 0.191471, kd_loss: 0.191471, lr: 4.303864e-07, gen_len: 279.000000, tot_len: 579.250000, student_train_time: 13.872660, weight_update_time: 0.000004
+[2026-03-27 00:53:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:54:02] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:54:09] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:55:16] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:55:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:55:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:55:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [67/115], train_progress [58.26%], Elapsed: 2:40:35, ETA: 1:55:02, rollout_time: 23.816942, teacher_fwd_time: 74.207458, loss: 0.228376, kd_loss: 0.228376, lr: 4.163159e-07, gen_len: 337.000000, tot_len: 629.250000, student_train_time: 14.443351, weight_update_time: 0.000004
+[2026-03-27 00:55:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:56:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:57:07] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:58:16] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 00:58:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:58:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 00:58:43] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [68/115], train_progress [59.13%], Elapsed: 2:43:35, ETA: 1:53:03, rollout_time: 76.980632, teacher_fwd_time: 76.977769, loss: 0.235491, kd_loss: 0.235491, lr: 4.023190e-07, gen_len: 352.125000, tot_len: 620.375000, student_train_time: 14.411002, weight_update_time: 0.000003
+[2026-03-27 00:58:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 00:59:30] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 00:59:37] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:00:46] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:01:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:01:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:01:11] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [69/115], train_progress [60.00%], Elapsed: 2:46:03, ETA: 1:50:42, rollout_time: 47.254063, teacher_fwd_time: 75.982458, loss: 0.243848, kd_loss: 0.243848, lr: 3.884074e-07, gen_len: 339.125000, tot_len: 633.125000, student_train_time: 14.043338, weight_update_time: 0.000004
+[2026-03-27 01:01:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:01:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:01:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:02:48] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:03:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:03:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:03:14] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [70/115], train_progress [60.87%], Elapsed: 2:48:07, ETA: 1:48:04, rollout_time: 21.114163, teacher_fwd_time: 76.096384, loss: 0.218838, kd_loss: 0.218838, lr: 3.745927e-07, gen_len: 209.875000, tot_len: 484.000000, student_train_time: 14.418801, weight_update_time: 0.000005
+[2026-03-27 01:03:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:03:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:03:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:04:51] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:05:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:05:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:05:17] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [71/115], train_progress [61.74%], Elapsed: 2:50:10, ETA: 1:45:27, rollout_time: 21.927357, teacher_fwd_time: 74.627080, loss: 0.291565, kd_loss: 0.291565, lr: 3.608862e-07, gen_len: 229.875000, tot_len: 483.875000, student_train_time: 14.542669, weight_update_time: 0.000005
+[2026-03-27 01:05:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:06:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:06:40] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:07:49] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:08:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:08:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:08:15] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [72/115], train_progress [62.61%], Elapsed: 2:53:08, ETA: 1:43:23, rollout_time: 74.871025, teacher_fwd_time: 76.937608, loss: 0.267777, kd_loss: 0.267777, lr: 3.472995e-07, gen_len: 518.500000, tot_len: 801.625000, student_train_time: 14.384584, weight_update_time: 0.000005
+[2026-03-27 01:08:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:08:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:08:53] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:09:57] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:10:23] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:10:23] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:10:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [73/115], train_progress [63.48%], Elapsed: 2:55:15, ETA: 1:40:49, rollout_time: 29.597039, teacher_fwd_time: 71.611835, loss: 0.252753, kd_loss: 0.252753, lr: 3.338438e-07, gen_len: 336.000000, tot_len: 631.500000, student_train_time: 14.275825, weight_update_time: 0.000004
+[2026-03-27 01:10:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:11:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:11:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:12:53] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:13:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:13:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:13:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [74/115], train_progress [64.35%], Elapsed: 2:58:11, ETA: 1:38:43, rollout_time: 73.626853, teacher_fwd_time: 76.247168, loss: 0.431929, kd_loss: 0.431929, lr: 3.205303e-07, gen_len: 333.500000, tot_len: 622.625000, student_train_time: 14.583835, weight_update_time: 0.000006
+[2026-03-27 01:13:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:13:58] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:14:05] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:15:14] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:15:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:15:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:15:42] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [75/115], train_progress [65.22%], Elapsed: 3:00:34, ETA: 1:36:18, rollout_time: 38.694376, teacher_fwd_time: 75.866001, loss: 0.213187, kd_loss: 0.213187, lr: 3.073700e-07, gen_len: 234.500000, tot_len: 519.000000, student_train_time: 16.427768, weight_update_time: 0.000005
+[2026-03-27 01:15:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:16:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:16:21] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:17:25] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:17:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:17:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:17:51] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [76/115], train_progress [66.09%], Elapsed: 3:02:44, ETA: 1:33:46, rollout_time: 31.619497, teacher_fwd_time: 72.153594, loss: 0.246745, kd_loss: 0.246745, lr: 2.943738e-07, gen_len: 281.500000, tot_len: 546.375000, student_train_time: 14.124933, weight_update_time: 0.000005
+[2026-03-27 01:17:53] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:18:22] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:18:30] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:19:37] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:20:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:20:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:20:03] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [77/115], train_progress [66.96%], Elapsed: 3:04:55, ETA: 1:31:15, rollout_time: 30.497979, teacher_fwd_time: 74.858773, loss: 0.304176, kd_loss: 0.304176, lr: 2.815526e-07, gen_len: 293.375000, tot_len: 582.250000, student_train_time: 13.883817, weight_update_time: 0.000005
+[2026-03-27 01:20:04] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:20:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:20:54] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:22:02] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:22:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:22:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:22:32] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [78/115], train_progress [67.83%], Elapsed: 3:07:24, ETA: 1:28:53, rollout_time: 44.385682, teacher_fwd_time: 75.240143, loss: 0.235124, kd_loss: 0.235124, lr: 2.689170e-07, gen_len: 298.125000, tot_len: 570.500000, student_train_time: 18.096674, weight_update_time: 0.000005
+[2026-03-27 01:22:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:23:08] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:23:16] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:24:17] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:24:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:24:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:24:44] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [79/115], train_progress [68.70%], Elapsed: 3:09:36, ETA: 1:26:24, rollout_time: 36.282722, teacher_fwd_time: 68.380258, loss: 0.184108, kd_loss: 0.184108, lr: 2.564775e-07, gen_len: 286.375000, tot_len: 564.750000, student_train_time: 15.102317, weight_update_time: 0.000004
+[2026-03-27 01:24:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:25:49] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:25:56] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:27:04] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:27:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:27:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:27:31] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [80/115], train_progress [69.57%], Elapsed: 3:12:23, ETA: 1:24:10, rollout_time: 65.294137, teacher_fwd_time: 75.440012, loss: 0.209944, kd_loss: 0.209944, lr: 2.442445e-07, gen_len: 490.000000, tot_len: 762.875000, student_train_time: 14.313349, weight_update_time: 0.000005
+[2026-03-27 01:27:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:28:05] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:28:13] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:29:13] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:29:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:29:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:29:39] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [81/115], train_progress [70.43%], Elapsed: 3:14:31, ETA: 1:21:38, rollout_time: 34.549731, teacher_fwd_time: 67.907781, loss: 0.240472, kd_loss: 0.240472, lr: 2.322280e-07, gen_len: 315.500000, tot_len: 617.000000, student_train_time: 14.040374, weight_update_time: 0.000005
+[2026-03-27 01:29:41] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:30:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:30:25] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:31:34] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:32:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:32:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:32:03] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [82/115], train_progress [71.30%], Elapsed: 3:16:55, ETA: 1:19:14, rollout_time: 38.608912, teacher_fwd_time: 76.453223, loss: 0.198761, kd_loss: 0.198761, lr: 2.204382e-07, gen_len: 315.875000, tot_len: 585.875000, student_train_time: 16.598474, weight_update_time: 0.000005
+[2026-03-27 01:32:04] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:32:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:32:58] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:34:06] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:34:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:34:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:34:33] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [83/115], train_progress [72.17%], Elapsed: 3:19:25, ETA: 1:16:53, rollout_time: 47.737717, teacher_fwd_time: 76.025360, loss: 0.242828, kd_loss: 0.242828, lr: 2.088846e-07, gen_len: 254.125000, tot_len: 515.250000, student_train_time: 14.534804, weight_update_time: 0.000008
+[2026-03-27 01:34:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:35:12] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:35:20] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:36:28] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:36:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:36:55] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:36:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [84/115], train_progress [73.04%], Elapsed: 3:21:47, ETA: 1:14:28, rollout_time: 39.270548, teacher_fwd_time: 76.255092, loss: 0.202807, kd_loss: 0.202807, lr: 1.975771e-07, gen_len: 391.625000, tot_len: 669.875000, student_train_time: 14.757904, weight_update_time: 0.000006
+[2026-03-27 01:36:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:37:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:37:59] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:39:00] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:39:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:39:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:39:26] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [85/115], train_progress [73.91%], Elapsed: 3:24:19, ETA: 1:12:06, rollout_time: 56.280715, teacher_fwd_time: 68.483897, loss: 0.220712, kd_loss: 0.220712, lr: 1.865249e-07, gen_len: 320.750000, tot_len: 601.875000, student_train_time: 14.817712, weight_update_time: 0.000005
+[2026-03-27 01:39:28] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:39:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:39:58] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:40:52] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:41:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:41:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:41:16] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [86/115], train_progress [74.78%], Elapsed: 3:26:08, ETA: 1:09:30, rollout_time: 24.691784, teacher_fwd_time: 61.358424, loss: 0.309950, kd_loss: 0.309950, lr: 1.757373e-07, gen_len: 228.250000, tot_len: 484.375000, student_train_time: 14.164170, weight_update_time: 0.000005
+[2026-03-27 01:41:18] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:41:58] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:42:05] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:43:07] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:43:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:43:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:43:34] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [87/115], train_progress [75.65%], Elapsed: 3:28:26, ETA: 1:07:04, rollout_time: 41.643111, teacher_fwd_time: 69.224912, loss: 0.254586, kd_loss: 0.254586, lr: 1.652231e-07, gen_len: 414.125000, tot_len: 682.000000, student_train_time: 14.705520, weight_update_time: 0.000004
+[2026-03-27 01:43:35] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:44:04] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:44:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:45:06] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:45:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:45:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:45:32] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [88/115], train_progress [76.52%], Elapsed: 3:30:24, ETA: 1:04:33, rollout_time: 30.318414, teacher_fwd_time: 61.626552, loss: 0.251083, kd_loss: 0.251083, lr: 1.549912e-07, gen_len: 276.250000, tot_len: 543.250000, student_train_time: 14.316728, weight_update_time: 0.000006
+[2026-03-27 01:45:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:46:48] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:46:56] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:48:04] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:48:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:48:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:48:31] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [89/115], train_progress [77.39%], Elapsed: 3:33:23, ETA: 1:02:20, rollout_time: 76.706710, teacher_fwd_time: 75.092679, loss: 0.245045, kd_loss: 0.245045, lr: 1.450501e-07, gen_len: 520.250000, tot_len: 804.250000, student_train_time: 15.180676, weight_update_time: 0.000005
+[2026-03-27 01:48:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:48:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:49:00] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:50:05] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:50:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:50:31] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:50:31] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [90/115], train_progress [78.26%], Elapsed: 3:35:23, ETA: 0:59:49, rollout_time: 21.780116, teacher_fwd_time: 72.670014, loss: 0.302384, kd_loss: 0.302384, lr: 1.354079e-07, gen_len: 234.500000, tot_len: 481.000000, student_train_time: 14.093797, weight_update_time: 0.000005
+[2026-03-27 01:50:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:51:28] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:51:35] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:52:23] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:52:48] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:52:48] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:52:48] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [91/115], train_progress [79.13%], Elapsed: 3:37:40, ETA: 0:57:24, rollout_time: 56.760408, teacher_fwd_time: 55.550548, loss: 0.209768, kd_loss: 0.209768, lr: 1.260727e-07, gen_len: 231.125000, tot_len: 528.250000, student_train_time: 14.168220, weight_update_time: 0.000005
+[2026-03-27 01:52:49] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:53:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:53:22] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:54:32] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:54:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:54:58] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:54:58] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [92/115], train_progress [80.00%], Elapsed: 3:39:50, ETA: 0:54:57, rollout_time: 27.261446, teacher_fwd_time: 76.992564, loss: 0.236488, kd_loss: 0.236488, lr: 1.170523e-07, gen_len: 279.875000, tot_len: 579.125000, student_train_time: 13.937442, weight_update_time: 0.000004
+[2026-03-27 01:54:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:55:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:56:04] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:57:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 01:57:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:57:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 01:57:37] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [93/115], train_progress [80.87%], Elapsed: 3:42:29, ETA: 0:52:37, rollout_time: 59.020210, teacher_fwd_time: 74.118757, loss: 0.250170, kd_loss: 0.250170, lr: 1.083541e-07, gen_len: 307.500000, tot_len: 607.125000, student_train_time: 14.873657, weight_update_time: 0.000006
+[2026-03-27 01:57:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 01:58:27] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:58:34] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 01:59:42] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:00:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:00:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:00:09] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [94/115], train_progress [81.74%], Elapsed: 3:45:01, ETA: 0:50:16, rollout_time: 49.399461, teacher_fwd_time: 75.334551, loss: 0.282125, kd_loss: 0.282125, lr: 9.998539e-08, gen_len: 313.625000, tot_len: 590.375000, student_train_time: 14.690302, weight_update_time: 0.000005
+[2026-03-27 02:00:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:00:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:00:51] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:01:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:02:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:02:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:02:10] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [95/115], train_progress [82.61%], Elapsed: 3:47:02, ETA: 0:47:47, rollout_time: 36.780577, teacher_fwd_time: 58.739262, loss: 0.209158, kd_loss: 0.209158, lr: 9.195311e-08, gen_len: 396.375000, tot_len: 652.625000, student_train_time: 13.781932, weight_update_time: 0.000004
+[2026-03-27 02:02:12] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:02:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:02:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:03:52] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:04:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:04:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:04:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [96/115], train_progress [83.48%], Elapsed: 3:49:11, ETA: 0:45:21, rollout_time: 26.505506, teacher_fwd_time: 76.005394, loss: 0.230545, kd_loss: 0.230545, lr: 8.426393e-08, gen_len: 316.875000, tot_len: 597.625000, student_train_time: 14.731677, weight_update_time: 0.000005
+[2026-03-27 02:04:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:05:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:05:16] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:06:23] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:06:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:06:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:06:50] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [97/115], train_progress [84.35%], Elapsed: 3:51:42, ETA: 0:42:59, rollout_time: 50.182000, teacher_fwd_time: 74.088060, loss: 0.211010, kd_loss: 0.211010, lr: 7.692423e-08, gen_len: 296.500000, tot_len: 552.750000, student_train_time: 14.670491, weight_update_time: 0.000005
+[2026-03-27 02:06:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:07:41] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:07:49] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:08:58] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:09:23] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:09:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:09:24] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [98/115], train_progress [85.22%], Elapsed: 3:54:16, ETA: 0:40:38, rollout_time: 51.634218, teacher_fwd_time: 76.519468, loss: 0.229744, kd_loss: 0.229744, lr: 6.994011e-08, gen_len: 265.625000, tot_len: 528.625000, student_train_time: 13.790869, weight_update_time: 0.000004
+[2026-03-27 02:09:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:10:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:10:31] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:11:32] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:11:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:11:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:11:59] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [99/115], train_progress [86.09%], Elapsed: 3:56:51, ETA: 0:38:16, rollout_time: 60.098153, teacher_fwd_time: 68.463667, loss: 0.240786, kd_loss: 0.240786, lr: 6.331737e-08, gen_len: 514.250000, tot_len: 780.625000, student_train_time: 14.585356, weight_update_time: 0.000005
+[2026-03-27 02:12:00] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:13:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:13:24] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:14:32] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:14:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:14:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:14:59] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [100/115], train_progress [86.96%], Elapsed: 3:59:51, ETA: 0:35:58, rollout_time: 77.866683, teacher_fwd_time: 75.545183, loss: 0.190715, kd_loss: 0.190715, lr: 5.706151e-08, gen_len: 278.500000, tot_len: 562.625000, student_train_time: 14.642911, weight_update_time: 0.000005
+[2026-03-27 02:15:00] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:15:41] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:15:48] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:16:53] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:17:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:17:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [101/115], train_progress [87.83%], Elapsed: 4:02:11, ETA: 0:33:34, rollout_time: 42.345396, teacher_fwd_time: 72.136425, loss: 0.225998, kd_loss: 0.225998, lr: 5.117773e-08, gen_len: 290.250000, tot_len: 580.500000, student_train_time: 13.868129, weight_update_time: 0.000005
+[2026-03-27 02:17:20] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:17:49] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:17:56] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:19:05] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:19:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:19:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:19:33] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [102/115], train_progress [88.70%], Elapsed: 4:04:25, ETA: 0:31:09, rollout_time: 30.054453, teacher_fwd_time: 76.421808, loss: 0.260129, kd_loss: 0.260129, lr: 4.567092e-08, gen_len: 202.750000, tot_len: 507.250000, student_train_time: 15.734361, weight_update_time: 0.000004
+[2026-03-27 02:19:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:20:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:20:23] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:21:31] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:21:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:21:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:21:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [103/115], train_progress [89.57%], Elapsed: 4:06:49, ETA: 0:28:45, rollout_time: 42.636091, teacher_fwd_time: 75.736501, loss: 0.229982, kd_loss: 0.229982, lr: 4.054565e-08, gen_len: 269.125000, tot_len: 560.625000, student_train_time: 14.348454, weight_update_time: 0.000005
+[2026-03-27 02:21:59] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:22:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:22:36] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:23:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:24:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:24:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:24:10] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [104/115], train_progress [90.43%], Elapsed: 4:09:02, ETA: 0:26:20, rollout_time: 31.621655, teacher_fwd_time: 75.312744, loss: 0.265492, kd_loss: 0.265492, lr: 3.580618e-08, gen_len: 244.250000, tot_len: 500.625000, student_train_time: 13.589653, weight_update_time: 0.000005
+[2026-03-27 02:24:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:25:03] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:25:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:26:18] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:26:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:26:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:26:44] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [105/115], train_progress [91.30%], Elapsed: 4:11:36, ETA: 0:23:57, rollout_time: 53.924329, teacher_fwd_time: 74.292367, loss: 0.165707, kd_loss: 0.165707, lr: 3.145644e-08, gen_len: 248.250000, tot_len: 512.750000, student_train_time: 14.456036, weight_update_time: 0.000005
+[2026-03-27 02:26:45] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:27:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:27:36] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:28:45] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:29:12] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:29:12] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:29:12] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [106/115], train_progress [92.17%], Elapsed: 4:14:04, ETA: 0:21:34, rollout_time: 44.584360, teacher_fwd_time: 75.985632, loss: 0.239724, kd_loss: 0.239724, lr: 2.750005e-08, gen_len: 316.250000, tot_len: 605.500000, student_train_time: 15.119563, weight_update_time: 0.000004
+[2026-03-27 02:29:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:29:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:30:04] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:31:08] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:31:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:31:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:31:34] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [107/115], train_progress [93.04%], Elapsed: 4:16:26, ETA: 0:19:10, rollout_time: 44.957003, teacher_fwd_time: 71.665057, loss: 0.207401, kd_loss: 0.207401, lr: 2.394029e-08, gen_len: 398.625000, tot_len: 664.875000, student_train_time: 13.862868, weight_update_time: 0.000005
+[2026-03-27 02:31:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:32:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:32:18] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:33:11] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:33:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:33:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:33:38] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [108/115], train_progress [93.91%], Elapsed: 4:18:30, ETA: 0:16:45, rollout_time: 37.407995, teacher_fwd_time: 60.105807, loss: 0.275877, kd_loss: 0.275877, lr: 2.078013e-08, gen_len: 392.250000, tot_len: 652.875000, student_train_time: 14.844744, weight_update_time: 0.000004
+[2026-03-27 02:33:40] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:34:12] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:34:19] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:35:28] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:35:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:35:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:35:54] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [109/115], train_progress [94.78%], Elapsed: 4:20:47, ETA: 0:14:21, rollout_time: 33.579588, teacher_fwd_time: 75.973733, loss: 0.211297, kd_loss: 0.211297, lr: 1.802218e-08, gen_len: 314.250000, tot_len: 565.125000, student_train_time: 15.107803, weight_update_time: 0.000003
+[2026-03-27 02:35:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:37:01] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:37:09] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:38:16] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:38:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:38:43] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:38:43] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [110/115], train_progress [95.65%], Elapsed: 4:23:35, ETA: 0:11:58, rollout_time: 66.958431, teacher_fwd_time: 74.866732, loss: 0.186504, kd_loss: 0.186504, lr: 1.566873e-08, gen_len: 320.625000, tot_len: 595.375000, student_train_time: 14.370471, weight_update_time: 0.000005
+[2026-03-27 02:38:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:39:36] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:39:44] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:40:53] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:41:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:41:19] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:41:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [111/115], train_progress [96.52%], Elapsed: 4:26:11, ETA: 0:09:35, rollout_time: 53.796006, teacher_fwd_time: 76.198880, loss: 0.231789, kd_loss: 0.231789, lr: 1.372175e-08, gen_len: 286.375000, tot_len: 550.250000, student_train_time: 14.601637, weight_update_time: 0.000006
+[2026-03-27 02:41:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:41:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:41:52] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:43:00] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:43:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:43:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:43:26] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [112/115], train_progress [97.39%], Elapsed: 4:28:18, ETA: 0:07:11, rollout_time: 24.960742, teacher_fwd_time: 75.981164, loss: 0.246769, kd_loss: 0.246769, lr: 1.218285e-08, gen_len: 272.625000, tot_len: 523.125000, student_train_time: 14.032592, weight_update_time: 0.000005
+[2026-03-27 02:43:28] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:44:25] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:44:33] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:45:41] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:46:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:46:07] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:46:07] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [113/115], train_progress [98.26%], Elapsed: 4:30:59, ETA: 0:04:47, rollout_time: 59.379841, teacher_fwd_time: 76.064153, loss: 0.230648, kd_loss: 0.230648, lr: 1.105331e-08, gen_len: 319.250000, tot_len: 605.500000, student_train_time: 13.878008, weight_update_time: 0.000005
+[2026-03-27 02:46:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:46:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:46:58] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:48:06] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:48:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:48:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:48:33] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [114/115], train_progress [99.13%], Elapsed: 4:33:25, ETA: 0:02:23, rollout_time: 43.057154, teacher_fwd_time: 76.211144, loss: 0.305678, kd_loss: 0.305678, lr: 1.033406e-08, gen_len: 387.125000, tot_len: 654.125000, student_train_time: 14.437539, weight_update_time: 0.000006
+[2026-03-27 02:48:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:49:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:49:17] [[32mINFO[0m] [[2mteacher_actor_hf.py:wakeup:135[0m] [TeacherRayActorHF] Awake (weights on cuda:0).
+[36m(TeacherRayActorHF pid=516682)[0m [2026-03-27 02:50:24] [[32mINFO[0m] [[2mteacher_actor_hf.py:sleep:128[0m] [TeacherRayActorHF] Sleeping (weights on CPU).
+[2026-03-27 02:50:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:167[0m] [RolloutActorGroupVLLM] Awake.
+[2026-03-27 02:50:50] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:160[0m] [RolloutActorGroupVLLM] Sleeping.
+[2026-03-27 02:50:50] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:455[0m] [Rank 0] epoch [1/1], step [115/115], train_progress [100.00%], Elapsed: 4:35:42, ETA: 0:00:00, rollout_time: 36.514366, teacher_fwd_time: 74.808399, loss: 0.265242, kd_loss: 0.265242, lr: 1.002570e-08, gen_len: 339.750000, tot_len: 631.250000, student_train_time: 14.181849, weight_update_time: 0.000005
+[2026-03-27 02:50:50] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:fit:207[0m] [Rank 0] Saving model after epoch 1
+[2026-03-27 02:51:25] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:fit:212[0m] [Rank 0] Training done, totally cost 4:36:18
