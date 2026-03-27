@@ -1,16 +1,3 @@
-{"time":"2026-03-26T11:06:12.225563081Z","level":"INFO","msg":"wandb-core"}
-{"time":"2026-03-26T11:06:12.228158107Z","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
-{"time":"2026-03-26T11:06:12.585341977Z","level":"INFO","msg":"stream: created new stream","id":"kafn70q3"}
-{"time":"2026-03-26T11:06:12.585441644Z","level":"INFO","msg":"handler: started"}
-{"time":"2026-03-26T11:06:12.585515797Z","level":"INFO","msg":"stream: started"}
-{"time":"2026-03-26T11:06:12.585592071Z","level":"INFO","msg":"writer: started","stream_id":"kafn70q3"}
-{"time":"2026-03-26T11:06:12.585605018Z","level":"INFO","msg":"sender: started"}
-{"time":"2026-03-26T11:06:13.069890988Z","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
-{"time":"2026-03-26T11:06:13.301693296Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
-{"time":"2026-03-26T11:06:22.323226925Z","level":"INFO","msg":"stream: closing"}
-{"time":"2026-03-26T11:06:22.603855799Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
-{"time":"2026-03-26T11:06:22.604195193Z","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":6,"console_offset":1,"console_lines":71,"uploaded_len":5,"complete":true,"exit_code":1}
-{"time":"2026-03-26T11:06:23.046682673Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
-{"time":"2026-03-26T11:06:23.046892664Z","level":"INFO","msg":"handler: closed"}
-{"time":"2026-03-26T11:06:23.046967113Z","level":"INFO","msg":"sender: closed"}
-{"time":"2026-03-26T11:06:23.046973453Z","level":"INFO","msg":"stream: closed"}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fa0ef3d24d2aff87fa733b6c6d5221a389ef60e6d8ec8ea35019624dd36dc11
+size 1668

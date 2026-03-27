@@ -1,22 +1,3 @@
-{"time":"2026-03-26T10:59:43.247398627Z","level":"INFO","msg":"wandb-core"}
-{"time":"2026-03-26T10:59:43.249394369Z","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
-{"time":"2026-03-26T10:59:43.613249066Z","level":"INFO","msg":"stream: created new stream","id":"d1wlxwtf"}
-{"time":"2026-03-26T10:59:43.613366507Z","level":"INFO","msg":"handler: started"}
-{"time":"2026-03-26T10:59:43.613479706Z","level":"INFO","msg":"stream: started"}
-{"time":"2026-03-26T10:59:43.613519583Z","level":"INFO","msg":"writer: started","stream_id":"d1wlxwtf"}
-{"time":"2026-03-26T10:59:43.613524759Z","level":"INFO","msg":"sender: started"}
-{"time":"2026-03-26T10:59:44.031858948Z","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":2}
-{"time":"2026-03-26T10:59:44.188057852Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
-{"time":"2026-03-26T10:59:59.032295011Z","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":0,"history_lines":1,"events_offset":0,"events_lines":1,"console_offset":1,"console_lines":4,"uploaded_len":2}
-{"time":"2026-03-26T10:59:59.196375662Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
-{"time":"2026-03-26T11:00:14.032199813Z","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":1,"history_lines":1,"events_offset":1,"events_lines":2}
-{"time":"2026-03-26T11:00:14.233734454Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
-{"time":"2026-03-26T11:00:16.790996716Z","level":"INFO","msg":"stream: closing"}
-{"time":"2026-03-26T11:00:17.081590844Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
-{"time":"2026-03-26T11:00:17.081877821Z","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":2,"history_lines":8,"events_offset":3,"events_lines":1,"console_offset":3,"console_lines":1,"uploaded_len":3}
-{"time":"2026-03-26T11:00:17.534500176Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
-{"time":"2026-03-26T11:00:17.534734264Z","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":5,"console_lines":82,"complete":true,"exit_code":1}
-{"time":"2026-03-26T11:00:17.992717871Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
-{"time":"2026-03-26T11:00:17.992873113Z","level":"INFO","msg":"handler: closed"}
-{"time":"2026-03-26T11:00:17.992941864Z","level":"INFO","msg":"sender: closed"}
-{"time":"2026-03-26T11:00:17.992955067Z","level":"INFO","msg":"stream: closed"}
+version https://git-lfs.github.com/spec/v1
+oid sha256:431efaa0bec85d5f97f600a0445b39b76b43c14f1e4461771e8b3b4836e05ee5
+size 2589
