@@ -158,12 +158,9 @@ def train(args):
         num_gpus_per_actor=0.5,
     )
 
-    # Off-policy vLLM rollout: skip weight-sync to avoid OOM from FlattenedTensorBucket
-    try:
-        import sgl_kernel  # noqa
-    except (ModuleNotFoundError, ImportError):
-        student_model.update_rollout_weights = lambda *a, **kw: None
-
+    # Removed the hack that bypassed vLLM off-policy rollout weight-syncing.
+    # The RolloutActorGroupVLLM now supports synchronous sync-from-disk
+    # seamlessly without deadlocking FSDP.
 
     # Initialize tokenizers
     student_tokenizer = get_tokenizer(

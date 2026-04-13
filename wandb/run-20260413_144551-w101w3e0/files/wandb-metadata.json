@@ -1,0 +1,45 @@
+{
+  "os": "Linux-6.8.0-84-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-04-13T14:45:51.383046Z",
+  "program": "/home/alignment-without-rewards/rl/grpo_run.py",
+  "codePath": "rl/grpo_run.py",
+  "codePathLocal": "rl/grpo_run.py",
+  "git": {
+    "remote": "https://github.com/viratzzs/alignment-without-rewards.git",
+    "commit": "742e0c6fbfff4fc1940fa848f51f834f70056a77"
+  },
+  "email": "viratchauhan2004.work@gmail.com",
+  "root": "/home/alignment-without-rewards",
+  "host": "2",
+  "executable": "/home/alignment-without-rewards/.venv/bin/python3",
+  "cpu_count": 20,
+  "cpu_count_logical": 20,
+  "gpu": "AMD Instinct MI300X VF",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "747760488448",
+      "used": "100195573760"
+    }
+  },
+  "memory": {
+    "total": "253347168256"
+  },
+  "gpu_amd": [
+    {
+      "id": "0",
+      "uniqueId": "0xfecdea6763cbc132",
+      "vbiosVersion": "113-M3000100-103",
+      "performanceLevel": "auto",
+      "maxPower": "750.0",
+      "series": "AMD Instinct MI300X VF",
+      "model": "0x74b5",
+      "vendor": "Advanced Micro Devices, Inc. [AMD/ATI]",
+      "sku": "M3000100",
+      "sclkRange": "500Mhz - 2100Mhz",
+      "mclkRange": "900Mhz - 1300Mhz"
+    }
+  ],
+  "writerId": "hny98qycuxjo3yd3mmnf7q5rccruwame"
+}

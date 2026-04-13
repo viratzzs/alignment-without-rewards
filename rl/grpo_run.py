@@ -59,14 +59,6 @@ output_dir="outputs/Qwen3-4B-RL"
 run_name="Qwen3-4B-RL"
 
 if __name__ == "__main__":
-    # 45k samples * 2 epochs * 2 generations = 180k samples
-    # 180k / (2 batch size * 8 gradient accumulation * 2 workers) = 5624 steps (for 2 gpus)
-    # 180k / (2 batch size * 8 gradient accumulation * 8 workers) = 1406 steps (for 8 gpus)
-    # 180k / (2 batch size * 2 gradient accumulation * 8 workers) = 5624 steps (for 8 gpus)
-    # UPDATED: 40k samples * 1 epoch * 2 generations = 80k samples
-    # 80k / (2 batch size * 4 gradient accumulation * 8 workers) = 1250 steps (for 8 gpus)
-    # 18k * 2 epochs * 2 generations = 72k samples
-    # 72k / (2 batch size * 8 gradient accumulation * 4 workers) = 1125 steps (for 4 gpus)
     training_args = GRPOConfig(
         #importance_sampling_level="sequence", # GSPO implementation by Qwen team
         #loss_type="bnpo",
@@ -80,7 +72,7 @@ if __name__ == "__main__":
         vllm_gpu_memory_utilization=0.5,
         vllm_max_model_length=4096,
         chat_template_kwargs={"enable_thinking": False},
-        learning_rate=1e-6,
+        learning_rate=5e-6,
         temperature=0.7,
         top_p=0.9, # do 0.8 if nonsense generations happen
         top_k=-1,
@@ -94,19 +86,20 @@ if __name__ == "__main__":
         #use_liger_loss=True,  # liger only supports token level sampling, so incompatible with GSPO(sequence level sampling)
         logging_steps=1,
         per_device_train_batch_size=8,
-        #gradient_accumulation_steps=4, # TODO: Add grad accumul. again if training too slow.
+        gradient_accumulation_steps=2,
         num_generations=4,
         # max_prompt_length removed in TRL 0.29.1 — enforce via tokenizer.model_max_length=2048 below
-        max_completion_length=3072,
-        num_train_epochs=1,
-        save_steps=500,
-        # to prevent RTE: expected to mark a variable ready only once, add this in startup: --ddp_find_unused_parameters False
+        max_completion_length=2048,
+        num_train_epochs=2,
+        #save_steps=500,
         #gradient_checkpointing=True, # TODO: add this back if OOM, else don't cus it makes training slow.
         ddp_find_unused_parameters=False,
         report_to="wandb",
         push_to_hub=True,
+        save_strategy="epoch",
         #generation_kwargs={},
         log_unique_prompts=True,         # renamed from wandb_log_unique_prompts
+        hub_model_id="ViratChauhan/Qwen3-4B-GRPO-v2"
     )
 
 
@@ -138,7 +131,7 @@ if __name__ == "__main__":
     #trainer.train(resume_from_checkpoint="/workspace/training-mvp/src/code-rl/outputs/Qwen8B-RL/checkpoint-600")
     trainer.train()
 
-    repo_name = "ViratChauhan/Qwen3-4B-GRPO"
+    repo_name = "ViratChauhan/Qwen3-4B-GRPO-v2"
 
     logger.info("Saving full model...")
     trainer.save_model(f"{output_dir}/final_model")
