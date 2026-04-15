@@ -1,0 +1,300 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            47divd8xcvty3182sx2e77ffivpxbf69:
+                args:
+                    - --num_nodes
+                    - "1"
+                    - --num_gpus_per_node
+                    - "1"
+                    - --backend
+                    - fsdp2
+                    - --train_batch_size
+                    - "32"
+                    - --micro_train_batch_size
+                    - "4"
+                    - --learning_rate
+                    - "2e-6"
+                    - --lr_warmup_ratio
+                    - "0.05"
+                    - --num_epochs
+                    - "3"
+                    - --save_path
+                    - ./outputs/opsd-qwen3-4b
+                    - --bf16
+                    - "True"
+                    - --gradient_checkpointing
+                    - "True"
+                    - --train_enable_sleep
+                    - "True"
+                    - --packing_samples
+                    - "True"
+                    - --teacher_update_freq
+                    - "1000000"
+                    - --student_name_or_path
+                    - Qwen/Qwen3-4B
+                    - --teacher_name_or_path
+                    - Qwen/Qwen3-4B
+                    - --enable_thinking
+                    - "True"
+                    - --rollout_batch_size
+                    - "64"
+                    - --rollout_num_engines
+                    - "1"
+                    - --rollout_tp_size
+                    - "1"
+                    - --rollout_mem_fraction_static
+                    - "0.5"
+                    - --rollout_enable_sleep
+                    - "True"
+                    - --n_samples_per_prompt
+                    - "1"
+                    - --generate_max_len
+                    - "8192"
+                    - --train_dataset_path
+                    - ./data/logiqa_train_kdflow.parquet
+                    - --max_len
+                    - "10000"
+                    - --prompt_max_len
+                    - "2048"
+                    - --input_key
+                    - messages
+                    - --label_key
+                    - label
+                    - --apply_chat_template
+                    - "True"
+                    - --kd_ratio
+                    - "1.0"
+                    - --kd_loss_fn
+                    - jsd
+                    - --jsd_beta
+                    - "0.5"
+                    - --kd_algorithm
+                    - opsd
+                    - --pointwise_kl_clip
+                    - "10.0"
+                    - --teacher_tp_size
+                    - "1"
+                    - --teacher_dp_size
+                    - "1"
+                    - --teacher_mem_fraction_static
+                    - "0.4"
+                    - --teacher_enable_sleep
+                    - "True"
+                    - --logging_steps
+                    - "1"
+                    - --use_wandb
+                    - "True"
+                    - --wandb_project
+                    - alignment-opsd
+                    - --wandb_group
+                    - on_policy_self_distillation
+                    - --wandb_run_name
+                    - opsd-qwen3-4b
+                    - --wandb_mode
+                    - online
+                codePath: scripts/opsd/train_opsd.py
+                codePathLocal: scripts/opsd/train_opsd.py
+                cpu_count: 20
+                cpu_count_logical: 20
+                disk:
+                    /:
+                        total: "747760488448"
+                        used: "492997156864"
+                email: viratchauhan2004.work@gmail.com
+                executable: /home/alignment-without-rewards/.venv/bin/python
+                git:
+                    commit: c12f79836f26be025405e96710762e44aefc3743
+                    remote: https://github.com/viratzzs/alignment-without-rewards.git
+                gpu: AMD Instinct MI300X VF
+                gpu_amd:
+                    - id: "0"
+                      maxPower: "750.0"
+                      mclkRange: 900Mhz - 1300Mhz
+                      model: "0x74b5"
+                      performanceLevel: auto
+                      sclkRange: 500Mhz - 2100Mhz
+                      series: AMD Instinct MI300X VF
+                      sku: M3000100
+                      uniqueId: "0xfecdea6763cbc132"
+                      vbiosVersion: 113-M3000100-103
+                      vendor: Advanced Micro Devices, Inc. [AMD/ATI]
+                gpu_count: 1
+                host: "2"
+                memory:
+                    total: "253347168256"
+                os: Linux-6.8.0-84-generic-x86_64-with-glibc2.39
+                program: /home/alignment-without-rewards/scripts/opsd/train_opsd.py
+                python: CPython 3.12.3
+                root: /home/alignment-without-rewards
+                startedAt: "2026-04-15T08:06:52.831481Z"
+                writerId: 47divd8xcvty3182sx2e77ffivpxbf69
+        m:
+            - "1": train/global_step
+              "6":
+                - 3
+              "7": []
+            - "1": eval/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": train/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+            - "2": eval/*
+              "5": 2
+              "6":
+                - 1
+              "7": []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 11
+                - 30
+                - 41
+                - 49
+                - 51
+                - 71
+                - 95
+                - 98
+                - 105
+            "2":
+                - 1
+                - 11
+                - 30
+                - 41
+                - 49
+                - 51
+                - 71
+                - 95
+                - 98
+                - 105
+            "3":
+                - 7
+                - 13
+                - 16
+                - 66
+            "4": 3.12.3
+            "5": 0.25.1
+            "6": 4.57.6
+            "10":
+                - 20
+            "12": 0.25.1
+            "13": linux-x86_64
+data:
+    value:
+        apply_chat_template: true
+        eval_dataset_path: null
+        eval_split: eval
+        image_key: null
+        input_key: messages
+        input_template: null
+        label_key: label
+        max_len: 10240
+        max_samples: 1e+08
+        output_key: null
+        packing_samples: true
+        preprocess_num_workers: 8
+        prompt_max_len: 2048
+        teacher_input_key: null
+        train_dataset_path: ./data/logiqa_train_kdflow.parquet
+        train_dataset_probs: null
+        train_split: train
+fsdp:
+    value:
+        cpu_offload: false
+        fsdp_size: -1
+kd:
+    value:
+        adaptive_alpha: 0.5
+        dskd_projector_lr: 0.0001
+        dskd_token_align: eta
+        dskd_topk_vocab: -1
+        hrl_topk: 5
+        jsd_beta: 0.5
+        kd_algorithm: opsd
+        kd_loss_fn: jsd
+        kd_ratio: 1
+        kd_temperature: 1
+        pointwise_kl_clip: 10
+        skew_lambda: 0.1
+        teacher_dp_size: 1
+        teacher_enable_sleep: true
+        teacher_ep_size: 1
+        teacher_forward_n_batches: 1
+        teacher_mem_fraction_static: 0.4
+        teacher_offload_tags: all
+        teacher_pp_size: 1
+        teacher_quantization: null
+        teacher_tp_size: 1
+        teacher_update_freq: 1000000
+log:
+    value:
+        logging_steps: 1
+        use_wandb: true
+        wandb_dir: null
+        wandb_group: on_policy_self_distillation
+        wandb_mode: online
+        wandb_org: null
+        wandb_project: alignment-opsd
+        wandb_run_name: opsd-qwen3-4b
+model:
+    value:
+        attn_implementation: flash_attention_2
+        disable_fast_tokenizer: false
+        enable_thinking: true
+        lora_alpha: 16
+        lora_dropout: 0
+        lora_rank: 0
+        ring_attn_size: 1
+        student_name_or_path: Qwen/Qwen3-4B
+        target_modules: all-linear
+        teacher_name_or_path: Qwen/Qwen3-4B
+        use_liger_kernel: false
+rollout:
+    value:
+        generate_max_len: 8192
+        n_samples_per_prompt: 1
+        print_rollout_sample: false
+        rollout_batch_size: 64
+        rollout_enable_sleep: true
+        rollout_mem_fraction_static: 0.5
+        rollout_num_engines: 1
+        rollout_tp_size: 1
+        temperature: 1
+        top_p: 1
+train:
+    value:
+        adam_betas:
+            - 0.9
+            - 0.98
+        backend: fsdp2
+        bf16: true
+        ckpt_path: ./ckpt/checkpoints_distill
+        enable_sleep: true
+        eval_steps: .inf
+        full_determinism: false
+        gradient_checkpointing: true
+        gradient_checkpointing_use_reentrant: false
+        learning_rate: 2e-06
+        load_checkpoint: false
+        local_rank: -1
+        lr_scheduler: cosine_with_min_lr
+        lr_warmup_ratio: 0.05
+        max_norm: 1
+        micro_train_batch_size: 4
+        min_lr: 1e-08
+        num_epochs: 3
+        num_gpus_per_node: 1
+        num_nodes: 1
+        save_path: ./outputs/opsd-qwen3-4b
+        save_steps: .inf
+        seed: 42
+        teacher_offload: false
+        train_batch_size: 32
+        train_enable_sleep: true
+        weight_decay: 0

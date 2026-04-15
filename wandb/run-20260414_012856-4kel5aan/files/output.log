@@ -1,0 +1,161 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m] ******* Start Training *******
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Num Epochs:            2
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Steps per Epoch:       115
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Total Training Steps:  230
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Per-device Batch Size: 4
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Gradient Accumulation: 8
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   Learning Rate:         1e-06
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Algorithm:          vanilla_kd
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:127[0m]   KD Loss Function:      rkl
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mteacher_group.py:shutdown:272[0m] [TeacherActorGroup] All teacher actors shutdown complete.
+[2026-04-14 01:28:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:shutdown:172[0m] [RolloutActorGroupVLLM] Shutdown complete.
+Traceback (most recent call last):
+  File "python/ray/_raylet.pyx", line 793, in ray._raylet.prepare_args_internal
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 752, in serialize
+    return self._serialize_to_msgpack(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 669, in _serialize_to_msgpack
+    pickle5_serialized_object = self._serialize_to_pickle5(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 616, in _serialize_to_pickle5
+    raise e
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 611, in _serialize_to_pickle5
+    inband = pickle.dumps(
+             ^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/cloudpickle/cloudpickle.py", line 1479, in dumps
+    cp.dump(obj)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/cloudpickle/cloudpickle.py", line 1245, in dump
+    return super().dump(obj)
+           ^^^^^^^^^^^^^^^^^
+TypeError: cannot pickle 'msgspec.msgpack.Encoder' object
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 173, in <module>
+    train(args)
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 163, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 137, in fit
+    self.student.connect_rollout_engines(self.rollout_group.actors, rollout_tp_size)
+  File "/home/KDFlow/kdflow/ray/train/student_group.py", line 182, in connect_rollout_engines
+    actor.connect_rollout_engines.remote(rollout_actors, rollout_tp_size)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 676, in remote
+    return self._remote(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/util/tracing/tracing_helper.py", line 422, in _start_span
+    return method(self, args, kwargs, *_args, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 883, in _remote
+    object_refs = invocation(args, kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 863, in invocation
+    return dst_actor._actor_method_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 2170, in _actor_method_call
+    object_refs = worker.core_worker.submit_actor_task(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 3781, in ray._raylet.CoreWorker.submit_actor_task
+  File "python/ray/_raylet.pyx", line 3786, in ray._raylet.CoreWorker.submit_actor_task
+  File "python/ray/_raylet.pyx", line 749, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python/ray/_raylet.pyx", line 740, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python/ray/_raylet.pyx", line 802, in ray._raylet.prepare_args_internal
+TypeError: Could not serialize the argument [<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>] for a task or actor kdflow.ray.train.student_actor.StudentRayActor.connect_rollout_engines:
+================================================================================
+Checking Serializability of [<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>]
+================================================================================
+[31m!!! FAIL[39m serialization: cannot pickle 'msgspec.msgpack.Encoder' object
+WARNING: Did not find non-serializable object in [<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>]. This may be an oversight.
+================================================================================
+Variable:
+
+	[1mFailTuple([<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>] [obj=[<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>], parent=None])[0m
+
+was found to be non-serializable. There may be multiple other undetected variables that were non-serializable.
+Consider either removing the instantiation/imports of these variables or moving the instantiation into the scope of the function/class.
+================================================================================
+Check https://docs.ray.io/en/master/ray-core/objects/serialization.html#troubleshooting for more information.
+If you have any suggestions on how to improve this error message, please reach out to the Ray developers on github.com/ray-project/ray/issues/
+================================================================================
+
+Traceback (most recent call last):
+  File "python/ray/_raylet.pyx", line 793, in ray._raylet.prepare_args_internal
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 752, in serialize
+    return self._serialize_to_msgpack(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 669, in _serialize_to_msgpack
+    pickle5_serialized_object = self._serialize_to_pickle5(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 616, in _serialize_to_pickle5
+    raise e
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/serialization.py", line 611, in _serialize_to_pickle5
+    inband = pickle.dumps(
+             ^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/cloudpickle/cloudpickle.py", line 1479, in dumps
+    cp.dump(obj)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/cloudpickle/cloudpickle.py", line 1245, in dump
+    return super().dump(obj)
+           ^^^^^^^^^^^^^^^^^
+TypeError: cannot pickle 'msgspec.msgpack.Encoder' object
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 173, in <module>
+    train(args)
+  File "/home/KDFlow/kdflow/cli/train_kd_on_policy.py", line 163, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 137, in fit
+    self.student.connect_rollout_engines(self.rollout_group.actors, rollout_tp_size)
+  File "/home/KDFlow/kdflow/ray/train/student_group.py", line 182, in connect_rollout_engines
+    actor.connect_rollout_engines.remote(rollout_actors, rollout_tp_size)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 676, in remote
+    return self._remote(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/util/tracing/tracing_helper.py", line 422, in _start_span
+    return method(self, args, kwargs, *_args, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 883, in _remote
+    object_refs = invocation(args, kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 863, in invocation
+    return dst_actor._actor_method_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/actor.py", line 2170, in _actor_method_call
+    object_refs = worker.core_worker.submit_actor_task(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 3781, in ray._raylet.CoreWorker.submit_actor_task
+  File "python/ray/_raylet.pyx", line 3786, in ray._raylet.CoreWorker.submit_actor_task
+  File "python/ray/_raylet.pyx", line 749, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python/ray/_raylet.pyx", line 740, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python/ray/_raylet.pyx", line 802, in ray._raylet.prepare_args_internal
+TypeError: Could not serialize the argument [<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>] for a task or actor kdflow.ray.train.student_actor.StudentRayActor.connect_rollout_engines:
+================================================================================
+Checking Serializability of [<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>]
+================================================================================
+[31m!!! FAIL[39m serialization: cannot pickle 'msgspec.msgpack.Encoder' object
+WARNING: Did not find non-serializable object in [<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>]. This may be an oversight.
+================================================================================
+Variable:
+
+	[1mFailTuple([<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>] [obj=[<kdflow.ray.rollout.rollout_group_vllm._FakeActorHandle object at 0x72cc02a05220>], parent=None])[0m
+
+was found to be non-serializable. There may be multiple other undetected variables that were non-serializable.
+Consider either removing the instantiation/imports of these variables or moving the instantiation into the scope of the function/class.
+================================================================================
+Check https://docs.ray.io/en/master/ray-core/objects/serialization.html#troubleshooting for more information.
+If you have any suggestions on how to improve this error message, please reach out to the Ray developers on github.com/ray-project/ray/issues/
+================================================================================

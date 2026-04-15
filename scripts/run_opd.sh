@@ -14,6 +14,9 @@ set -x
 # Load env vars (HF_TOKEN, WANDB_API_KEY, etc.)
 set -a; source "$(dirname "$0")/../.env"; set +a
 
+# Reduce PyTorch memory fragmentation (helps on ROCm/HIP)
+#export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
 # ============ Training ============
 OPTS=""
 OPTS+=" --num_nodes 1"
@@ -23,15 +26,16 @@ OPTS+=" --train_batch_size 32" # edited
 OPTS+=" --micro_train_batch_size 4"
 OPTS+=" --learning_rate 1e-6"
 OPTS+=" --lr_warmup_ratio 0.05"
-OPTS+=" --num_epochs 1"
+OPTS+=" --num_epochs 2"
 OPTS+=" --save_path ./outputs/opd-qwen3-4b"
 OPTS+=" --bf16 True"
 OPTS+=" --gradient_checkpointing True"
+OPTS+=" --save_steps 40"
 OPTS+=" --train_enable_sleep True"
 OPTS+=" --packing_samples True" # edited
 
-# ============ Model ============
 OPTS+=" --student_name_or_path Qwen/Qwen3-4B"
+# ============ Model ============
 OPTS+=" --teacher_name_or_path Qwen/Qwen3-30B-A3B"
 OPTS+=" --enable_thinking False"
 
@@ -78,4 +82,4 @@ PUSH_DIR="${LATEST_CKPT:-outputs/opd-qwen3-4b}"
 echo "Pushing checkpoint from: $PUSH_DIR"
 python scripts/push_to_hub.py \
     --ckpt-dir "$PUSH_DIR" \
-    --repo-name "ViratChauhan/Qwen3-4B-OPD"
+    --repo-name "ViratChauhan/Qwen3-4B-OPD-v2"

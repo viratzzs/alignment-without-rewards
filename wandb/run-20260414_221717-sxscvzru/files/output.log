@@ -1,0 +1,129 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m] ******* Start Training *******
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Num Epochs:            3
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Steps per Epoch:       115
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Total Training Steps:  345
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Per-device Batch Size: 4
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Gradient Accumulation: 8
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   Learning Rate:         1e-06
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Algorithm:          opsd
+[2026-04-14 22:17:19] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:127[0m]   KD Loss Function:      jsd
+[2026-04-14 22:17:20] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[36m(StudentRayActor pid=361134)[0m
+[36m(StudentRayActor pid=361134)[0m [2026-04-14 22:17:08] 2:361134:361134 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=361134)[0m
+[36m(StudentRayActor pid=361134)[0m [2026-04-14 22:17:08] 2:361134:361134 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=361134)[0m RCCL version : 2.26.6-HEAD:f224e2c
+[36m(StudentRayActor pid=361134)[0m HIP version  : 7.0.51831-a3e329ad8
+[36m(StudentRayActor pid=361134)[0m ROCm version : 7.0.0.0-38-9428210
+[36m(StudentRayActor pid=361134)[0m Hostname     : 2
+[36m(StudentRayActor pid=361134)[0m Librccl path : /opt/rocm-7.0.0/lib/librccl.so.1
+[36m(StudentRayActor pid=361134)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[36m(StudentRayActor pid=361134)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[36m(StudentRayActor pid=361134)[0m [rank0]:[W414 22:17:20.634083143 ProcessGroupGloo.cpp:516] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+[2026-04-14 22:17:42] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=360901)[0m [2026-04-14 22:17:42] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=360901)[0m [2026-04-14 22:17:52] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[36m(StudentRayActor pid=361134)[0m /home/KDFlow/kdflow/ray/train/student_actor.py:258: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /app/pytorch/torch/csrc/utils/tensor_numpy.cpp:206.)
+[36m(StudentRayActor pid=361134)[0m   k: torch.from_numpy(ray.get(v) if isinstance(v, ray.ObjectRef) else v).to(device, non_blocking=True)
+[36m(TeacherRayActor pid=360901)[0m [2026-04-14 22:18:16] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[2026-04-14 22:18:17] [[32mINFO[0m] [[2mteacher_group.py:shutdown:272[0m] [TeacherActorGroup] All teacher actors shutdown complete.
+[2026-04-14 22:18:17] [[32mINFO[0m] [[2mrollout_group_vllm.py:shutdown:202[0m] [RolloutActorGroupVLLM] Shutdown complete.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 257, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 247, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 205, in fit
+    self.student.update_teacher_weights()
+  File "/home/KDFlow/kdflow/ray/train/student_group.py", line 224, in update_teacher_weights
+    ray.get(refs)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(AttributeError): [36mray::StudentRayActor.update_teacher_weights()[39m (pid=361134, ip=129.212.188.215, actor_id=3b140f969a5b3bcabf46d52b01000000, repr=<kdflow.ray.train.student_actor.StudentRayActor object at 0x781530e386b0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/student_actor.py", line 384, in update_teacher_weights
+    self.strategy.update_rollout_weights_from_tensor(
+  File "/home/KDFlow/kdflow/backend/fsdp/fsdp_strategy.py", line 529, in update_rollout_weights_from_tensor
+    self._flush_weight_bucket(
+  File "/home/KDFlow/kdflow/backend/fsdp/fsdp_strategy.py", line 603, in _flush_weight_bucket
+    ray.get(ref)
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(AttributeError): [36mray::TeacherRayActor.update_weights_from_tensor()[39m (pid=360901, ip=129.212.188.215, actor_id=f0653f4b0d3302ac80342d9b01000000, repr=<kdflow.ray.train.teacher_actor.TeacherRayActor object at 0x7071807981d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/teacher_actor.py", line 144, in update_weights_from_tensor
+    return self.engine_service.update_weights_from_tensor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/backend/rocm/hf_engine.py", line 210, in update_weights_from_tensor
+    data = MultiprocessingSerializer.deserialize(serialized)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/sglang/srt/utils.py", line 1881, in deserialize
+    return ForkingPickler.loads(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/sglang/srt/patch_torch.py", line 51, in _rebuild_cuda_tensor_modified
+    return reductions._rebuild_cuda_tensor_original(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'torch.multiprocessing.reductions' has no attribute '_rebuild_cuda_tensor_original'
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 257, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 247, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 205, in fit
+    self.student.update_teacher_weights()
+  File "/home/KDFlow/kdflow/ray/train/student_group.py", line 224, in update_teacher_weights
+    ray.get(refs)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(AttributeError): [36mray::StudentRayActor.update_teacher_weights()[39m (pid=361134, ip=129.212.188.215, actor_id=3b140f969a5b3bcabf46d52b01000000, repr=<kdflow.ray.train.student_actor.StudentRayActor object at 0x781530e386b0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/student_actor.py", line 384, in update_teacher_weights
+    self.strategy.update_rollout_weights_from_tensor(
+  File "/home/KDFlow/kdflow/backend/fsdp/fsdp_strategy.py", line 529, in update_rollout_weights_from_tensor
+    self._flush_weight_bucket(
+  File "/home/KDFlow/kdflow/backend/fsdp/fsdp_strategy.py", line 603, in _flush_weight_bucket
+    ray.get(ref)
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(AttributeError): [36mray::TeacherRayActor.update_weights_from_tensor()[39m (pid=360901, ip=129.212.188.215, actor_id=f0653f4b0d3302ac80342d9b01000000, repr=<kdflow.ray.train.teacher_actor.TeacherRayActor object at 0x7071807981d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/teacher_actor.py", line 144, in update_weights_from_tensor
+    return self.engine_service.update_weights_from_tensor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/backend/rocm/hf_engine.py", line 210, in update_weights_from_tensor
+    data = MultiprocessingSerializer.deserialize(serialized)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/sglang/srt/utils.py", line 1881, in deserialize
+    return ForkingPickler.loads(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/sglang/srt/patch_torch.py", line 51, in _rebuild_cuda_tensor_modified
+    return reductions._rebuild_cuda_tensor_original(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'torch.multiprocessing.reductions' has no attribute '_rebuild_cuda_tensor_original'

@@ -1,0 +1,115 @@
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_setup.py:_flush():81] Configure stats pid to 163419
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /home/alignment-without-rewards/wandb/run-20260414_013328-ae2rr4t4/logs/debug.log
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /home/alignment-without-rewards/wandb/run-20260414_013328-ae2rr4t4/logs/debug-internal.log
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_init.py:init():844] calling init triggers
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'data': DataArguments(train_dataset_path='./data/logiqa_train_kdflow.parquet', train_dataset_probs=None, train_split='train', eval_dataset_path=None, eval_split='eval', input_key='messages', image_key=None, output_key=None, teacher_input_key=None, label_key='label', input_template=None, apply_chat_template=True, max_len=4096, max_samples=100000000.0, packing_samples=True, prompt_max_len=2048, preprocess_num_workers=8), 'model': ModelArguments(student_name_or_path='Qwen/Qwen3-4B', teacher_name_or_path='Qwen/Qwen3-30B-A3B', attn_implementation='flash_attention_2', use_liger_kernel=False, lora_rank=0, lora_alpha=16, target_modules='all-linear', lora_dropout=0.0, disable_fast_tokenizer=False, enable_thinking=False, ring_attn_size=1), 'train': TrainingArguments(num_nodes=1, num_gpus_per_node=1, num_epochs=2, train_batch_size=32, micro_train_batch_size=4, learning_rate=1e-06, lr_warmup_ratio=0.05, min_lr=1e-08, lr_scheduler='cosine_with_min_lr', max_norm=1.0, weight_decay=0.0, adam_betas=(0.9, 0.98), eval_steps=inf, save_steps=inf, backend='fsdp2', gradient_checkpointing=True, gradient_checkpointing_use_reentrant=False, teacher_offload=False, train_enable_sleep=True, enable_sleep=True, full_determinism=False, load_checkpoint=False, ckpt_path='./ckpt/checkpoints_distill', save_path='./outputs/opd-qwen3-4b', seed=42, bf16=True, local_rank=-1), 'fsdp': FSDPArguments(fsdp_size=-1, cpu_offload=False), 'kd': DistillationArguments(kd_ratio=1.0, kd_temperature=1.0, kd_algorithm='vanilla_kd', kd_loss_fn='rkl', teacher_forward_n_batches=1, teacher_enable_sleep=True, teacher_offload_tags='all', teacher_quantization=None, teacher_tp_size=1, teacher_ep_size=1, teacher_pp_size=1, teacher_dp_size=1, teacher_mem_fraction_static=0.4, teacher_update_freq=1, dskd_token_align='eta', dskd_topk_vocab=-1, dskd_projector_lr=0.0001, jsd_beta=0.5, skew_lambda=0.1, adaptive_alpha=0.5, hrl_topk=5), 'rollout': RolloutArguments(rollout_num_engines=1, rollout_tp_size=1, rollout_enable_sleep=True, rollout_mem_fraction_static=0.5, top_p=1.0, temperature=1.0, n_samples_per_prompt=1, rollout_batch_size=64, generate_max_len=2048, print_rollout_sample=False), 'log': LoggingArguments(logging_steps=1, use_wandb=True, wandb_org=None, wandb_project='alignment-opd', wandb_group='on_policy_distillation', wandb_run_name='opd-qwen3-4b', wandb_mode='online', wandb_dir=None), '_wandb': {}}
+2026-04-14 01:33:28,371 INFO    MainThread:163419 [wandb_init.py:init():892] starting backend
+2026-04-14 01:33:28,797 INFO    MainThread:163419 [wandb_init.py:init():895] sending inform_init request
+2026-04-14 01:33:28,798 INFO    MainThread:163419 [wandb_init.py:init():903] backend started and connected
+2026-04-14 01:33:28,800 INFO    MainThread:163419 [wandb_init.py:init():973] updated telemetry
+2026-04-14 01:33:28,803 INFO    MainThread:163419 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-04-14 01:33:29,365 INFO    MainThread:163419 [wandb_init.py:init():1042] starting run threads in backend
+2026-04-14 01:33:29,449 INFO    MainThread:163419 [wandb_run.py:_console_start():2524] atexit reg
+2026-04-14 01:33:29,449 INFO    MainThread:163419 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-04-14 01:33:29,449 INFO    MainThread:163419 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-04-14 01:33:29,449 INFO    MainThread:163419 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-04-14 01:33:29,451 INFO    MainThread:163419 [wandb_init.py:init():1082] run started, returning control to user process
+2026-04-14 01:34:04,898 INFO    wandb-AsyncioManager-main:163419 [service_client.py:_forward_responses():134] Reached EOF.
+2026-04-14 01:34:04,898 INFO    wandb-AsyncioManager-main:163419 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.
+2026-04-14 01:34:04,898 ERROR   wandb-AsyncioManager-main:163419 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-04-14 01:34:04,899 ERROR   wandb-AsyncioManager-main:163419 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-04-14 01:34:04,899 ERROR   wandb-AsyncioManager-main:163419 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-04-14 01:34:04,899 ERROR   wandb-AsyncioManager-main:163419 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-04-14 01:34:05,321 ERROR   wandb-AsyncioManager-main:163419 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 78, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-04-14 01:34:05,775 ERROR   wandb-AsyncioManager-main:163419 [asyncio_manager.py:fn_wrap_exceptions():184] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_manager.py", line 182, in fn_wrap_exceptions
+    await fn()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 45, in publish
+    await self._send_server_request(request)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 78, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 87, in _send_server_request
+    await self._drain_writer()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/wandb/sdk/lib/service/service_client.py", line 96, in _drain_writer
+    await self._writer.drain()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 392, in drain
+    await self._protocol._drain_helper()
+  File "/usr/lib/python3.12/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

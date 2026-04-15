@@ -104,12 +104,12 @@ def analyze_models(base_name, tuned_names, threshold=1e-5):
                 logger.info(f"If not, then the overlap is more than just on-policy data distribution as we might think. It can be the difference in updates performed by GRPO and OPD with a teacher model (OPSD todo.)")
 
 if __name__ == "__main__":
-    logger.add("sparsity_analysis.log", mode="w")
+    logger.add("sparsity_analysis-v2.log", mode="w")
     parser = argparse.ArgumentParser()
     parser.add_argument("--base", type=str, default="Qwen/Qwen3-4B")
     parser.add_argument("--tuned", type=str, nargs="+", default=[
-        "ViratChauhan/Qwen3-4B-OPD", 
-        #"ViratChauhan/Qwen3-4B-OPSD",
+        "ViratChauhan/Qwen3-4B-OPD-v2", 
+        "ViratChauhan/Qwen3-4B-OPSD",
         "ViratChauhan/Qwen3-4B-GRPO"
     ])
     parser.add_argument("--threshold", type=float, default=1e-5)

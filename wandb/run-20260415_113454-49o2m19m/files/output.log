@@ -1,0 +1,90 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m] ******* Start Training *******
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Num Epochs:            3
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Steps per Epoch:       28
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Total Training Steps:  84
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Per-device Batch Size: 2
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Gradient Accumulation: 16
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   Learning Rate:         2e-06
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Algorithm:          opsd
+[2026-04-15 11:34:55] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:127[0m]   KD Loss Function:      jsd
+[36m(StudentRayActor pid=564757)[0m [rank0]:[W415 11:34:56.743273584 ProcessGroupGloo.cpp:516] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+[36m(StudentRayActor pid=564757)[0m
+[36m(StudentRayActor pid=564757)[0m [2026-04-15 11:34:44] 2:564757:564757 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=564757)[0m
+[36m(StudentRayActor pid=564757)[0m [2026-04-15 11:34:44] 2:564757:564757 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=564757)[0m RCCL version : 2.26.6-HEAD:f224e2c
+[36m(StudentRayActor pid=564757)[0m HIP version  : 7.0.51831-a3e329ad8
+[36m(StudentRayActor pid=564757)[0m ROCm version : 7.0.0.0-38-9428210
+[36m(StudentRayActor pid=564757)[0m Hostname     : 2
+[36m(StudentRayActor pid=564757)[0m Librccl path : /opt/rocm-7.0.0/lib/librccl.so.1
+[36m(StudentRayActor pid=564757)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[36m(StudentRayActor pid=564757)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-04-15 11:34:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 11:37:34] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=564577)[0m [2026-04-15 11:37:34] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=564577)[0m [2026-04-15 11:37:59] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[36m(StudentRayActor pid=564757)[0m /home/KDFlow/kdflow/ray/train/student_actor.py:258: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /app/pytorch/torch/csrc/utils/tensor_numpy.cpp:206.)
+[36m(StudentRayActor pid=564757)[0m   k: torch.from_numpy(ray.get(v) if isinstance(v, ray.ObjectRef) else v).to(device, non_blocking=True)
+[2026-04-15 11:38:09] [[32mINFO[0m] [[2mteacher_group.py:shutdown:272[0m] [TeacherActorGroup] All teacher actors shutdown complete.
+[2026-04-15 11:38:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:shutdown:204[0m] [RolloutActorGroupVLLM] Shutdown complete.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 264, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 254, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 184, in fit
+    status_list = ray.get(self.student.async_run_distill(global_batch))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(IndexError): [36mray::StudentRayActor.fit()[39m (pid=564757, ip=129.212.188.215, actor_id=4c144d452122309363a7578b01000000, repr=<kdflow.ray.train.student_actor.StudentRayActor object at 0x7e6d53938950>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/student_actor.py", line 265, in fit
+    loss_info = self.kd_algorithm.training_step(micro_batch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/scripts/opsd/opsd_algorithm.py", line 89, in training_step
+    teacher_hiddens = teacher_hiddens[student_loss_mask]
+                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+IndexError: The shape of the mask [2, 874] at index 0 does not match the shape of the indexed tensor [1093, 2560] at index 0
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 264, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 254, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 184, in fit
+    status_list = ray.get(self.student.async_run_distill(global_batch))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(IndexError): [36mray::StudentRayActor.fit()[39m (pid=564757, ip=129.212.188.215, actor_id=4c144d452122309363a7578b01000000, repr=<kdflow.ray.train.student_actor.StudentRayActor object at 0x7e6d53938950>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/student_actor.py", line 265, in fit
+    loss_info = self.kd_algorithm.training_step(micro_batch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/scripts/opsd/opsd_algorithm.py", line 89, in training_step
+    teacher_hiddens = teacher_hiddens[student_loss_mask]
+                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+IndexError: The shape of the mask [2, 874] at index 0 does not match the shape of the indexed tensor [1093, 2560] at index 0

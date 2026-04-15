@@ -1,0 +1,184 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m] ******* Start Training *******
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Num Epochs:            3
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Steps per Epoch:       115
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Total Training Steps:  345
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Per-device Batch Size: 4
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Gradient Accumulation: 8
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   Learning Rate:         1e-06
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Algorithm:          opsd
+[2026-04-14 22:46:04] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:127[0m]   KD Loss Function:      jsd
+[2026-04-14 22:46:06] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[36m(StudentRayActor pid=388380)[0m
+[36m(StudentRayActor pid=388380)[0m [2026-04-14 22:45:54] 2:388380:388380 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=388380)[0m
+[36m(StudentRayActor pid=388380)[0m [2026-04-14 22:45:54] 2:388380:388380 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=388380)[0m RCCL version : 2.26.6-HEAD:f224e2c
+[36m(StudentRayActor pid=388380)[0m HIP version  : 7.0.51831-a3e329ad8
+[36m(StudentRayActor pid=388380)[0m ROCm version : 7.0.0.0-38-9428210
+[36m(StudentRayActor pid=388380)[0m Hostname     : 2
+[36m(StudentRayActor pid=388380)[0m Librccl path : /opt/rocm-7.0.0/lib/librccl.so.1
+[36m(StudentRayActor pid=388380)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[36m(StudentRayActor pid=388380)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[36m(StudentRayActor pid=388380)[0m [rank0]:[W414 22:46:06.233995701 ProcessGroupGloo.cpp:516] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+[2026-04-14 22:46:28] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:46:28] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:46:38] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[36m(StudentRayActor pid=388380)[0m /home/KDFlow/kdflow/ray/train/student_actor.py:258: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /app/pytorch/torch/csrc/utils/tensor_numpy.cpp:206.)
+[36m(StudentRayActor pid=388380)[0m   k: torch.from_numpy(ray.get(v) if isinstance(v, ray.ObjectRef) else v).to(device, non_blocking=True)
+[2026-04-14 22:47:13] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [1/345], train_progress [0.29%], Elapsed: 0:01:06, ETA: 6:18:24, rollout_time: 22.675917, teacher_fwd_time: 11.479399, loss: 0.173434, kd_loss: 0.173434, grad_norm: 6.831702, response_length: 305.062500, total_length: 591.781250, lr: 4.285714e-08, student_train_time: 22.102024
+[2026-04-14 22:47:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-14 22:47:29] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:47:29] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:47:32] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-14 22:47:47] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [2/345], train_progress [0.58%], Elapsed: 0:01:41, ETA: 4:48:41, rollout_time: 16.166374, teacher_fwd_time: 4.674927, loss: 0.187698, kd_loss: 0.187698, grad_norm: 6.719666, response_length: 309.593750, total_length: 590.468750, lr: 1.000000e-07, student_train_time: 9.059072
+[2026-04-14 22:47:47] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-14 22:47:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:47:57] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:48:00] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-14 22:48:14] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [3/345], train_progress [0.87%], Elapsed: 0:02:08, ETA: 4:03:12, rollout_time: 9.912312, teacher_fwd_time: 4.269622, loss: 0.178185, kd_loss: 0.178185, grad_norm: 7.441089, response_length: 269.875000, total_length: 540.281250, lr: 1.571429e-07, student_train_time: 8.271206
+[2026-04-14 22:48:14] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-14 22:48:38] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:48:38] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:48:40] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-14 22:48:56] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [4/345], train_progress [1.16%], Elapsed: 0:02:49, ETA: 4:00:07, rollout_time: 23.291997, teacher_fwd_time: 4.451660, loss: 0.164279, kd_loss: 0.164279, grad_norm: 6.247711, response_length: 333.546875, total_length: 606.703125, lr: 2.142857e-07, student_train_time: 9.138840
+[2026-04-14 22:48:56] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-14 22:49:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:49:15] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:49:18] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-14 22:49:33] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [5/345], train_progress [1.45%], Elapsed: 0:03:27, ETA: 3:54:36, rollout_time: 19.628311, teacher_fwd_time: 4.302160, loss: 0.166895, kd_loss: 0.166895, grad_norm: 6.515369, response_length: 302.953125, total_length: 576.390625, lr: 2.714286e-07, student_train_time: 8.661047
+[2026-04-14 22:49:33] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-14 22:49:52] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:49:52] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:49:55] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-14 22:50:10] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [6/345], train_progress [1.74%], Elapsed: 0:04:04, ETA: 3:49:46, rollout_time: 18.993933, teacher_fwd_time: 4.495054, loss: 0.145965, kd_loss: 0.145965, grad_norm: 6.034987, response_length: 314.531250, total_length: 584.703125, lr: 3.285714e-07, student_train_time: 8.941382
+[2026-04-14 22:50:10] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-14 22:50:39] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:184[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:50:39] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:50:42] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-14 22:50:57] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [7/345], train_progress [2.03%], Elapsed: 0:04:50, ETA: 3:53:22, rollout_time: 29.042615, teacher_fwd_time: 4.301358, loss: 0.167621, kd_loss: 0.167621, grad_norm: 6.062332, response_length: 306.156250, total_length: 584.062500, lr: 3.857143e-07, student_train_time: 8.732384
+[2026-04-14 22:50:57] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:191[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-14 22:50:57] [[32mINFO[0m] [[2mteacher_group.py:shutdown:272[0m] [TeacherActorGroup] All teacher actors shutdown complete.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:50:57] [[32mINFO[0m] [[2mhf_engine.py:shutdown:241[0m] [HFEngineService] Shutdown complete.
+[36m(TeacherRayActor pid=388102)[0m [2026-04-14 22:50:57] [[32mINFO[0m] [[2mteacher_actor.py:shutdown:154[0m] [TeacherRayActor] Shutdown complete
+[31mERROR[0m [90m04-14 22:50:57[0m [90m[core_client.py:610][0m Engine core proc EngineCore_DP0 died unexpectedly, shutting down client.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 247, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 153, in fit
+    rollout_samples = self.rollout(prompt_batch, **self.generate_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 258, in rollout
+    all_outputs = self.rollout_group.generate(all_stu_prompts, self.generate_kwargs, image_data=all_images)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/rollout/rollout_group_vllm.py", line 169, in generate
+    outputs = self.llm.generate(prompts, sampling_params=sp, use_tqdm=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 439, in generate
+    outputs = self._run_engine(use_tqdm=use_tqdm)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1764, in _run_engine
+    step_outputs = self.llm_engine.step()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 294, in step
+    outputs = self.engine_core.get_output()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 719, in get_output
+    outputs = self.outputs_queue.get()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/queue.py", line 171, in get
+    self.not_empty.wait()
+  File "/usr/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 257, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 252, in train
+    rollout_group.shutdown()
+  File "/home/KDFlow/kdflow/ray/rollout/rollout_group_vllm.py", line 199, in shutdown
+    self.llm.sleep(level=2)  # release all GPU memory
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1542, in sleep
+    self.reset_prefix_cache()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1519, in reset_prefix_cache
+    return self.llm_engine.reset_prefix_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 335, in reset_prefix_cache
+    return self.engine_core.reset_prefix_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 769, in reset_prefix_cache
+    return self.call_utility(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 746, in call_utility
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "/usr/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 247, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 153, in fit
+    rollout_samples = self.rollout(prompt_batch, **self.generate_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 258, in rollout
+    all_outputs = self.rollout_group.generate(all_stu_prompts, self.generate_kwargs, image_data=all_images)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/rollout/rollout_group_vllm.py", line 169, in generate
+    outputs = self.llm.generate(prompts, sampling_params=sp, use_tqdm=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 439, in generate
+    outputs = self._run_engine(use_tqdm=use_tqdm)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1764, in _run_engine
+    step_outputs = self.llm_engine.step()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 294, in step
+    outputs = self.engine_core.get_output()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 719, in get_output
+    outputs = self.outputs_queue.get()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/queue.py", line 171, in get
+    self.not_empty.wait()
+  File "/usr/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 257, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 252, in train
+    rollout_group.shutdown()
+  File "/home/KDFlow/kdflow/ray/rollout/rollout_group_vllm.py", line 199, in shutdown
+    self.llm.sleep(level=2)  # release all GPU memory
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1542, in sleep
+    self.reset_prefix_cache()
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1519, in reset_prefix_cache
+    return self.llm_engine.reset_prefix_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 335, in reset_prefix_cache
+    return self.engine_core.reset_prefix_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 769, in reset_prefix_cache
+    return self.call_utility(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 746, in call_utility
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "/usr/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt

@@ -1,0 +1,143 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai/
+[2026-04-15 10:04:22] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:119[0m] ******* Start Training *******
+[2026-04-15 10:04:22] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:120[0m]   Num Epochs:            3
+[2026-04-15 10:04:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:121[0m]   Steps per Epoch:       28
+[2026-04-15 10:04:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:122[0m]   Total Training Steps:  84
+[2026-04-15 10:04:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:123[0m]   Per-device Batch Size: 4
+[2026-04-15 10:04:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:124[0m]   Gradient Accumulation: 8
+[2026-04-15 10:04:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:125[0m]   Learning Rate:         2e-06
+[2026-04-15 10:04:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:126[0m]   KD Algorithm:          opsd
+[2026-04-15 10:04:23] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:_print_training_config:127[0m]   KD Loss Function:      jsd
+[2026-04-15 10:04:24] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[36m(StudentRayActor pid=512981)[0m [rank0]:[W415 10:04:24.478988396 ProcessGroupGloo.cpp:516] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+[36m(StudentRayActor pid=512981)[0m
+[36m(StudentRayActor pid=512981)[0m [2026-04-15 10:04:12] 2:512981:512981 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=512981)[0m
+[36m(StudentRayActor pid=512981)[0m [2026-04-15 10:04:12] 2:512981:512981 [0] /longer_pathname_so_that_rpms_can_support_packaging_the_debug_info_for_all_os_profiles/src/out/ubuntu-24.04/24.04/build/rccl/hipify/src/init.cc:161 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+[36m(StudentRayActor pid=512981)[0m RCCL version : 2.26.6-HEAD:f224e2c
+[36m(StudentRayActor pid=512981)[0m HIP version  : 7.0.51831-a3e329ad8
+[36m(StudentRayActor pid=512981)[0m ROCm version : 7.0.0.0-38-9428210
+[36m(StudentRayActor pid=512981)[0m Hostname     : 2
+[36m(StudentRayActor pid=512981)[0m Librccl path : /opt/rocm-7.0.0/lib/librccl.so.1
+[36m(StudentRayActor pid=512981)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[36m(StudentRayActor pid=512981)[0m [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-04-15 10:09:15] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:09:15] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:09:40] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[36m(StudentRayActor pid=512981)[0m /home/KDFlow/kdflow/ray/train/student_actor.py:258: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /app/pytorch/torch/csrc/utils/tensor_numpy.cpp:206.)
+[36m(StudentRayActor pid=512981)[0m   k: torch.from_numpy(ray.get(v) if isinstance(v, ray.ObjectRef) else v).to(device, non_blocking=True)
+[2026-04-15 10:11:16] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [1/84], train_progress [1.19%], Elapsed: 0:06:51, ETA: 9:28:33, rollout_time: 290.871535, teacher_fwd_time: 27.242271, loss: 0.029829, kd_loss: 0.029829, grad_norm: 0.607013, response_length: 1387.839844, total_length: 1661.632812, lr: 2.647059e-07, student_train_time: 83.251984
+[2026-04-15 10:11:16] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 10:17:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:17:51] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:18:11] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 10:19:32] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [2/84], train_progress [2.38%], Elapsed: 0:15:07, ETA: 10:19:47, rollout_time: 395.207052, teacher_fwd_time: 21.567228, loss: 0.025708, kd_loss: 0.025708, grad_norm: 0.533357, response_length: 1487.894531, total_length: 1759.156250, lr: 7.352941e-07, student_train_time: 74.607880
+[2026-04-15 10:19:32] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 10:25:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:25:26] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:25:46] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 10:27:13] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [3/84], train_progress [3.57%], Elapsed: 0:22:49, ETA: 10:16:03, rollout_time: 354.116023, teacher_fwd_time: 21.582142, loss: 0.016464, kd_loss: 0.016464, grad_norm: 0.334494, response_length: 1531.710938, total_length: 1803.652344, lr: 1.205882e-06, student_train_time: 81.347617
+[2026-04-15 10:27:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 10:32:44] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:32:44] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:33:02] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 10:34:22] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [4/84], train_progress [4.76%], Elapsed: 0:29:57, ETA: 9:59:00, rollout_time: 330.770388, teacher_fwd_time: 19.300801, loss: 0.011428, kd_loss: 0.011428, grad_norm: 0.274899, response_length: 1326.164062, total_length: 1599.601562, lr: 1.676471e-06, student_train_time: 73.725674
+[2026-04-15 10:34:22] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 10:39:21] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:39:21] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:39:39] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 10:40:53] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [5/84], train_progress [5.95%], Elapsed: 0:36:29, ETA: 9:36:26, rollout_time: 299.042187, teacher_fwd_time: 19.793898, loss: 0.008771, kd_loss: 0.008771, grad_norm: 0.183016, response_length: 1332.019531, total_length: 1597.875000, lr: 1.992510e-06, student_train_time: 67.771155
+[2026-04-15 10:40:53] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 10:46:37] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:46:37] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:46:54] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 10:48:13] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [6/84], train_progress [7.14%], Elapsed: 0:43:48, ETA: 9:29:24, rollout_time: 343.388126, teacher_fwd_time: 19.542815, loss: 0.006846, kd_loss: 0.006846, grad_norm: 0.137889, response_length: 1353.968750, total_length: 1617.476562, lr: 1.998607e-06, student_train_time: 71.791037
+[2026-04-15 10:48:13] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 10:54:09] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:54:09] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 10:54:27] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 10:55:41] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [7/84], train_progress [8.33%], Elapsed: 0:51:16, ETA: 9:23:56, rollout_time: 356.450830, teacher_fwd_time: 19.465509, loss: 0.006133, kd_loss: 0.006133, grad_norm: 0.122116, response_length: 1290.402344, total_length: 1563.578125, lr: 1.995811e-06, student_train_time: 67.080782
+[2026-04-15 10:55:41] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 11:01:11] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:01:11] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:01:29] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 11:02:51] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [8/84], train_progress [9.52%], Elapsed: 0:58:26, ETA: 9:15:07, rollout_time: 329.944810, teacher_fwd_time: 19.900915, loss: 0.005396, kd_loss: 0.005396, grad_norm: 0.096535, response_length: 1362.707031, total_length: 1631.121094, lr: 1.991478e-06, student_train_time: 75.331416
+[2026-04-15 11:02:51] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 11:08:23] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:08:23] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:08:42] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 11:10:01] [[32mINFO[0m] [[2mon_policy_kd_trainer.py:logging:474[0m] [Rank 0] epoch [1/3], step [9/84], train_progress [10.71%], Elapsed: 1:05:37, ETA: 9:06:48, rollout_time: 332.108267, teacher_fwd_time: 20.544027, loss: 0.005059, kd_loss: 0.005059, grad_norm: 0.089489, response_length: 1409.593750, total_length: 1679.929688, lr: 1.985614e-06, student_train_time: 73.109800
+[2026-04-15 11:10:01] [[32mINFO[0m] [[2mrollout_group_vllm.py:wakeup:193[0m] [RolloutActorGroupVLLM] Awake.
+[2026-04-15 11:16:26] [[32mINFO[0m] [[2mrollout_group_vllm.py:sleep:186[0m] [RolloutActorGroupVLLM] Sleeping.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:16:26] [[32mINFO[0m] [[2mhf_engine.py:wakeup:184[0m] [HFEngineService] Waking up — moving teacher to GPU.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:16:45] [[32mINFO[0m] [[2mhf_engine.py:sleep:173[0m] [HFEngineService] Sleeping — moving teacher to CPU.
+[2026-04-15 11:16:54] [[32mINFO[0m] [[2mteacher_group.py:shutdown:272[0m] [TeacherActorGroup] All teacher actors shutdown complete.
+[2026-04-15 11:16:54] [[32mINFO[0m] [[2mrollout_group_vllm.py:shutdown:204[0m] [RolloutActorGroupVLLM] Shutdown complete.
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 264, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 254, in train
+    trainer.fit()
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:16:54] [[32mINFO[0m] [[2mhf_engine.py:shutdown:241[0m] [HFEngineService] Shutdown complete.
+[36m(TeacherRayActor pid=512857)[0m [2026-04-15 11:16:54] [[32mINFO[0m] [[2mteacher_actor.py:shutdown:154[0m] [TeacherRayActor] Shutdown complete
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 184, in fit
+    status_list = ray.get(self.student.async_run_distill(global_batch))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::StudentRayActor.fit()[39m (pid=512981, ip=129.212.188.215, actor_id=7e10aebfa026d16b037242ad01000000, repr=<kdflow.ray.train.student_actor.StudentRayActor object at 0x74e83f3ef3b0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/student_actor.py", line 265, in fit
+    loss_info = self.kd_algorithm.training_step(micro_batch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/scripts/opsd/opsd_algorithm.py", line 107, in training_step
+    kd_loss = self._compute_clipped_loss(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/scripts/opsd/opsd_algorithm.py", line 151, in _compute_clipped_loss
+    pointwise_kl_tm = t_probs * (t_log_probs - log_m)
+                      ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: HIP out of memory. Tried to allocate 298.00 MiB. GPU 0 has a total capacity of 191.69 GiB of which 0 bytes is free. Of the allocated memory 173.79 GiB is allocated by PyTorch, and 6.37 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 264, in <module>
+    train(args)
+  File "/home/alignment-without-rewards/scripts/opsd/train_opsd.py", line 254, in train
+    trainer.fit()
+  File "/home/KDFlow/kdflow/trainer/on_policy_kd_trainer.py", line 184, in fit
+    status_list = ray.get(self.student.async_run_distill(global_batch))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/.venv/lib/python3.12/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::StudentRayActor.fit()[39m (pid=512981, ip=129.212.188.215, actor_id=7e10aebfa026d16b037242ad01000000, repr=<kdflow.ray.train.student_actor.StudentRayActor object at 0x74e83f3ef3b0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/KDFlow/kdflow/ray/train/student_actor.py", line 265, in fit
+    loss_info = self.kd_algorithm.training_step(micro_batch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/scripts/opsd/opsd_algorithm.py", line 107, in training_step
+    kd_loss = self._compute_clipped_loss(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alignment-without-rewards/scripts/opsd/opsd_algorithm.py", line 151, in _compute_clipped_loss
+    pointwise_kl_tm = t_probs * (t_log_probs - log_m)
+                      ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: HIP out of memory. Tried to allocate 298.00 MiB. GPU 0 has a total capacity of 191.69 GiB of which 0 bytes is free. Of the allocated memory 173.79 GiB is allocated by PyTorch, and 6.37 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -21,11 +21,7 @@ import ray
 
 from kdflow.ray.train.teacher_group import TeacherActorGroup
 from kdflow.ray.train.student_group import StudentActorGroup
-try:
-    import sgl_kernel  # noqa: F401
-    from kdflow.ray.rollout.rollout_group import RolloutActorGroup
-except (ModuleNotFoundError, ImportError):
-    from kdflow.ray.rollout.rollout_group_vllm import RolloutActorGroupVLLM as RolloutActorGroup
+from kdflow.ray.rollout.rollout_group_vllm import RolloutActorGroupVLLM as RolloutActorGroup
 from kdflow.ray.placement_group import create_placement_group
 from kdflow.trainer import OnPolicyKDTrainer
 from kdflow.datasets import PromptDataset
@@ -52,9 +48,18 @@ class OPSDPromptDataset(PromptDataset):
     def process_data(self, data):
         """Override to inject privileged info into teacher prompt."""
         # Build student prompt normally
-        stu_prompt = self._build_prompt(data, self.student_processor, self.input_key)
+        if self.apply_chat_template:
+            chat = convert_to_openai_messages(data[self.input_key])
+            stu_prompt = self.student_processor.apply_chat_template(
+                chat,
+                tokenize=False,
+                add_generation_prompt=True,
+                enable_thinking=self.enable_thinking, # Follow global flag for student
+            )
+        else:
+            stu_prompt = self._build_prompt(data, self.student_processor, self.input_key)
         
-        # Build teacher prompt WITH privileged information
+        # Build teacher prompt WITH privileged information (TM-on)
         label = data.get(self.label_key, "") if self.label_key else ""
         tea_prompt = self._build_teacher_prompt_with_privilege(
             data, self.teacher_processor or self.student_processor, label
@@ -82,11 +87,8 @@ class OPSDPromptDataset(PromptDataset):
         """
         Build teacher prompt that includes the correct answer as privileged info.
         
-        For OPSD, the teacher is conditioned on:
-          [original conversation] + [assistant message with correct answer]
-        
-        This means the teacher "knows" the answer and can then provide
-        better token-level guidance on the student's rollout trajectory.
+        The teacher is conditioned on the correct answer and uses Thinking Mode
+        to rationalize the solution.
         """
         if self.apply_chat_template:
             chat = convert_to_openai_messages(data[self.input_key])
@@ -100,7 +102,7 @@ class OPSDPromptDataset(PromptDataset):
                 chat,
                 tokenize=False,
                 add_generation_prompt=True if not label else False,
-                enable_thinking=self.enable_thinking,
+                enable_thinking=True, # Thinking ALWAYS enabled for teacher rationalization
             )
         
         # Fallback for non-chat-template format
@@ -135,10 +137,11 @@ def train(args):
         num_actors=args.rollout.rollout_num_engines,
         tp_size=args.rollout.rollout_tp_size,
         num_gpus_per_node=args.train.num_gpus_per_node,
-        enable_memory_saver=True,
+        enable_memory_saver=args.train.enable_sleep,
         mem_fraction_static=args.rollout.rollout_mem_fraction_static,
         num_gpus_per_actor=0.3,
         pg=(pg, reordered_bundle_indices, reordered_gpu_ids),
+        max_model_len=args.data.max_len,
     )
     rollout_group.sleep()
 
@@ -192,7 +195,7 @@ def train(args):
         tokenizer_info=tokenizer_info,
         max_data_num=args.data.max_samples,
         input_template=args.data.input_template,
-        num_processors=args.data.preprocess_num_workers,
+        num_processors=None, # Force None to avoid multiprocessing completely
     )
 
     sampler = DistributedSampler(
